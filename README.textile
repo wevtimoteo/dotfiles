@@ -1,0 +1,13 @@
+h1. Installation:
+
+<pre><code>git clone git://github.com/wolcanus/dotfiles.git
+cd dotfiles
+./install.sh</code></pre>
+
+h2. References:
+<ul>
+  <li><a href="https://github.com/dynaum/dotfiles">https://github.com/dynaum/dotfiles</a></li>
+  <li><a href="https://github.com/akitaonrails/vimfiles">https://github.com/akitaonrails/vimfiles</a></li>
+  <li><a href="https://github.com/BrunoGrasselli/vim_files">https://github.com/BrunoGrasselli/vim_files</a></li>
+  <li><a href="https://github.com/git/git">https://github.com/git/git</a></li>
+</ul>
