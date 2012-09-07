@@ -4,6 +4,11 @@ h1. Installation:
 cd dotfiles
 sh install.sh</code></pre>
 
+h2. ColorScheme
+
+<p>Currently I'm using busybee, check it out in <a href="http://www.vim.org/scripts/script.php?script_id=2549">BusyBee</a></p>
+<p align="center"><img src="http://img526.imageshack.us/img526/3431/shot20100403183821.png" alt="BusyBee Screenshot" /></p>
+
 h2. References:
 
 <ul>
