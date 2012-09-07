@@ -1,4 +1,4 @@
-files=( bash_profile irbrc alias vimrc git-completion.sh gitconfig gitignore_global )
+files=( bash_profile irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global )
 
 for filename in ${files[@]}
 do
