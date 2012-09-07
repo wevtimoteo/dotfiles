@@ -1,0 +1,1 @@
+/Users/weverton/.bash_profile
