@@ -5,6 +5,7 @@ cd dotfiles
 ./install.sh</code></pre>
 
 h2. References:
+
 <ul>
   <li><a href="https://github.com/dynaum/dotfiles">https://github.com/dynaum/dotfiles</a></li>
   <li><a href="https://github.com/akitaonrails/vimfiles">https://github.com/akitaonrails/vimfiles</a></li>
