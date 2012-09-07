@@ -18,7 +18,7 @@ h2. References:
   <li><a href="https://github.com/git/git">https://github.com/git/git</a></li>
 </ul>
 
-h2. License
+h2. License:
 
 <pre><code>            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
