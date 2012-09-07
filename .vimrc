@@ -9,7 +9,6 @@ syntax enable
 set background=dark
 colorscheme busybee
 set guifont=Monaco:h15
-set columns=100
 set autoindent
 set incsearch
 set hlsearch
