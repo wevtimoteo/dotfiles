@@ -1,10 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/weverton/Sites/dinda'
-let g:netrw_dirhist_2='/Users/weverton/Sites/braspag'
-let g:netrw_dirhist_3='/Users/weverton/Sites/dinda'
-let g:netrw_dirhist_4='/Users/weverton/Sites/dinda/db'
-let g:netrw_dirhist_5='/Users/weverton/Sites/dinda/spec'
-let g:netrw_dirhist_6='/Users/weverton/Sites/manganomori/spec'
-let g:netrw_dirhist_7='/Users/weverton/Sites/manganomori'
-let g:netrw_dirhist_8='/Users/weverton/.rbenv'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/weverton/Sites/dinda/app/views'
+let g:netrw_dirhist_2='/Users/weverton/Sites/shipping-service'
