@@ -7,7 +7,7 @@ set nu
 syntax enable 
 
 set background=dark
-colorscheme busybee
+colorscheme molokai
 set guifont=Monaco:h15
 set autoindent
 set incsearch
