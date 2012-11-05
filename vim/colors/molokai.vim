@@ -80,6 +80,10 @@ hi SignColumn      guifg=#A6E22E guibg=#232526
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#465457               gui=bold
 hi Special         guifg=#66D9EF guibg=bg      gui=italic
+<<<<<<< HEAD
+=======
+hi SpecialKey      guifg=#888A85               gui=italic
+>>>>>>> adding molokai colorscheme
 if has("spell")
     hi SpellBad    guisp=#FF0000 gui=undercurl
     hi SpellCap    guisp=#7070F0 gui=undercurl
@@ -110,25 +114,36 @@ if s:molokai_original == 1
    hi Comment         guifg=#75715E
    hi CursorLine                    guibg=#3E3D32
    hi CursorColumn                  guibg=#3E3D32
+<<<<<<< HEAD
    hi ColorColumn                   guibg=#3B3A32
    hi LineNr          guifg=#BCBCBC guibg=#3B3A32
    hi NonText         guifg=#75715E
    hi SpecialKey      guifg=#75715E
+=======
+   hi LineNr          guifg=#BCBCBC guibg=#3B3A32
+   hi NonText         guifg=#BCBCBC guibg=#3B3A32
+>>>>>>> adding molokai colorscheme
 else
    hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
    hi Comment         guifg=#465457
    hi CursorLine                    guibg=#293739
    hi CursorColumn                  guibg=#293739
+<<<<<<< HEAD
    hi ColorColumn                   guibg=#232526
    hi LineNr          guifg=#465457 guibg=#232526
    hi NonText         guifg=#465457
    hi SpecialKey      guifg=#465457
+=======
+   hi LineNr          guifg=#BCBCBC guibg=#232526
+   hi NonText         guifg=#BCBCBC guibg=#232526
+>>>>>>> adding molokai colorscheme
 end
 
 "
 " Support for 256-color terminal
 "
 if &t_Co > 255
+<<<<<<< HEAD
    if s:molokai_original == 1
       hi Normal                   ctermbg=234
       hi CursorLine               ctermbg=235   cterm=none
@@ -136,6 +151,8 @@ if &t_Co > 255
       hi Normal       ctermfg=252 ctermbg=233
       hi CursorLine               ctermbg=234   cterm=none
    endif
+=======
+>>>>>>> adding molokai colorscheme
    hi Boolean         ctermfg=135
    hi Character       ctermfg=144
    hi Number          ctermfg=135
@@ -160,7 +177,11 @@ if &t_Co > 255
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
    hi Function        ctermfg=118
+<<<<<<< HEAD
    hi Identifier      ctermfg=208               cterm=none
+=======
+   hi Identifier      ctermfg=208
+>>>>>>> adding molokai colorscheme
    hi Ignore          ctermfg=244 ctermbg=232
    hi IncSearch       ctermfg=193 ctermbg=16
 
@@ -191,6 +212,10 @@ if &t_Co > 255
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
    hi Special         ctermfg=81  ctermbg=232
+<<<<<<< HEAD
+=======
+   hi SpecialKey      ctermfg=245
+>>>>>>> adding molokai colorscheme
 
    hi Statement       ctermfg=161               cterm=bold
    hi StatusLine      ctermfg=238 ctermbg=253
@@ -211,10 +236,19 @@ if &t_Co > 255
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
+<<<<<<< HEAD
    hi Comment         ctermfg=59
    hi CursorColumn                ctermbg=234
    hi ColorColumn                 ctermbg=234
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=59
    hi SpecialKey      ctermfg=59
+=======
+   hi Normal          ctermfg=252 ctermbg=233
+   hi Comment         ctermfg=59
+   hi CursorLine                  ctermbg=234   cterm=none
+   hi CursorColumn                ctermbg=234
+   hi LineNr          ctermfg=250 ctermbg=234
+   hi NonText         ctermfg=250 ctermbg=234
+>>>>>>> adding molokai colorscheme
 end

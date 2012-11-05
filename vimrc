@@ -15,7 +15,6 @@ set hlsearch
 set wildmode=list:longest
 set pastetoggle=<F3>
 
-
 "unmapping arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
