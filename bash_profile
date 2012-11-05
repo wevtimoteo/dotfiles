@@ -3,7 +3,7 @@
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
-export EDITOR="mvim"
+export EDITOR="vim"
 
 eval "$(rbenv init -)"
 # source ~/.rbenv/completions/rbenv.bash
