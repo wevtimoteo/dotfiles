@@ -14,6 +14,8 @@ alias gitrb='git fetch; git rebase origin/`git branch | grep \* | sed "s/^\* //g
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias be="bundle exec"
+alias unit="be rspec -t ~@acceptance"
+alias acceptance="be rspec -t @acceptance"
 
 # others
 alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
