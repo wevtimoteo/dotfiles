@@ -5,6 +5,7 @@ alias l='ls -CF'
 alias ..='cd ..'
 alias ...='cd ..; ll'
 alias peg='ps -ef | grep -i'
+alias psg='ps aux | grep '
 alias llg='launchctl list | grep'
 
 # GIT
