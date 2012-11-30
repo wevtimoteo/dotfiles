@@ -9,11 +9,24 @@ syntax enable
 set background=dark
 colorscheme molokai
 set guifont=Monaco:h15
+set cindent
+set cinkeys=0{,0},:,0#,!,!^F
+set smartindent
 set autoindent
 set incsearch
 set hlsearch
 set wildmode=list:longest
 set pastetoggle=<F3>
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+filetype indent on
+
+"allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 "unmapping arrow keys
 nnoremap <up> <nop>
