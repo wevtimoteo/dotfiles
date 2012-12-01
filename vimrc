@@ -111,6 +111,9 @@ set laststatus=2
 nmap <leader>l :set list!<CR>
 set list!
 
+" Enabling SnipMate
+filetype plugin on
+
 " Print current path
 cmap <C-e> <C-r>=expand('%:p:h')<CR>/
 
