@@ -35,3 +35,6 @@ else
 fi
 
 source "$HOME/.git-completion.sh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
