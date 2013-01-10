@@ -45,3 +45,8 @@ tags
 ################
 *.swp
 *.swo
+
+# Zeus #
+############
+custom_plan.rb
+zeus.json
