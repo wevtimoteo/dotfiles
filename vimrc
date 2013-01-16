@@ -12,7 +12,6 @@ colorscheme molokai
 set guifont=Monaco:h15
 
 " indent
-set cindent
 set cinkeys=0{,0},:,0#,!,!^F
 set smartindent
 set autoindent
