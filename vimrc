@@ -12,7 +12,7 @@ colorscheme molokai
 set guifont=Monaco:h15
 
 " indent
-set cinkeys=0{,0},:,0#,!,!^F
+set cinkeys=0{,0},:,0#,!^F
 set smartindent
 set autoindent
 
@@ -78,6 +78,8 @@ set pastetoggle=<F3>
 nmap <Tab> gt
 nmap <S-Tab> gT
 
+"map for Exp (NERDtree)
+nmap <leader>e :Exp<cr>
 
 " Default settings
 set ts=2 sts=2 sw=2 expandtab
