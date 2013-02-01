@@ -108,6 +108,9 @@ let g:Powerline_symbols = 'unicode'
 set nocompatible
 set laststatus=2
 
+" Automatically removing all trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 set list!
