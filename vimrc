@@ -4,7 +4,7 @@
 set encoding=utf-8
 set mouse=a
 set nu
-syntax enable 
+syntax enable
 
 " theme
 set background=dark
@@ -44,6 +44,9 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+"make Y consistent with C and D
+nnoremap Y y$
 
 " turn off needless toolbar on gvim/mvim
 set guioptions+=TLlRrb
