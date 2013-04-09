@@ -4,6 +4,7 @@
 
 [github]
   username = wolcanus
+	user = wolcanus
 
 [credential]
 	helper = osxkeychain
