@@ -21,7 +21,6 @@ set incsearch
 " highlight all the matches in search
 set hlsearch
 
-
 " show dir list when tab dir
 set wildmode=list:longest
 
@@ -35,15 +34,6 @@ filetype indent on
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" unmapping arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 
 "make Y consistent with C and D
 nnoremap Y y$
@@ -132,7 +122,14 @@ highlight SpecialKey guifg=#4a4a59
 
 autocmd BufRead,BufNewFile *.tokamak set filetype=ruby
 
-"autoload NERDTree
-"autocmd vimenter * NERDTree
+" unmapping arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 call pathogen#infect()
