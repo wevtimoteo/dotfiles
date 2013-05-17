@@ -113,6 +113,9 @@ filetype plugin on
 " Print current path
 cmap <C-e> <C-r>=expand('%:p:h')<CR>/
 
+" Check spell and limit text length for commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
