@@ -24,6 +24,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+# set ps1
 if [ -f $BASH_COMPLETION_DIR/git ] && [ -f `which rbenv` ]; then
   export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w$(__git_ps1) ruby=$(__rbenv_ps1) \n\[\033[01;34m\]\$\[\033[00m\] '
 elif [ -f $BASH_COMPLETION_DIR/git ]; then
@@ -33,6 +34,12 @@ elif [ `which rbenv` ]; then
 else
   export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \n\[\033[01;34m\]\$\[\033[00m\] '
 fi
+
+# fast access to projects folder
+CDPATH=".:~:~/Sites"
+
+# load AWSrc file
+. ~/.awsrc
 
 source "$HOME/.git-completion.sh"
 
