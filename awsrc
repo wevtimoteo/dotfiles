@@ -56,10 +56,10 @@
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # vars when using aws-sdk
-export   AWS_CREDENTIAL_FILE="$HOME/.aws/aws-credential-file.cfg"
+# export   AWS_CREDENTIAL_FILE="$HOME/.aws/aws-credential-file.cfg"
 
-export     AWS_ACCESS_KEY_ID=$( awk -F= '/AccessKey/ {print $2}' $AWS_CREDENTIAL_FILE )
-export AWS_SECRET_ACCESS_KEY=$( awk -F= '/SecretKey/ {print $2}' $AWS_CREDENTIAL_FILE )
+# export     AWS_ACCESS_KEY_ID=$( awk -F= '/AccessKey/ {print $2}' $AWS_CREDENTIAL_FILE )
+# export AWS_SECRET_ACCESS_KEY=$( awk -F= '/SecretKey/ {print $2}' $AWS_CREDENTIAL_FILE )
 
 # pre-req for EC2:
 #     brew install ec2-ami-tools
@@ -72,8 +72,8 @@ export AWS_SECRET_ACCESS_KEY=$( awk -F= '/SecretKey/ {print $2}' $AWS_CREDENTIAL
 #     ec2-describe-volumes
 export         EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
-export         EC2_CERT="$(/bin/ls $HOME/.aws/cert-*.pem)"
-export  EC2_PRIVATE_KEY="$(/bin/ls $HOME/.aws/pk-*.pem)"
+# export         EC2_CERT="$(/bin/ls $HOME/.aws/cert-*.pem)"
+# export  EC2_PRIVATE_KEY="$(/bin/ls $HOME/.aws/pk-*.pem)"
 
 # Default region
 export EC2_REGION=sa-east-1
