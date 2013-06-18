@@ -70,7 +70,8 @@ set pastetoggle=<F3>
 nmap <Tab> gt
 nmap <S-Tab> gT
 
-"map for Exp (NERDtree)
+"NERDtree
+"map for Exp
 nmap <leader>e :Exp<cr>
 
 " Default settings
@@ -106,6 +107,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 set list!
+
+" Increase and decrease split size 10 in 10
+nmap <silent> <leader>< :10winc <<CR>
+nmap <silent> <leader>> :10winc ><CR>
 
 " Enabling SnipMate
 filetype plugin on
