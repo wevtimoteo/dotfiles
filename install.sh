@@ -6,6 +6,6 @@ do
   ln -s $PWD/$filename ~/.$filename
 done
 
-ln -s $PWD/git-edit /usr/local/bin/git-edit
+ln -fs $PWD/git-edit /usr/local/bin/git-edit
 
 source ~/.bash_profile
