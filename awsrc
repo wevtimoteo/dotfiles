@@ -80,6 +80,7 @@ export EC2_REGION=sa-east-1
 
 # Default Service Point
 export EC2_URL=https://ec2.sa-east-1.amazonaws.com
+export  S3_URL=https://s3.sa-east-1.amazonaws.com
 
 # RDS
 #     $ brew install rds-command-line-tools
