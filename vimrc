@@ -140,4 +140,6 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+nmap ; :
+
 call pathogen#infect()
