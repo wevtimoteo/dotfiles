@@ -1,0 +1,4 @@
+#!/bin/bash
+# connect to multiples servers based in your cap stage file
+# author: @grasselli - https://github.com/brunograsselli
+cat config/deploy/$1.rb | grep server | sed -E s/.*\'\(.*\)\'.*/\\1/ | xargs csshX
