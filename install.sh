@@ -7,5 +7,6 @@ do
 done
 
 ln -fs $PWD/git-edit /usr/local/bin/git-edit
+ln -fs $PWD/capssh /usr/local/bin/capssh
 
 source ~/.bash_profile
