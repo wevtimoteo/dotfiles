@@ -16,7 +16,7 @@ eval "$(rbenv init -)"
 __rbenv_ps1 ()
 {
   rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
-  printf $rbenv_ruby_version
+  #printf $rbenv_ruby_version
 }
 
 # prompt with git && rbenv
