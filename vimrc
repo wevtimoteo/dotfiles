@@ -9,7 +9,7 @@ syntax enable
 " theme
 set background=dark
 colorscheme molokai
-set guifont="Sauce Code for Powerline Light":h15
+set guifont="Monaco":h15
 
 " indent
 set cinkeys=0{,0},:,0#,!^F
