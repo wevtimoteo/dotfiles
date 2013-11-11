@@ -5,6 +5,7 @@ ExtractSnips()	snipMate.txt	/*ExtractSnips()*
 ExtractSnipsFile()	snipMate.txt	/*ExtractSnipsFile()*
 Filename()	snipMate.txt	/*Filename()*
 ResetSnippets()	snipMate.txt	/*ResetSnippets()*
+ZoomWin.txt	ZoomWin.txt	/*ZoomWin.txt*
 g:SuperTabClosePreviewOnPopupClose	supertab.txt	/*g:SuperTabClosePreviewOnPopupClose*
 g:SuperTabCompletionContexts	supertab.txt	/*g:SuperTabCompletionContexts*
 g:SuperTabContextDefaultCompletionType	supertab.txt	/*g:SuperTabContextDefaultCompletionType*
@@ -18,8 +19,11 @@ g:SuperTabMappingTabLiteral	supertab.txt	/*g:SuperTabMappingTabLiteral*
 g:SuperTabNoCompleteAfter	supertab.txt	/*g:SuperTabNoCompleteAfter*
 g:SuperTabNoCompleteBefore	supertab.txt	/*g:SuperTabNoCompleteBefore*
 g:SuperTabRetainCompletionDuration	supertab.txt	/*g:SuperTabRetainCompletionDuration*
+g:ZoomWin_funcref	ZoomWin.txt	/*g:ZoomWin_funcref*
 g:snippets_dir	snipMate.txt	/*g:snippets_dir*
 g:snips_author	snipMate.txt	/*g:snips_author*
+g:zoomwin_preserve_taglist	ZoomWin.txt	/*g:zoomwin_preserve_taglist*
+g:zoomwin_preserve_winmanager	ZoomWin.txt	/*g:zoomwin_preserve_winmanager*
 i_CTRL-R_<Tab>	snipMate.txt	/*i_CTRL-R_<Tab>*
 list-snippets	snipMate.txt	/*list-snippets*
 multi_snip	snipMate.txt	/*multi_snip*
@@ -64,3 +68,9 @@ supertab-options	supertab.txt	/*supertab-options*
 supertab-preventcomplete	supertab.txt	/*supertab-preventcomplete*
 supertab-usage	supertab.txt	/*supertab-usage*
 supertab.txt	supertab.txt	/*supertab.txt*
+zoomwin	ZoomWin.txt	/*zoomwin*
+zoomwin-copyright	ZoomWin.txt	/*zoomwin-copyright*
+zoomwin-history	ZoomWin.txt	/*zoomwin-history*
+zoomwin-options	ZoomWin.txt	/*zoomwin-options*
+zoomwin-setup	ZoomWin.txt	/*zoomwin-setup*
+zoomwin-usage	ZoomWin.txt	/*zoomwin-usage*
