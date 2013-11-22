@@ -143,6 +143,6 @@ inoremap <right> <nop>
 nmap ; :
 
 " Dealing with TMUX unnamed clipboard
-set clipboard^=unnamed
+" set clipboard^=unnamed
 
 call pathogen#infect()
