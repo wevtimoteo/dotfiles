@@ -1,27 +1,22 @@
-h1. Installation:
+# Installation:
 
-<pre><code>git clone git://github.com/wolcanus/dotfiles.git
+```
+git clone git://github.com/wolcanus/dotfiles.git
 cd dotfiles
-sh install.sh</code></pre>
+sh install.sh
+```
 
-h2. ColorScheme
+## References:
 
-<p>Currently I'm using busybee, check it out in <a href="http://www.vim.org/scripts/script.php?script_id=2549">BusyBee</a></p>
-<p align="center"><img src="http://img526.imageshack.us/img526/3431/shot20100403183821.png" alt="BusyBee Screenshot" /></p>
+  * https://github.com/dynaum/dotfiles
+  * http://dailyvim.tumblr.com
+  * https://github.com/BrunoGrasselli/vim_files
+  * https://github.com/git/git
 
-h2. References:
+## License:
 
-<ul>
-  <li><a href="https://github.com/dynaum/dotfiles">https://github.com/dynaum/dotfiles</a></li>
-  <li><a href="http://dailyvim.tumblr.com/">http://dailyvim.tumblr.com/</a></li>
-  <li><a href="https://github.com/BrunoGrasselli/vim_files">https://github.com/BrunoGrasselli/vim_files</a></li>
-  <li><a href="https://github.com/git/git">https://github.com/git/git</a></li>
-  <li><a href="https://github.com/akitaonrails/vimfiles">https://github.com/akitaonrails/vimfiles</a></li>
-</ul>
-
-h2. License:
-
-<pre><code>            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+```
+             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
 
  Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
@@ -33,4 +28,7 @@ h2. License:
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
-  0. You just DO WHAT THE FUCK YOU WANT TO. </code></pre>
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+```
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wolcanus/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
