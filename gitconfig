@@ -1,6 +1,6 @@
 [user]
 	name = Weverton do Couto Timoteo
-	email = me@wolcan.us
+	email = weverton@wolcan.us
 
 [github]
   username = wolcanus
@@ -23,4 +23,5 @@
   co  = checkout
   df  = diff
   lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches master
   who = shortlog -s --
