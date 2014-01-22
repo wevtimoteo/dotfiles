@@ -1,4 +1,3 @@
 #!/bin/bash
-# connect to multiples servers based in your cap stage file
-
-cat config/deploy/$1.rb | grep server | sed -E s/.*\'\(.*\)\'.*/\\1/ | xargs ssh
+# connect to multiples servers based in your cap stage file and auto scaling instances
+bundle exec cap $1 hostname | grep server | sed -E s/.*-\(.*\)\ .*/\\1/ | xargs csshX
