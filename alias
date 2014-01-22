@@ -17,7 +17,7 @@ alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias be="bundle exec"
 alias unit="be rspec -t ~@acceptance"
 alias acceptance="be rspec -t @acceptance"
-alias migrate="rake db:migrate; RAILS_ENV=test rake db:migrate"
+alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
 alias tmux="TERM=screen-256color-bce tmux"
 
 # others
