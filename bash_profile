@@ -36,7 +36,7 @@ else
 fi
 
 # fast access to projects folder
-CDPATH=".:~:~/Sites"
+CDPATH=".:~:~/Sites:~/Apps"
 
 # load AWSenv file
 export AWSENV_PROFILES_DIR="$HOME/Sites/aws-profiles"
