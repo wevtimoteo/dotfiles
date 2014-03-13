@@ -9,6 +9,12 @@
 [credential]
 	helper = osxkeychain
 
+[diff]
+      tool = ksdiff
+
+[difftool "ksdiff"]
+  cmd = ksdiff \"$LOCAL\" \"$REMOTE\"
+
 [core]
 	excludesfile = ~/.gitignore_global
   autosetuprebase = always
@@ -25,5 +31,6 @@
   lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   lgm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches master
   who = shortlog -s --
+  dft = difftool -y
 [push]
 	default = matching
