@@ -1,4 +1,4 @@
-f2iles=( bash_profile irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global gemrc awsrc tmux.conf )
+files=( bash_profile irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global gemrc awsrc tmux.conf )
 
 for filename in ${files[@]}
 do
