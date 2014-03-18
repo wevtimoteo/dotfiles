@@ -46,6 +46,10 @@ Thumbs.db
 *.swp
 *.swo
 
+# Emacs #
+#########
+[#]*[#]
+
 # Zeus #
 ############
 custom_plan.rb
