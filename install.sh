@@ -9,6 +9,13 @@ done
 ln -fs $PWD/git-edit /usr/local/bin/git-edit
 ln -fs $PWD/capssh /usr/local/bin/capssh
 ln -fs $PWD/capcssh /usr/local/bin/capcssh
-ln -fs $PWD/emacs.d/ ~/.emacs.d/
+
+dirs=( emacs.d )
+
+for dir in ${dirs[@]}
+do
+  [[ -s $HOME/.$dir ]] && rm $HOME/.$dir
+  ln -s $PWD/$dir ~/.$dir
+done
 
 source ~/.bash_profile
