@@ -3,4 +3,5 @@
 .DS_Store
 
 emacs.d/elpa/
-emacs.d/places
+emacs.d/places/
+emacs.d/backups/
