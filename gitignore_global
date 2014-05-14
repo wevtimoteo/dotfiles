@@ -45,6 +45,7 @@ Thumbs.db
 ################
 *.swp
 *.swo
+.idea
 
 # Emacs #
 #########
