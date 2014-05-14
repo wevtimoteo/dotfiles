@@ -130,6 +130,11 @@ highlight SpecialKey guifg=#4a4a59
 
 autocmd BufRead,BufNewFile *.tokamak set filetype=ruby
 
+" Build tags for the current directory
+nmap <F2> :!/usr/local/Cellar/ctags/5.8/bin/ctags -R .<CR>
+"Ctags search always lists all occurrences
+nmap <C-]> g<C-]>
+
 " unmapping arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
