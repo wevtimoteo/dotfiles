@@ -147,6 +147,9 @@ inoremap <right> <nop>
 
 nmap ; :
 
+nmap <up> <C-a>
+nmap <down> <C-x>
+
 " Dealing with TMUX unnamed clipboard
 " set clipboard^=unnamed
 
