@@ -6,6 +6,9 @@ set mouse=a
 set nu
 syntax enable
 
+"set Podfile syntax to ruby lang
+au BufRead,BufNewFile Podfile set filetype=ruby
+
 " theme
 set background=dark
 colorscheme molokai
