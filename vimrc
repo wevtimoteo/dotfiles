@@ -147,8 +147,12 @@ inoremap <right> <nop>
 
 nmap ; :
 
+" increment and decrement with arrow keys
 nmap <up> <C-a>
 nmap <down> <C-x>
+
+" mapping h1
+map h1 yypVr=o
 
 " Dealing with TMUX unnamed clipboard
 " set clipboard^=unnamed
