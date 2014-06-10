@@ -10,7 +10,7 @@
 	helper = osxkeychain
 
 [diff]
-      tool = ksdiff
+  tool = ksdiff
 
 [difftool "ksdiff"]
   cmd = ksdiff \"$LOCAL\" \"$REMOTE\"
@@ -33,7 +33,7 @@
   who = shortlog -s --
   dft = difftool -y
 [push]
-	default = matching
+	default = simple
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
