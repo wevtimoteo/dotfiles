@@ -115,6 +115,11 @@ set list!
 nmap <silent> <leader>< :10winc <<CR>
 nmap <silent> <leader>> :10winc ><CR>
 
+" Better navigation for wrapped lines
+nmap j gj
+nmap k gk
+
+
 " Enabling SnipMate
 filetype plugin on
 
