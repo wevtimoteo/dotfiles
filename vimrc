@@ -14,6 +14,9 @@ set background=dark
 colorscheme molokai
 set guifont="Monaco":h15
 
+" Show theme hi CursorLine
+set cursorline
+
 " indent
 set cinkeys=0{,0},:,0#,!^F
 set smartindent
