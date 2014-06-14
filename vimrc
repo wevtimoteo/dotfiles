@@ -166,6 +166,6 @@ nmap <down> <C-x>
 map h1 yypVr=o
 
 " Dealing with TMUX unnamed clipboard
-" set clipboard^=unnamed
+set clipboard=unnamed
 
 call pathogen#infect()
