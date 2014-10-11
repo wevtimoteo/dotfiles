@@ -1,6 +1,3 @@
 [submodule "tmux-powerline"]
 	path = tmux-powerline
 	url = git@github.com:erikw/tmux-powerline.git
-[submodule "vim/vim-gitgutter"]
-	path = vim/vim-gitgutter
-	url = git@github.com:airblade/vim-gitgutter.git
