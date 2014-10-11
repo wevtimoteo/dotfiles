@@ -24,8 +24,8 @@ else
   export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \n\[\033[01;34m\]\$\[\033[00m\] '
 fi
 
-unset RUBY_FREE_MIN
-unset RUBY_HEAP_MIN_SLOTS
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # load AWSen
 export AWSENV_PROFILES_DIR="$HOME/Sites/aws-profiles"
