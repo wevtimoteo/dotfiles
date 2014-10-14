@@ -49,6 +49,11 @@ set guioptions+=TLlRrb
 set guioptions-=TLlRrb
 set guioptions-=m
 
+" Using this mapping, you can press Alt-/
+" in order to automatically fill in a
+" range" for your search
+vnoremap <M-/> <Esc>/\%V
+
 " ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
