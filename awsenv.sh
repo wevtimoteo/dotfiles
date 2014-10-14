@@ -51,16 +51,16 @@ export AWSENV_PROFILE=${current_profile##*/}
 ### Routines
 ###
 
-function awsenv-ls() {
+function awsenv_ls() {
 
     echo "AWSEnv: Profiles"
     echo "----------------"
-    builtin cd "${profiles_dir}" && find * -type d -prune
+    builtin cd "${profiles_dir}" && find * -type d -o -type l -prune | sort
     echo
 
 }
 
-function awsenv-set() {
+function awsenv_set() {
 
     profile="$1"
     if [ ! -d "${profiles_dir}/${profile}" ]
@@ -88,14 +88,14 @@ function awsenv-set() {
 
 }
 
-function awsenv-generate() {
+function awsenv_generate() {
 
     profile="$1"
 
     if [ -z "${profile}" ]
     then
         echo
-        echo "Usage: awsenv-generate profile"
+        echo "Usage: awsenv_generate profile"
         echo
         return
     fi
