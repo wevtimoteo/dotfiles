@@ -32,7 +32,7 @@ export LANG=en_US.UTF-8
 export AWSENV_PROFILES_DIR="$HOME/Sites/aws-profiles"
 . $HOME/Sites/dotfiles/awsenv.sh
 . $HOME/.awsrc
-awsenv-set dev
+awsenv_set dev
 
 . $HOME/.git-completion.sh
 
