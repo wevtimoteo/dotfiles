@@ -130,6 +130,8 @@ nmap <silent> <leader>> :10winc ><CR>
 nmap j gj
 nmap k gk
 
+" Abbreviations
+ab pry require 'pry';binding.pry
 
 " Enabling SnipMate
 filetype plugin on
