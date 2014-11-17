@@ -12,8 +12,6 @@ alias llg='launchctl list | grep'
 alias gitrb='git fetch; git rebase origin/`git branch | grep \* | sed "s/^\* //g"`'
 
 # DEV
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias be="bundle exec"
 alias unit="be rspec -t ~@acceptance"
 alias acceptance="be rspec -t @acceptance"
