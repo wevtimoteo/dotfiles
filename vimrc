@@ -130,6 +130,8 @@ nmap <silent> <leader>> :10winc ><CR>
 nmap j gj
 nmap k gk
 
+nmap [ <leader>
+
 " Abbreviations
 ab pry require 'pry';binding.pry
 
