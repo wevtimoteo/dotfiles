@@ -7,6 +7,7 @@ alias ...='cd ..; ll'
 alias peg='ps -ef | grep -i'
 alias psg='ps aux | grep '
 alias llg='launchctl list | grep'
+alias ack='ack-grep'
 
 # GIT
 alias gitrb='git fetch; git rebase origin/`git branch | grep \* | sed "s/^\* //g"`'
