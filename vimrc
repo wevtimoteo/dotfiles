@@ -133,7 +133,7 @@ nmap k gk
 nmap [ <leader>
 
 " Abbreviations
-ab pry require 'pry';binding.pry
+ab pryb require 'pry';binding.pry
 
 " Enabling SnipMate
 filetype plugin on
