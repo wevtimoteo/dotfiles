@@ -177,4 +177,7 @@ nmap <down> <C-x>
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
 
+" Vim-notes
+let g:notes_directories = ['~/Dropbox/Notes']
+
 call pathogen#infect()
