@@ -145,7 +145,7 @@ if &t_Co > 255
    else
       "hi Normal       ctermfg=252 ctermbg=233
       hi Normal       ctermfg=252 ctermbg=none
-      hi CursorLine               ctermbg=234   cterm=none
+      hi CursorLine               ctermbg=233   cterm=none
       hi CursorLineNr ctermfg=208               cterm=none
    endif
    hi Boolean         ctermfg=135
@@ -196,7 +196,7 @@ if &t_Co > 255
    hi PreProc         ctermfg=118
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=bold
-   hi Search          ctermfg=253   ctermbg=66  cterm=NONE
+   hi Search          ctermfg=9   ctermbg=231  cterm=NONE
 
    " marks column
    hi SignColumn      ctermfg=118 ctermbg=235
