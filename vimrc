@@ -8,10 +8,11 @@ syntax enable
 
 "set Podfile syntax to ruby lang
 au BufRead,BufNewFile Podfile set filetype=ruby
+au BufRead,BufNewFile *.hamlc set filetype=haml
 
 " theme
 set background=dark
-colorscheme molokai
+colorscheme molokai_transparent
 set guifont="Monaco":h15
 
 " Show theme hi CursorLine
