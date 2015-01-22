@@ -1,4 +1,4 @@
-"wolcanus .vimrc
+"wevtimoteo .vimrc
 
 "general options
 set encoding=utf-8
