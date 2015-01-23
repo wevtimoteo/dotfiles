@@ -1,4 +1,4 @@
-"wolcanus .vimrc
+"wevtimoteo .vimrc
 
 "general options
 set encoding=utf-8
@@ -174,5 +174,8 @@ nmap <down> <C-x>
 
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
+
+" Cyclomatic Complexity Ruby
+silent exe "g:flog_enable"
 
 call pathogen#infect()
