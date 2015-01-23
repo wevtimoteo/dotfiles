@@ -175,4 +175,7 @@ nmap <down> <C-x>
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
 
+" Cyclomatic Complexity Ruby
+silent exe "g:flog_enable"
+
 call pathogen#infect()
