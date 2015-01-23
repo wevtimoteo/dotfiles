@@ -180,5 +180,8 @@ set clipboard=unnamed
 
 " Vim-notes
 let g:notes_directories = ['~/Dropbox/Notes']
+"
+" Cyclomatic Complexity Ruby
+silent exe "g:flog_enable"
 
 call pathogen#infect()
