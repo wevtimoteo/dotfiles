@@ -182,6 +182,7 @@ set clipboard=unnamed
 let g:notes_directories = ['~/Dropbox/Notes']
 "
 " Cyclomatic Complexity Ruby
-silent exe "g:flog_enable"
+let g:flog_enable=0
+nmap <F4> :call ToggleFlog()<CR>
 
 call pathogen#infect()
