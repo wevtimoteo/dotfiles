@@ -84,7 +84,7 @@ nmap <S-Tab> gT
 
 "NERDtree
 "map for Exp
-nmap <leader>e :Exp<cr>
+nmap <leader>e :Exp<CR>
 
 " Default settings
 set ts=2 sts=2 sw=2 expandtab
