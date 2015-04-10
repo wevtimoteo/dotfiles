@@ -1,5 +1,7 @@
 . ~/.alias
 
+export WINEARCH=win32
+
 # rbenv
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -20,7 +22,7 @@ if [ -f $BASH_COMPLETION_DIR/git ] && [ -f `which rbenv` ]; then
 elif [ -f $BASH_COMPLETION_DIR/git ]; then
   export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\]  '
 elif [ `which rbenv` ]; then
-  export PS1=" \[\033[01;32m\]\\w\[\033[03;35m\] \$(parse_git_branch) \[\033[01;34m\]\$\[\033[00m\] "
+  export PS1="\[\033[01;31m\]➜ \[\033[01;32m\]\\W \[\033[01;35m\]\$(parse_git_branch) \[\033[01;34m\]\$\[\033[00m\] "
 else
   export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \n\[\033[01;34m\]\$\[\033[00m\] '
 fi

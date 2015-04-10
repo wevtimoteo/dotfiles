@@ -10,7 +10,7 @@
 	helper = osxkeychain
 
 [diff]
-  tool = ksdiff
+	tool = vimdiff
 
 [difftool "ksdiff"]
   cmd = ksdiff \"$LOCAL\" \"$REMOTE\"
@@ -33,9 +33,12 @@
   lgm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches
   who = shortlog -s --
   dft = difftool -y
+	d = difftool
 [push]
 	default = simple
 [filter "media"]
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[difftool]
+	prompt = false
