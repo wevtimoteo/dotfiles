@@ -21,6 +21,7 @@
 
 ; Show line numbers
 (global-linum-mode t)
+(setq linum-format "%d ")
 
 ; Trim whitespaces on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -30,3 +31,13 @@
 
 ; Disable autosaving
 (setq auto-save-default nil)
+
+; Always follow symlink
+(setq vc-follow-symlinks t)
+
+; Disable autoindent
+(add-hook 'after-change-major-mode-hook (lambda() (electric-indent-mode -1)))
+
+; Highlight current line
+(global-hl-line-mode)
+(set-face-background hl-line-face "color-233")
