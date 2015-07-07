@@ -19,5 +19,7 @@ alias acceptance="be rspec -t @acceptance"
 alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
 alias tmux="TERM=screen-256color-bce tmux"
 
+alias emacs="emacs --no-window-system"
+
 # others
 alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'

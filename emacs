@@ -17,3 +17,6 @@ vc-follow-symlinks t
 (setq auto-mode-alist
       (append '((".*\\.emacs\\'" . lisp-mode))
               auto-mode-alist))
+
+
+(load "~/.emacs.d")
