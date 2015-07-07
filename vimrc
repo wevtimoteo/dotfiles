@@ -6,8 +6,8 @@ set mouse=a
 set nu
 syntax enable
 
-"set Podfile syntax to ruby lang
 au BufRead,BufNewFile Podfile set filetype=ruby
+au BufRead,BufNewFile Berksfile set filetype=ruby
 au BufRead,BufNewFile *.hamlc set filetype=haml
 
 " theme
@@ -108,7 +108,10 @@ set nobackup
 set noswapfile
 
 "configs for powerline
-set t_Co=256
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 set nocompatible
 set laststatus=2
 
@@ -116,6 +119,7 @@ let g:airline_theme             = 'powerlineish'
 let g:airline_enable_branch     = 1
 let g:airline_enable_syntastic  = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -193,5 +197,21 @@ inoremap <D-j> <Esc>:m .+1<CR>==gi
 inoremap <D-k> <Esc>:m .-2<CR>==gi
 vnoremap <D-j> :m '>+1<CR>gv=gv
 vnoremap <D-k> :m '<-2<CR>gv=gv
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" flagship
+set laststatus=2
+set showtabline=2
+set guioptions-=e
+let g:tablabel = "%N%{flagship#tabmodified()} %{flagship#tabcwds('shorten',',')}"
 
 call pathogen#infect()
