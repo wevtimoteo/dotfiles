@@ -27,3 +27,6 @@
 
 ; List directories first
 (setq dired-listing-switches "-lXGh --group-directories-first")
+
+; Disable autosaving
+(setq auto-save-default nil)
