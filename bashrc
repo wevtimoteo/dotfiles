@@ -1,4 +1,4 @@
-. ~/.alias
+source ~/.alias
 
 export WINEARCH=win32
 
@@ -149,3 +149,5 @@ export NVM_DIR="/home/weverton/.nvm"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+source ~/.imports
