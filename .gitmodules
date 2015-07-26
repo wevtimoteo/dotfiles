@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule "vim/bundle/wildfire.vim"]
+	path = vim/bundle/wildfire.vim
+	url = git@github.com:gcmt/wildfire.vim.git
