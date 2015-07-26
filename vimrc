@@ -115,8 +115,8 @@ set nocompatible
 set laststatus=2
 
 let g:airline_theme             = 'powerlineish'
-let g:airline_enable_branch     = 1
-let g:airline_enable_syntastic  = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -134,7 +134,7 @@ nmap j gj
 nmap k gk
 
 " Abbreviations
-ab pry require 'pry';binding.pry
+ab pryb require 'pry';binding.pry
 
 " Enabling SnipMate
 filetype plugin on
@@ -177,8 +177,5 @@ nmap <down> <C-x>
 
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
-
-" Cyclomatic Complexity Ruby
-silent exe "g:flog_enable"
 
 call pathogen#infect()
