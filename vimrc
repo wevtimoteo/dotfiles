@@ -60,6 +60,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+" misc
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
