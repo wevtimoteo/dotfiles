@@ -116,6 +116,7 @@ set nocompatible
 set laststatus=2
 
 let g:airline_theme             = 'powerlineish'
+"let g:airline_theme             = 'papercolor'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
@@ -124,7 +125,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-set list!
+"set list!
 
 " Increase and decrease split size 10 in 10
 nmap <silent> <leader>< :10winc <<CR>
