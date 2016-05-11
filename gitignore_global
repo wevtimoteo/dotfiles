@@ -78,3 +78,6 @@ DerivedData
 # CocoaPods
 Pods
 tags
+
+# Tmux Plugins
+tmux/plugins/tmux-*
