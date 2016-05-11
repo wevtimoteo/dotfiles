@@ -8,9 +8,9 @@ do
   ln -s $PWD/$filename ~/.$filename
 done
 
-ln -fs $PWD/git-edit /usr/local/bin/git-edit
-ln -fs $PWD/capssh /usr/local/bin/capssh
-ln -fs $PWD/capcssh /usr/local/bin/capcssh
+sudo ln -fs $PWD/git-edit /usr/local/bin/git-edit
+sudo ln -fs $PWD/capssh /usr/local/bin/capssh
+sudo ln -fs $PWD/capcssh /usr/local/bin/capcssh
 
 dirs=( emacs.d )
 
