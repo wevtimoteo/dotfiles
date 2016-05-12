@@ -1,4 +1,3 @@
-
 .netrwhist
 .DS_Store
 
@@ -7,3 +6,8 @@ emacs.d/places
 emacs.d/backups/
 emacs.d/.smex-items
 emacs.d/auto-save-list
+
+# Tmux Plugins
+tmux/plugins/tmux-*
+
+vim/plugged
