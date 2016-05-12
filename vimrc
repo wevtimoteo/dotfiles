@@ -17,6 +17,7 @@ Plug 'gcmt/wildfire.vim'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-classpath', { 'for': 'clojure' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 " Multiple file types
