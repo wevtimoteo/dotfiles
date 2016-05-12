@@ -36,6 +36,7 @@ syntax enable
 au BufRead,BufNewFile Podfile set filetype=ruby
 au BufRead,BufNewFile Berksfile set filetype=ruby
 au BufRead,BufNewFile *.hamlc set filetype=haml
+au BufRead,BufNewFile *.ejs set filetype=html
 
 " theme
 set background=dark
