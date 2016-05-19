@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'gcmt/wildfire.vim'
+Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -32,6 +33,7 @@ set encoding=utf-8
 set mouse=a
 set nu
 syntax enable
+syntax on
 
 au BufRead,BufNewFile Podfile set filetype=ruby
 au BufRead,BufNewFile Berksfile set filetype=ruby
@@ -41,6 +43,7 @@ au BufRead,BufNewFile *.ejs set filetype=html
 " theme
 set background=dark
 colorscheme molokai_transparent
+colo dracula
 set guifont="Monaco":h15
 
 " Show theme hi CursorLine
