@@ -15,6 +15,7 @@ Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'gcmt/wildfire.vim'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plug 'wfleming/vim-codeclimate'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -234,6 +235,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Codeclimate
+nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
+nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
+nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 
 " flagship
 set laststatus=2
