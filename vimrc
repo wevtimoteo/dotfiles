@@ -15,6 +15,7 @@ Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'gcmt/wildfire.vim'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plug 'wakatime/vim-wakatime'
 Plug 'wfleming/vim-codeclimate'
 
 " Loaded when lang file is opened
