@@ -79,3 +79,6 @@ DerivedData
 # CocoaPods
 Pods
 tags
+
+# Ack
+.ackrc
