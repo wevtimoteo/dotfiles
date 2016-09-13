@@ -152,3 +152,4 @@ export NVM_DIR="/home/weverton/.nvm"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 source ~/.imports
+source ~/.custom_functions
