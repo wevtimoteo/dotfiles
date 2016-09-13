@@ -237,6 +237,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Transforms old Ruby hash syntax to new one
+map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
+
 " Codeclimate
 nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
 nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
