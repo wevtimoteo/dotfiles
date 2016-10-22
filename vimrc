@@ -17,6 +17,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plug 'wakatime/vim-wakatime'
 Plug 'wfleming/vim-codeclimate'
+Plug 'posva/vim-vue'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
