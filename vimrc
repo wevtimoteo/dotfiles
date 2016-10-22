@@ -246,6 +246,11 @@ nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
 nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
 nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 
+" CtrlP ignore
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'node_modules$',
+  \ }
+
 " flagship
 set laststatus=2
 set showtabline=2
