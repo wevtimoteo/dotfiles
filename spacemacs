@@ -276,3 +276,34 @@ you should place your code here."
     (move-beginning-of-line nil)))
 
 (global-set-key (kbd "C-a") 'custom/smart-move-beginning-of-line)
+
+(defmacro custom/with-region-info (&rest body)
+  "Evaluate BODY provinding BEG, END and NUM-LINES bindings, which represents
+regions's beginning, ending and extension in lines."
+  `(save-excursion
+     (let (beg end num-lines)
+       (if (and mark-active (> (point) (mark)))
+           (exchange-point-and-mark))
+       (setq beg (line-beginning-position))
+       (if mark-active
+           (exchange-point-and-mark))
+       (setq end (line-end-position))
+       (setq num-lines (max 1 (count-lines beg end)))
+       ,@body)))
+
+(defun custom/duplicate-current-line-or-region (arg)
+  "Duplicates the current line or those covered by region ARG times."
+  (interactive "p")
+  (custom/with-region-info
+   (let ((exit-point end)
+         (region (buffer-substring-no-properties beg end)))
+     (dotimes (_ arg)
+       (goto-char end)
+       (newline)
+       (insert region)
+       (setq end (point)))
+     (goto-char exit-point)
+     (next-line)
+     (back-to-indentation))))
+
+(global-set-key (kbd "C-c d") 'custom/duplicate-current-line-or-region)
