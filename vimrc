@@ -14,7 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'gcmt/wildfire.vim'
-Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'wfleming/vim-codeclimate'
 Plug 'posva/vim-vue'
 
@@ -44,7 +44,7 @@ au BufRead,BufNewFile *.ejs set filetype=html
 
 " theme
 set background=dark
-colorscheme molokai_transparent
+colorscheme dracula
 colo dracula
 set guifont="Monaco":h15
 
