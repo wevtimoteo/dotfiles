@@ -17,6 +17,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'wfleming/vim-codeclimate'
 Plug 'posva/vim-vue'
+Plug 'bronson/vim-trailing-whitespace'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
