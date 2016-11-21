@@ -32,6 +32,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 . $HOME/.git-completion.sh
+. $HOME/.hub.bash_completion.sh
 
 # fast access to projects folder
 CDPATH=".:~:~/Sites:~/Apps"
