@@ -8,6 +8,7 @@ emacs.d/.smex-items
 emacs.d/auto-save-list
 
 # Tmux Plugins
-tmux/plugins/tmux-*
+tmux/plugins/*
+tmux/resurrect
 
 vim/plugged
