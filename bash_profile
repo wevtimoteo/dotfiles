@@ -40,6 +40,7 @@ export AWSENV_PROFILES_DIR="$HOME/Sites/aws-profiles"
 awsenv_set dev
 
 . $HOME/.git-completion.sh
+. $HOME/.hub.bash_completion.sh
 
 # fast access to projects folder
 CDPATH=".:~:~/Sites:~/Apps"
