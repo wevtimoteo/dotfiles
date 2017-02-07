@@ -1,10 +1,10 @@
 [user]
-	name = Weverton do Couto Timoteo
-	email = weverton.ct@gmail.com
+	name = Henrik Baltazar
+	email = henrik.g.baltazar@gmail.com
 
 [github]
-  username = wevtimoteo
-	user = wevtimoteo
+  username = henrikbaltazar
+	user = henrikbaltazar
 
 [credential]
 	helper = osxkeychain
