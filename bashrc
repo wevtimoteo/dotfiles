@@ -2,15 +2,7 @@ source ~/.alias
 
 export WINEARCH=win32
 
-# rbenv
-export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="~/bin:$PATH"
-
 export EDITOR="vim"
-
-eval "$(rbenv init -)"
 
 # prompt with git && rbenv
 parse_git_branch() {
