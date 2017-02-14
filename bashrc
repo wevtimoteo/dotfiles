@@ -23,7 +23,7 @@ export LANG=en_US.UTF-8
 . $HOME/.hub.bash_completion.sh
 
 # fast access to projects folder
-CDPATH=".:~:~/Sites:~/Apps"
+CDPATH=".:~:~/Projetos"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -141,4 +141,9 @@ export NVM_DIR="/home/weverton/.nvm"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 source ~/.imports
-source ~/.custom_functions
+
+### Start tmux with the terminal
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
+
