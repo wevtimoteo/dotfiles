@@ -1,8 +1,13 @@
+# Vim
+vim/plugged
 
 .netrwhist
-.DS_Store
-
+# Emacs
 emacs.d/elpa/
 emacs.d/places
 emacs.d/backups/
 emacs.d/.smex-items
+
+# Tmux Plugins
+tmux/plugins/*
+tmux/resurrect
