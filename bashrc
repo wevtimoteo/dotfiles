@@ -23,7 +23,7 @@ export LANG=en_US.UTF-8
 . $HOME/.hub.bash_completion.sh
 
 # fast access to projects folder
-CDPATH=".:~:~/Sites:~/Apps"
+CDPATH=".:~:~/Projetos"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -134,7 +134,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NVM_DIR="/home/weverton/.nvm"
+export NVM_DIR="/home/henrik/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ### Added by the Heroku Toolbelt
