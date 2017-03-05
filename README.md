@@ -3,7 +3,7 @@
 ```
 git clone git://github.com/wolcanus/dotfiles.git
 cd dotfiles
-bash install.sh
+sh install.sh
 ```
 
 ## References:
