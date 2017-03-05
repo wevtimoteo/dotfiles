@@ -4,7 +4,7 @@ export WINEARCH=win32
 
 export EDITOR="vim"
 
-# prompt with git && rbenv
+# prompt with git
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -23,7 +23,7 @@ export LANG=en_US.UTF-8
 . $HOME/.hub.bash_completion.sh
 
 # fast access to projects folder
-CDPATH=".:~:~/Projetos"
+CDPATH=".:~:~/Sites:~/Apps"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -134,10 +134,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NVM_DIR="/home/henrik/.nvm"
+export NVM_DIR="/home/weverton/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-source ~/.personal_alias
