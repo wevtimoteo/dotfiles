@@ -1,4 +1,5 @@
 source ~/.alias
+source ~/.personal_alias
 
 export WINEARCH=win32
 
