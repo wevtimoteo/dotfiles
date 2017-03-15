@@ -1,7 +1,10 @@
-# Installation:
+Dotfiles for MacOSX
+=====================
+
+## Setup
 
 ```
-git clone git://github.com/wolcanus/dotfiles.git
+git clone git://github.com/wevtimoteo/dotfiles.git
 cd dotfiles
 sh install.sh
 ```
