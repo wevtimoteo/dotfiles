@@ -4,39 +4,3 @@
 [submodule "tmux/plugins/tpm"]
   path = tmux/plugins/tpm
   url = git@github.com:tmux-plugins/tpm.git
-[submodule "vim/bundle/vim-gitgutter"]
-  path = vim/bundle/vim-gitgutter
-  url = git@github.com:airblade/vim-gitgutter.git
-[submodule "vim/bundle/vim-surround"]
-  path = vim/bundle/vim-surround
-  url = git@github.com:tpope/vim-surround.git
-[submodule "vim/bundle/syntastic"]
-  path = vim/bundle/syntastic
-  url = git@github.com:scrooloose/syntastic.git
-[submodule "vim/bundle/tabular"]
-  path = vim/bundle/tabular
-  url = git@github.com:godlygeek/tabular.git
-[submodule "vim/bundle/vim-rails"]
-  path = vim/bundle/vim-rails
-  url = git@github.com:tpope/vim-rails.git
-[submodule "vim/bundle/vim-ruby"]
-  path = vim/bundle/vim-ruby
-  url = git@github.com:vim-ruby/vim-ruby.git
-[submodule "vim/bundle/wildfire.vim"]
-  path = vim/bundle/wildfire.vim
-  url = git@github.com:gcmt/wildfire.vim.git
-[submodule "vim/bundle/vim-airline"]
-  path = vim/bundle/vim-airline
-  url = git@github.com:bling/vim-airline.git
-[submodule "vim/bundle/vim-markdown"]
-  path = vim/bundle/vim-markdown
-  url = git@github.com:tpope/vim-markdown.git
-[submodule "vim/bundle/ctrlp.vim"]
-  path = vim/bundle/ctrlp.vim
-  url = git@github.com:kien/ctrlp.vim.git
-[submodule "vim/bundle/jshint.vim"]
-  path = vim/bundle/jshint.vim
-  url = git@github.com:wookiehangover/jshint.vim.git
-[submodule "vim/bundle/ack.vim"]
-  path = vim/bundle/ack.vim
-  url = git@github.com:mileszs/ack.vim.git

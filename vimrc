@@ -1,5 +1,35 @@
 "wevtimoteo .vimrc
 
+"Plugins -- vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'kchmck/vim-coffee-script'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'walm/jshint.vim'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'gcmt/wildfire.vim'
+Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'wfleming/vim-codeclimate'
+Plug 'posva/vim-vue'
+Plug 'bronson/vim-trailing-whitespace'
+
+" Loaded when lang file is opened
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-classpath', { 'for': 'clojure' }
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+
+" Multiple file types
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
+
+" Add plugins to &runtimepath
+call plug#end()
+
 "general options
 set encoding=utf-8
 set mouse=a
@@ -11,7 +41,8 @@ au BufRead,BufNewFile Podfile set filetype=ruby
 
 " theme
 set background=dark
-colorscheme molokai
+colorscheme dracula
+colo dracula
 set guifont="Monaco":h15
 
 " Show theme hi CursorLine
@@ -114,7 +145,6 @@ set t_Co=256
 set nocompatible
 set laststatus=2
 
-let g:airline_theme             = 'powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
@@ -177,5 +207,3 @@ nmap <down> <C-x>
 
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
-
-call pathogen#infect()
