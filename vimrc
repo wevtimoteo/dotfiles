@@ -18,6 +18,7 @@ Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'wfleming/vim-codeclimate'
 Plug 'posva/vim-vue'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'hwartig/vim-seeing-is-believing'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -207,3 +208,18 @@ nmap <down> <C-x>
 
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
+
+" Enable seeing-is-believing mappings only for Ruby
+augroup seeingIsBelievingSettings
+  autocmd!
+
+  autocmd FileType ruby nmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby xmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
+
+  autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+
+  autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
+  autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing-is-believing-run)
+augroup END
