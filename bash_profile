@@ -45,3 +45,4 @@ awsenv_set dev
 # fast access to projects folder
 CDPATH=".:~:~/Sites:~/Apps"
 
+source ~/.exports
