@@ -22,4 +22,5 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias emacs="emacs --no-window-system"
 
 # others
-alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
+alias ip='curl -s http://meuip.net.br/ | grep "Meu ip - Qual &eacute; o Meu IP?" | grep -o ''[Z0-9^.]'' | xargs'
+alias tmuxkill="tmux kill-session -t"
