@@ -22,5 +22,6 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias emacs="emacs --no-window-system"
 
 # others
-alias ip="curl -s http://meuip.net.br/ | grep 'Meu ip - Qual &eacute; o Meu IP?' | grep -o '[Z0-9^.]' | xargs"
+alias extip="curl -s http://meuip.net.br/ | grep 'Meu ip - Qual &eacute; o Meu IP?' | grep -o '[Z0-9^.]' | xargs"
+alias intip="ip route get 8.8.8.8 | awk '{print $ NF; exit}'"
 alias tmuxkill="tmux kill-session -t"
