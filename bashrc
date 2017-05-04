@@ -1,16 +1,9 @@
 source ~/.alias
+source ~/.personal_alias
 
 export WINEARCH=win32
 
-# rbenv
-export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="~/bin:$PATH"
-
 export EDITOR="vim"
-
-eval "$(rbenv init -)"
 
 # prompt with git && rbenv
 parse_git_branch() {
@@ -18,15 +11,7 @@ parse_git_branch() {
 }
 
 # set ps1
-if [ -f $BASH_COMPLETION_DIR/git ] && [ -f `which rbenv` ]; then
-  export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\] '
-elif [ -f $BASH_COMPLETION_DIR/git ]; then
-  export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\]  '
-elif [ `which rbenv` ]; then
-  export PS1="\[\033[38;5;66m\]➜ \[\033[38;5;62m\]\\W \[\033[38;5;244m\]\$(parse_git_branch) \[\033[01;34m\]\$\[\033[00m\] "
-else
-  export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \n\[\033[01;34m\]\$\[\033[00m\] '
-fi
+export PS1="\[\033[38;5;66m\]➜ \[\033[38;5;62m\]\\W \[\033[38;5;244m\]\$(parse_git_branch) \[\033[01;34m\]\$\[\033[00m\] "
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -35,7 +20,7 @@ export LANG=en_US.UTF-8
 . $HOME/.hub.bash_completion.sh
 
 # fast access to projects folder
-CDPATH=".:~:~/Sites:~/Apps"
+CDPATH=".:~:~/Projetos"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -153,4 +138,9 @@ export NVM_DIR="/home/weverton/.nvm"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 source ~/.imports
-source ~/.custom_functions
+
+### Start tmux with the terminal
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
+
