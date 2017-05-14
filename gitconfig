@@ -6,9 +6,6 @@
   username = wevtimoteo
 	user = wevtimoteo
 
-[credential]
-	helper = osxkeychain
-
 [diff]
 	tool = vimdiff
 
