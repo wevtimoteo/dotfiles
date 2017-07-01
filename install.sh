@@ -11,5 +11,6 @@ done
 sudo ln -fs $PWD/git-edit /usr/local/bin/git-edit
 sudo ln -fs $PWD/capssh /usr/local/bin/capssh
 sudo ln -fs $PWD/capcssh /usr/local/bin/capcssh
+ln -s ~/.vim ~/.config/nvim
 
 source ~/.bashrc
