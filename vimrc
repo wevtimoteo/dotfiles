@@ -153,7 +153,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-set list!
+"set list!
 
 " Increase and decrease split size 10 in 10
 nmap <silent> <leader>< :10winc <<CR>
