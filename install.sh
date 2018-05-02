@@ -9,6 +9,7 @@ done
 ln -fs $PWD/git-edit /usr/local/bin/git-edit
 ln -fs $PWD/capssh /usr/local/bin/capssh
 ln -fs $PWD/capcssh /usr/local/bin/capcssh
+ln -s ~/.vim ~/.config/nvim
 
 dirs=( emacs.d )
 
