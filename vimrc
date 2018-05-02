@@ -18,6 +18,11 @@ Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'wfleming/vim-codeclimate'
 Plug 'posva/vim-vue'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'fatih/vim-go'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'keith/swift.vim'
+Plug 'rhysd/vim-crystal'
+Plug 'idris-hackers/idris-vim'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
