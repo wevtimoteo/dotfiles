@@ -4,13 +4,21 @@
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+# golang
+export PATH="$HOME/go/bin:$PATH"
+export GOPATH=$HOME/go
+
 export EDITOR="vim"
 
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/wolcanus/.boot2docker/certs/boot2docker-vm
+unset DOCKER_HOST
+export DOCKER_CERT_PATH="$HOME/.docker/machine/certs/"
 export DOCKER_TLS_VERIFY=1
 
+#eval "$(docker-machine env default)"
+
 eval "$(rbenv init -)"
+
+eval "$(stack --bash-completion-script stack)"
 
 export PATH="/usr/local/heroku/bin:$PATH"
 
