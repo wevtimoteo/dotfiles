@@ -105,5 +105,22 @@ cabal.project.local~
 .HTF/
 .ghc.environment.*
 
+# Clojure
+/checkouts
+.lein-deps-sum
+.lein-failures
+.lein-plugins
+.classpath
+.settings
+.project
+.lein-repl-history
+.nrepl-port
+
+# Python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Ack
 .ackrc
