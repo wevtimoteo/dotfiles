@@ -143,7 +143,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "shades-of-purple-hyper",
+    "hyper-dracula",
     "hyper-hide-title",
     "gitrocket",
     "space-pull",
