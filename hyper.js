@@ -46,7 +46,7 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: '',
+    css: '.term_fit { padding: 2px !important }',
 
     // custom CSS to embed in the terminal window
     termCSS: '',
