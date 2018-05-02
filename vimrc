@@ -208,3 +208,6 @@ nmap <down> <C-x>
 
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
+
+" Transforms old Ruby hash syntax to new one
+map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
