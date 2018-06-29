@@ -8,6 +8,11 @@ module.exports = {
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
 
+    modifierKeys: {
+      altIsMeta: true,
+      option: "meta"
+    },
+
     // default font size in pixels for all tabs
     fontSize: 15,
 
