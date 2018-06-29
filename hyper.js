@@ -14,7 +14,7 @@ module.exports = {
     },
 
     // default font size in pixels for all tabs
-    fontSize: 15,
+    fontSize: 14,
 
     // font family with optional fallbacks
     fontFamily: 'Roboto Mono Light for Powerline, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
