@@ -1,5 +1,10 @@
-Dotfiles for MacOSX
-=====================
+Dotfiles for MacOS
+==================
+
+If you're looking for Linux version:
+
+* [Ubuntu](https://github.com/wevtimoteo/dotfiles/tree/ubuntu)
+* [Fedora](https://github.com/wevtimoteo/dotfiles/tree/fedora)
 
 ## Setup
 
@@ -33,7 +38,3 @@ sh install.sh
 
   0. You just DO WHAT THE FUCK YOU WANT TO.
 ```
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wolcanus/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
