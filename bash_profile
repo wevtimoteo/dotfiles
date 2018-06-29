@@ -1,7 +1,7 @@
 . ~/.alias
 
 # rbenv
-export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # golang
@@ -21,6 +21,8 @@ eval "$(rbenv init -)"
 eval "$(stack --bash-completion-script stack)"
 
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export HISTCONTROL=ignoreboth
 
 # prompt with git && rbenv
 parse_git_branch() {
