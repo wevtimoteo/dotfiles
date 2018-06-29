@@ -150,12 +150,8 @@ module.exports = {
   plugins: [
     "shades-of-purple-hyper",
     "hyper-hide-title",
-    "gitrocket",
-    "space-pull",
     "hyperminimal",
-    "hyperline",
-    "hyperborder",
-    "hyper-spotify",
+    "hyperborder"
   ],
 
   // in development, you can create a directory under
