@@ -145,8 +145,6 @@ module.exports = {
   plugins: [
     "hyper-dracula",
     "hyper-hide-title",
-    "gitrocket",
-    "space-pull",
     "hyperminimal",
     "hyperline",
     "hyperborder",
