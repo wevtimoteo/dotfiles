@@ -23,6 +23,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'keith/swift.vim'
 Plug 'rhysd/vim-crystal'
 Plug 'idris-hackers/idris-vim'
+Plug 'pangloss/vim-javascript'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
