@@ -1,6 +1,6 @@
-"wolcanus .vimrc
+" wevtimoteo .vimrc
 
-"Plugins -- vim-plug
+" Plugins -- Using vim-plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
