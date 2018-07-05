@@ -24,6 +24,8 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-classpath', { 'for': 'clojure' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'benmills/vimux', { 'for': 'ruby' }
+Plug 'jgdavey/vim-turbux', { 'for': 'ruby' }
 
 " Multiple file types
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
