@@ -14,8 +14,9 @@ alias git-last-commit-for-all-branches='for branch in `git branch -r | grep -v H
 
 # DEV
 alias be="bundle exec"
-alias unit="be rspec -t ~@acceptance"
-alias acceptance="be rspec -t @acceptance"
+alias rspec='be rspec'
+alias unit="rspec -t ~@acceptance"
+alias acceptance="rspec -t @acceptance"
 alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="nvim"
