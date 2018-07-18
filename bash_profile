@@ -8,7 +8,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export GOPATH=$HOME/go
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 unset DOCKER_HOST
 export DOCKER_CERT_PATH="$HOME/.docker/machine/certs/"
