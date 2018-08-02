@@ -128,16 +128,16 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    //hyperline: {
-    //  plugins: [
-    //    "ip",
-    //    "cpu",
-    //    "spotify",
-    //    "memory",
-    //    "battery",
-    //    "network"
-    //  ]
-    //},
+    hyperline: {
+      plugins: [
+        "ip",
+        "cpu",
+        "memory",
+        "battery",
+        "network",
+        "spotify",
+      ]
+    },
     //
   },
 
@@ -151,7 +151,8 @@ module.exports = {
     "shades-of-purple-hyper",
     "hyper-hide-title",
     "hyperminimal",
-    "hyperborder"
+    "hyperborder",
+    "hyperline",
   ],
 
   // in development, you can create a directory under
