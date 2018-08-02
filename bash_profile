@@ -10,11 +10,8 @@ export GOPATH=$HOME/go
 
 export EDITOR="nvim"
 
-unset DOCKER_HOST
-export DOCKER_CERT_PATH="$HOME/.docker/machine/certs/"
-export DOCKER_TLS_VERIFY=1
-
-#eval "$(docker-machine env default)"
+unset DOCKER_CERT_PATH
+unset DOCKER_TLS_VERIFY
 
 eval "$(rbenv init -)"
 
