@@ -20,6 +20,7 @@ Plug 'posva/vim-vue'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'fatih/vim-go'
 Plug 'othree/html5.vim'
+Plug 'ekalinin/Dockerfile.vim'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
