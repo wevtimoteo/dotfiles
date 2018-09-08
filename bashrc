@@ -154,3 +154,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 source ~/.exports
 source ~/.custom_functions
+
+# ASDF tool
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
