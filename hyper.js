@@ -146,9 +146,7 @@ module.exports = {
     "hyper-dracula",
     "hyper-hide-title",
     "hyperminimal",
-    "hyperline",
     "hyperborder",
-    "hyper-spotify",
   ],
 
   // in development, you can create a directory under
