@@ -158,3 +158,5 @@ source ~/.custom_functions
 # ASDF tool
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
+
+export ERL_AFLAGS="-kernel shell_history enabled"
