@@ -2,7 +2,7 @@ source ~/.alias
 
 export WINEARCH=win32
 
-# rbenv
+
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -35,7 +35,7 @@ export LANG=en_US.UTF-8
 . $HOME/.hub.bash_completion.sh
 
 # fast access to projects folder
-CDPATH=".:~:~/Sites:~/Apps"
+CDPATH=".:~:$HOME/Sites:$HOME/Apps"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -146,7 +146,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NVM_DIR="/home/weverton/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ### Added by the Heroku Toolbelt
