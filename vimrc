@@ -220,4 +220,4 @@ set clipboard=unnamed
 map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
 
 " Custom ignore for CtrlP
-let g:ctrlp_custom_ignore = '_build\|deps'
+let g:ctrlp_custom_ignore = '_build\|deps\|vendor'
