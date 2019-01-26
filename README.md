@@ -1,9 +1,9 @@
 # Installation:
 
 ```
-git clone git://github.com/wolcanus/dotfiles.git
+git clone git://github.com/wevtimoteo/dotfiles.git
 cd dotfiles
-sh install.sh
+bash install.sh
 ```
 
 ## References:
@@ -30,7 +30,3 @@ sh install.sh
 
   0. You just DO WHAT THE FUCK YOU WANT TO.
 ```
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wolcanus/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
