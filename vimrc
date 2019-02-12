@@ -62,8 +62,8 @@ au BufRead,BufNewFile *.ejs set filetype=html
 
 " theme
 set background=dark
-"colorscheme dracula
-"colo dracula
+colorscheme dracula
+colo dracula
 set guifont="Monaco":h15
 
 hi Normal guibg=NONE ctermbg=NONE
