@@ -56,6 +56,7 @@ syntax enable
 syntax on
 
 au BufRead,BufNewFile Podfile set filetype=ruby
+au BufRead,BufNewFile Guardfile set filetype=ruby
 au BufRead,BufNewFile Berksfile set filetype=ruby
 au BufRead,BufNewFile *.hamlc set filetype=haml
 au BufRead,BufNewFile *.ejs set filetype=html
