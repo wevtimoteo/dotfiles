@@ -124,3 +124,6 @@ __pycache__/
 
 # Ack
 .ackrc
+
+# Ruby
+.byebug_history
