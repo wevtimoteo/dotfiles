@@ -280,4 +280,4 @@ set guioptions-=e
 let g:tablabel = "%N%{flagship#tabmodified()} %{flagship#tabcwds('shorten',',')}"
 
 " Custom ignore for CtrlP
-let g:ctrlp_custom_ignore = '_build\|deps'
+let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules\|tmp'
