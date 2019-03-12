@@ -43,6 +43,7 @@ Plug 'posva/vim-vue', { 'for': ['javascript', 'js'] }
 
 Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
 
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rb', 'erb'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'rb'] }
 
 " Add plugins to &runtimepath
