@@ -45,6 +45,7 @@ Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
 
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rb', 'erb'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'rb'] }
+Plug 'dgsuarez/reruby.vim', { 'for': ['ruby', 'rb'] }
 
 " Add plugins to &runtimepath
 call plug#end()
