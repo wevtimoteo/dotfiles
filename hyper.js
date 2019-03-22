@@ -153,6 +153,7 @@ module.exports = {
     "hyperminimal",
     "hyperborder",
     "hyperline",
+    "hyper-font-smoothing",
   ],
 
   // in development, you can create a directory under
