@@ -11,6 +11,9 @@
 less -r
 
 --ignore-dir=log/
+--ignore-dir=tmp/
+--ignore-dir=public/assets/
+--ignore-dir=build/
 --ignore-dir=vendor/
 --ignore-file=ext:log
 --ignore-file=ext:output
