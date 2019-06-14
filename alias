@@ -22,6 +22,10 @@ alias acceptance="be rspec -t @acceptance"
 alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
 alias tmux="TERM=screen-256color-bce tmux"
 
+# Syntax highlighting and better display of file contents
+# https://github.com/sharkdp/bat
+alias cat="bat"
+
 alias emacs="emacs --no-window-system"
 
 # others
