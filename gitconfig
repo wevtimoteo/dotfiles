@@ -39,3 +39,5 @@
 	smudge = git media smudge %f
 [difftool]
 	prompt = false
+[commit]
+	gpgsign = true
