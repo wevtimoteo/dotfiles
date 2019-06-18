@@ -69,9 +69,11 @@ colorscheme dracula
 colo dracula
 set guifont="Monaco":h15
 
+hi Comment ctermfg=146
+
 hi Normal guibg=NONE ctermbg=NONE
 hi CursorLine ctermbg=235
-hi Search ctermbg=69 ctermfg=15
+hi Search ctermbg=218 ctermfg=198
 
 " Show theme hi CursorLine
 set cursorline
