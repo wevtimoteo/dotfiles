@@ -44,6 +44,7 @@ syntax enable
 
 "set Podfile syntax to ruby lang
 au BufRead,BufNewFile Podfile set filetype=ruby
+au BufRead,BufNewFile j2 set syntax=csh
 
 " theme
 colorscheme dracula
@@ -221,4 +222,4 @@ set clipboard=unnamed
 map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
 
 " Custom ignore for CtrlP
-let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules'
+let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules\|tmp'
