@@ -15,6 +15,7 @@ less -r
 --ignore-dir=public/assets/
 --ignore-dir=build/
 --ignore-dir=vendor/
+--ignore-dir=node_modules/
 --ignore-file=ext:log
 --ignore-file=ext:output
 
