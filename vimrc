@@ -30,6 +30,8 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 
 Plug 'othree/html5.vim', { 'for': 'html' }
 
+Plug 'hashivim/vim-terraform', { 'for': 'tf' }
+
 " Multiple file types
 Plug 'rhysd/vim-crystal', { 'for': ['crystal', 'cr'] }
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
