@@ -266,6 +266,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Alignment
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
 " Transforms old Ruby hash syntax to new one
 map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
 
