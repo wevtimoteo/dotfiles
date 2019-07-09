@@ -8,9 +8,10 @@ do
   ln -sf $PWD/$filename ~/.$filename
 done
 
-sudo ln -fs $PWD/git-edit /usr/local/bin/git-edit
-sudo ln -fs $PWD/capssh /usr/local/bin/capssh
-sudo ln -fs $PWD/capcssh /usr/local/bin/capcssh
+sudo ln -fs $PWD/git-edit /usr/local/bin/
+sudo ln -fs $PWD/capssh /usr/local/bin/
+sudo ln -fs $PWD/capcssh /usr/local/bin/
+sudo ln -fs $PWD/docker_remote_tags /usr/local/bin/
 ln -sf ~/.vim ~/.config/nvim
 
 source ~/.bashrc
