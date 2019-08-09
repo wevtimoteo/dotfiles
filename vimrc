@@ -3,35 +3,57 @@
 "Plugins -- vim-plug
 call plug#begin('~/.vim/plugged')
 
+" Multiple file types
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
+
 Plug 'vim-airline/vim-airline'
-Plug 'kchmck/vim-coffee-script'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'walm/jshint.vim'
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
-Plug 'godlygeek/tabular'
-Plug 'gcmt/wildfire.vim'
 Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'wfleming/vim-codeclimate'
-Plug 'posva/vim-vue'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'fatih/vim-go'
-Plug 'othree/html5.vim'
-Plug 'ekalinin/Dockerfile.vim'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rizzatti/dash.vim'
+
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'scrooloose/syntastic'
+
+Plug 'gcmt/wildfire.vim'
+Plug 'wfleming/vim-codeclimate'
+Plug 'bronson/vim-trailing-whitespace'
 
 " Loaded when lang file is opened
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-classpath', { 'for': 'clojure' }
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
+Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+
+Plug 'othree/html5.vim', { 'for': 'html' }
+
+Plug 'hashivim/vim-terraform', { 'for': 'tf' }
+
+" Multiple file types
+Plug 'rhysd/vim-crystal', { 'for': ['crystal', 'cr'] }
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
+
+Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'hs'] }
+
+
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'js'] }
+Plug 'walm/jshint.vim', { 'for': ['javascript', 'js'] }
+Plug 'posva/vim-vue', { 'for': ['javascript', 'js'] }
+
+Plug 'tpope/vim-markdown', { 'for': ['markdown', 'md'] }
+
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rb', 'erb'] }
+Plug 'tpope/vim-rails', { 'for': ['ruby', 'rb'] }
+Plug 'dgsuarez/reruby.vim', { 'for': ['ruby', 'rb'] }
 Plug 'benmills/vimux', { 'for': 'ruby' }
 Plug 'jgdavey/vim-turbux', { 'for': 'ruby' }
 
-" Multiple file types
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
+Plug 'ekalinin/Dockerfile.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
