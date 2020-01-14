@@ -273,6 +273,9 @@ let g:terraform_fmt_on_save=1
 " Transforms old Ruby hash syntax to new one
 map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
 
+" Transform JSON strings in Ruby symbols
+map <leader>" :%s/"\(.\+\)":/\1:/gc<CR>
+
 " Codeclimate
 nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
 nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
