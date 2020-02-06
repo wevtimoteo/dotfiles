@@ -16,6 +16,7 @@ less -r
 --ignore-dir=build/
 --ignore-dir=vendor/
 --ignore-dir=node_modules/
+--ignore-dir=coverage/
 --ignore-file=ext:log
 --ignore-file=ext:output
 
