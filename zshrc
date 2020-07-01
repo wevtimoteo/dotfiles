@@ -1,8 +1,13 @@
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+
+fpath=(~/.zsh $fpath)
+fpath=(${ASDF_DIR}/completions $fpath)
+fpath=(~/.zsh/completions $fpath)
+
 ## enable the default zsh completions!
 autoload -Uz compinit && compinit
 
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.sh
-fpath=(~/.zsh $fpath)
+unsetopt nomatch
 
 source ~/.alias
 
