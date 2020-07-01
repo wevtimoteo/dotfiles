@@ -1,3 +1,5 @@
 #!/bin/bash
+set -e
+
 # open all modified/added files with your $EDITOR
 $EDITOR -p $(git status --short | awk '$1 ~ /^M$/ {print $2}')
