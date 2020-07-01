@@ -36,6 +36,9 @@ typeset -U path cdpath fpath
 setopt auto_cd
 cdpath=($HOME/Sites $HOME/Apps)
 
+# Enable comment in command line
+setopt interactivecomments
+
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format %d
 zstyle ':completion:*:descriptions' format %B%d%b
