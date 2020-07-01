@@ -59,14 +59,12 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
-  package       # Package version
   ruby          # Ruby section
   elixir        # Elixir section
   xcode         # Xcode section
   swift         # Swift section
   golang        # Go section
   rust          # Rust section
-  docker        # Docker section
   aws           # Amazon Web Services section
   venv          # virtualenv section
   terraform     # Terraform workspace section
