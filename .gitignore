@@ -1,5 +1,6 @@
 # Vim
 vim/plugged
+vim/autoload/plug.vim.old
 
 .netrwhist
 # Emacs
@@ -11,3 +12,11 @@ emacs.d/.smex-items
 # Tmux Plugins
 tmux/plugins/*
 tmux/resurrect
+
+# zsh
+zsh/.zcompdump*
+zsh/_git
+zsh/completions
+
+# zsh themes
+zsh/custom/themes/
