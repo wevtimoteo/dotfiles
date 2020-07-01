@@ -1,0 +1,1 @@
+/Users/wevtimoteo/Sites/dotfiles/git-completion.sh
