@@ -14,4 +14,6 @@ sudo ln -fs $PWD/capcssh /usr/local/bin/
 sudo ln -fs $PWD/docker_remote_tags /usr/local/bin/
 ln -sf ~/.vim ~/.config/nvim
 
+ln -sf /opt/google/chrome/chrome ~/.local/bin/
+
 source ~/.bashrc
