@@ -68,6 +68,8 @@ au BufRead,BufNewFile Guardfile set filetype=ruby
 au BufRead,BufNewFile Berksfile set filetype=ruby
 au BufRead,BufNewFile *.hamlc set filetype=haml
 au BufRead,BufNewFile *.ejs set filetype=html
+au BufRead,BufNewFile .env.example set filetype=sh
+au BufRead,BufNewFile .env.development set filetype=sh
 
 " theme
 set background=dark
