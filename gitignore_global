@@ -131,3 +131,7 @@ __pycache__/
 # VSCode
 .vscode/
 
+# Code Query
+.starscope.db
+ruby_cscope.out
+ruby_tags
