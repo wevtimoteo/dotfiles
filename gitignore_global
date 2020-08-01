@@ -127,3 +127,7 @@ __pycache__/
 
 # Ruby
 .byebug_history
+
+# VSCode
+.vscode/
+
