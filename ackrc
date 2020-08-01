@@ -23,6 +23,7 @@ less -r
 
 --ignore-file=match:tags
 --ignore-file=match:.min.js
+--ignore-file=match:ruby_cscope.out
 
 #make sure ack knows how to search common filetypes used in rails projects
 --type-add=css=scss

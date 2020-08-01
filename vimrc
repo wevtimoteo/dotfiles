@@ -17,6 +17,10 @@ Plug 'gcmt/wildfire.vim'
 Plug 'wfleming/vim-codeclimate'
 Plug 'bronson/vim-trailing-whitespace'
 
+" Required by codequery
+Plug 'Shougo/unite.vim'
+Plug 'devjoe/vim-codequery'
+
 " Loaded when lang file is opened
 Plug 'idris-hackers/idris-vim', { 'for': 'idris' }
 
