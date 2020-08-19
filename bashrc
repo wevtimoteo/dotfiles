@@ -12,6 +12,9 @@ export EDITOR="vim"
 
 eval "$(rbenv init -)"
 
+# Gnome Terminal Colors
+eval `dircolors $HOME/.dir_colors/dircolors`
+
 # prompt with git && rbenv
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
