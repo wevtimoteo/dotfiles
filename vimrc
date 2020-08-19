@@ -14,7 +14,6 @@ Plug 'godlygeek/tabular'
 Plug 'scrooloose/syntastic'
 
 Plug 'gcmt/wildfire.vim'
-Plug 'wfleming/vim-codeclimate'
 Plug 'bronson/vim-trailing-whitespace'
 
 " Required by codequery
@@ -22,14 +21,8 @@ Plug 'Shougo/unite.vim'
 Plug 'devjoe/vim-codequery'
 
 " Loaded when lang file is opened
-Plug 'idris-hackers/idris-vim', { 'for': 'idris' }
-
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-classpath', { 'for': 'clojure' }
-
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
 Plug 'keith/swift.vim', { 'for': 'swift' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 
 Plug 'othree/html5.vim', { 'for': 'html' }
@@ -38,7 +31,6 @@ Plug 'hashivim/vim-terraform', { 'for': 'tf' }
 
 " Multiple file types
 Plug 'rhysd/vim-crystal', { 'for': ['crystal', 'cr'] }
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 
 Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'hs'] }
 
