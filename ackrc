@@ -25,7 +25,7 @@ less -r
 --ignore-file=match:.min.js
 --ignore-file=match:ruby_cscope.out
 
-#make sure ack knows how to search common filetypes used in rails projects
+# Make sure ack knows how to search common filetypes used in rails projects
 --type-add=css=scss
 --type-add=ruby=.haml,.lock
 --type-set=coffeescript=.coffee
