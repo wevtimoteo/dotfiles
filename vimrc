@@ -274,7 +274,7 @@ map <leader>" :%s/"\(.\+\)":/\1:/gc<CR>
 " CtrlP ignore
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules$',
-  \ }
+\ }
 
 " flagship
 set laststatus=2
