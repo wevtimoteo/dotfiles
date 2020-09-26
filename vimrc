@@ -271,11 +271,6 @@ map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
 " Transform JSON strings in Ruby symbols
 map <leader>" :%s/"\(.\+\)":/\1:/gc<CR>
 
-" Codeclimate
-nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
-nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
-nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
-
 " CtrlP ignore
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules$',
