@@ -239,9 +239,6 @@ nmap <down> <C-x>
 " Dealing with TMUX unnamed clipboard
 set clipboard=unnamed
 
-" Vim-notes
-let g:notes_directories = ['~/Dropbox/Notes']
-"
 " Cyclomatic Complexity Ruby
 let g:flog_enable=0
 nmap <F4> :call ToggleFlog()<CR>
