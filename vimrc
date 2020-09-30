@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'Rigellute/shades-of-purple.vim'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'ctrlpvim/ctrlp.vim'
@@ -63,10 +64,12 @@ au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile .env.example set filetype=sh
 au BufRead,BufNewFile .env.development set filetype=sh
 
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 " theme
-set background=dark
-colorscheme dracula
-colo dracula
+colorscheme shades_of_purple
 set guifont="Monaco":h15
 
 hi Comment ctermfg=146
