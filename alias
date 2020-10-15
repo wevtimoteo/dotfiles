@@ -8,11 +8,6 @@ alias peg='ps -ef | grep -i'
 alias psg='ps aux | grep '
 alias llg='launchctl list | grep'
 
-# GIT
-alias current-branch='git branch | grep \* | sed "s/^\* //g"'
-alias gitrb='git fetch --prune; git rebase origin/`current-branch`'
-alias git-last-commit-for-all-branches='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
-
 # DEV
 alias be="bundle exec"
 alias rspec='be rspec'
