@@ -1,4 +1,4 @@
-files=( bash_profile zshrc zsh irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global gemrc tmux.conf emacs pryrc tmux hub.bash_completion.sh hyper.js tigrc )
+files=( bash_profile zshrc zsh irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global gemrc tmux.conf emacs pryrc tmux hyper.js tigrc )
 
 for filename in ${files[@]}
 do
