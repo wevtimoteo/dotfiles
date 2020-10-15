@@ -33,6 +33,8 @@
   lgm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches master
   who = shortlog -s --
   dft = difftool -y
+  oh-my-god = !sh -c 'git fsck --lost-found | grep "dangling commit" | cut -d " " -f 3 | xargs git log --oneline --no-walk -p'
+
 [push]
 	default = simple
 [filter "media"]
