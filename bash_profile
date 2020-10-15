@@ -40,8 +40,8 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-. $HOME/.git-completion.sh
-. $HOME/.hub.bash_completion.sh
+source $HOME/.git-completion.sh
+eval "$(gh completion -s bash)"
 
 # fast access to projects folder
 CDPATH=".:~:~/Sites:~/Apps"
