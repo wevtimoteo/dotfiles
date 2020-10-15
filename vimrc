@@ -18,7 +18,6 @@ Plug 'godlygeek/tabular'
 Plug 'scrooloose/syntastic'
 
 Plug 'gcmt/wildfire.vim'
-Plug 'wfleming/vim-codeclimate'
 Plug 'bronson/vim-trailing-whitespace'
 
 " Loaded when lang file is opened
