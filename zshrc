@@ -62,6 +62,8 @@ ZSH_CUSTOM="$ZDOTDIR/custom"
 autoload -U promptinit; promptinit
 prompt spaceship
 
+set -o emacs
+
 SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
@@ -76,7 +78,6 @@ SPACESHIP_PROMPT_ORDER=(
   venv          # virtualenv section
   terraform     # Terraform workspace section
   battery       # Battery level and status
-  vi_mode       # Vi-mode indicator
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
