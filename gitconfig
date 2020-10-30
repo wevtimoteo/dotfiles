@@ -47,3 +47,5 @@
 	smudge = git media smudge %f
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
