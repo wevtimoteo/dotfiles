@@ -33,7 +33,7 @@
 	d = difftool
   committers = shortlog --summary --email --committer -n
   last-commit = !sh -c 'git rev-list HEAD --abbrev-commit | head -1'
-  current-branch = !sh -c 'git branch | grep \\* | sed "s/^*\\ //g"'
+  current-branch = branch --show-current
   update = !sh -c 'git fetch --prune && git rebase origin/`git current-branch`'
   oh-my-god = !sh -c 'git fsck --lost-found | grep "dangling commit" | cut -d " " -f 3 | xargs git log --oneline --no-walk -p'
 
