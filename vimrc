@@ -23,6 +23,7 @@ Plug 'devjoe/vim-codequery'
 
 " Loaded when lang file is opened
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
+Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'ex', 'exs'] }
 
 Plug 'othree/html5.vim', { 'for': 'html' }
 
@@ -146,6 +147,9 @@ nmap <S-Tab> gT
 "NERDtree
 "map for Exp
 nmap <leader>e :Exp<CR>
+
+" Mix format
+map <leader>m :MixFormat<CR>
 
 " Default settings
 set ts=2 sts=2 sw=2 expandtab
