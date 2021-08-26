@@ -201,6 +201,7 @@ nmap [ <leader>
 
 " Abbreviations
 ab pryb require 'pry';binding.pry
+ab pryi require IEx; IEx.pry
 
 " Enabling SnipMate
 filetype plugin on
