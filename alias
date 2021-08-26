@@ -20,7 +20,7 @@ alias tmux="env TERM=xterm-256color tmux"
 
 # Syntax highlighting and better display of file contents
 # https://github.com/sharkdp/bat
-alias cat="bat"
+alias cat="batcat"
 
 alias emacs="emacs --no-window-system"
 
