@@ -23,8 +23,6 @@ Plug 'devjoe/vim-codequery'
 
 " Loaded when lang file is opened
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
-Plug 'keith/swift.vim', { 'for': 'swift' }
-Plug 'fatih/vim-go', { 'for': 'go' }
 
 Plug 'othree/html5.vim', { 'for': 'html' }
 
