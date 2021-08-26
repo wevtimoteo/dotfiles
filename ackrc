@@ -14,6 +14,7 @@ less -r
 --ignore-dir=tmp/
 --ignore-dir=public/assets/
 --ignore-dir=build/
+--ignore-dir=priv/
 --ignore-dir=vendor/
 --ignore-dir=node_modules/
 --ignore-dir=deps/
