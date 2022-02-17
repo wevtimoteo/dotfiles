@@ -17,10 +17,6 @@ Plug 'scrooloose/syntastic'
 Plug 'gcmt/wildfire.vim'
 Plug 'bronson/vim-trailing-whitespace'
 
-" Required by codequery
-Plug 'Shougo/unite.vim'
-Plug 'devjoe/vim-codequery'
-
 " Loaded when lang file is opened
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
 Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'ex', 'exs'] }
@@ -28,11 +24,6 @@ Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'ex', 'exs'] }
 Plug 'othree/html5.vim', { 'for': 'html' }
 
 Plug 'hashivim/vim-terraform', { 'for': 'tf' }
-
-" Multiple file types
-Plug 'rhysd/vim-crystal', { 'for': ['crystal', 'cr'] }
-
-Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'hs'] }
 
 
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'js'] }
