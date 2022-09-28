@@ -4,7 +4,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'airblade/vim-gitgutter'
 
@@ -25,7 +24,6 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 
 Plug 'hashivim/vim-terraform', { 'for': 'tf' }
 
-
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'js'] }
 Plug 'walm/jshint.vim', { 'for': ['javascript', 'js'] }
 Plug 'posva/vim-vue', { 'for': ['javascript', 'js'] }
@@ -34,7 +32,20 @@ Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
 
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rb', 'erb'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'rb'] }
-Plug 'dgsuarez/reruby.vim', { 'for': ['ruby', 'rb'] }
+
+" After install run :call mkdp#util#install()
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown' }
+
+" Use vim on the browsers
+Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
+let $GHOSTTEXT_SERVER_PORT = 6001
+let g:nvim_ghost_super_quiet = 1
+
+augroup nvim_ghost_user_autocommands
+  au User app.shortcut.com set filetype=markdown
+  au User www.gitlab.com, gitlab.com set filetype=markdown
+  au User www.github.com, github.com set filetype=markdown
+augroup END
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -278,4 +289,4 @@ set guioptions-=e
 let g:tablabel = "%N%{flagship#tabmodified()} %{flagship#tabcwds('shorten',',')}"
 
 " Custom ignore for CtrlP
-let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules\|priv\/static\|tmp\|.log$'
+let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules\|priv\/static\|tmp\|storage\|.log$'
