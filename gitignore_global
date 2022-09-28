@@ -48,7 +48,7 @@ Thumbs.db
 ################
 *.swp
 *.swo
-.idea
+Session.vim
 
 # Emacs #
 #########
