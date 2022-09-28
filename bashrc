@@ -1,13 +1,7 @@
-export WINEARCH=win32
-
-
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="~/bin:$PATH"
 
-
-# Gnome Terminal Colors
-eval `dircolors $HOME/.dir_colors/dircolors`
 export EDITOR="nvim"
 
 # prompt with git
@@ -123,7 +117,6 @@ eval `dircolors ~/Sites/gnome-terminal/dircolors`
 export PATH="/usr/local/heroku/bin:$PATH"
 
 source ~/.exports
-source ~/.custom_functions
 
 # ASDF tool
 source $HOME/.asdf/asdf.sh
