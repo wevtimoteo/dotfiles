@@ -5,11 +5,10 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="~/bin:$PATH"
 
-export EDITOR="vim"
-
 
 # Gnome Terminal Colors
 eval `dircolors $HOME/.dir_colors/dircolors`
+export EDITOR="nvim"
 
 # prompt with git
 parse_git_branch() {
