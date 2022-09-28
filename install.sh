@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=( ackrc bashrc irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global gemrc tmux.conf pryrc tmux spacemacs hyper.js )
+files=( ackrc bashrc irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global gemrc tmux.conf pryrc tmux )
 
 for filename in ${files[@]}
 do
@@ -8,12 +8,7 @@ do
   ln -sf $PWD/$filename ~/.$filename
 done
 
-sudo ln -fs $PWD/git-edit /usr/local/bin/
-sudo ln -fs $PWD/capssh /usr/local/bin/
-sudo ln -fs $PWD/capcssh /usr/local/bin/
-sudo ln -fs $PWD/docker_remote_tags /usr/local/bin/
+sudo ln -fs $PWD/git-edit ~/.local/bin/
 ln -sf ~/.vim ~/.config/nvim
-
-ln -sf /opt/google/chrome/chrome ~/.local/bin/
 
 source ~/.bashrc
