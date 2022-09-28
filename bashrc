@@ -21,9 +21,6 @@ export PS1="\[\033[38;5;43m\]➜ \[\033[38;5;75m\]\\W \[\033[38;5;249m\]\$(parse
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-. $HOME/.git-completion.sh
-eval "$(gh completion -s bash)"
-
 # fast access to projects folder
 CDPATH=".:~:$HOME/Sites:$HOME/Apps"
 
@@ -143,4 +140,9 @@ source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 export PATH="$HOME/.asdf/shims/:$PATH"
 
+# Git completion
+source $HOME/.git-completion.sh
+eval "$(gh completion -s bash)"
+
+# History for Erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
