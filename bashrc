@@ -1,5 +1,3 @@
-source ~/.alias
-
 export WINEARCH=win32
 
 

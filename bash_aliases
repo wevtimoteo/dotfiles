@@ -9,7 +9,7 @@ alias peg='ps -ef | grep -i'
 alias psg='ps aux | grep '
 alias llg='launchctl list | grep'
 alias ack='ack-grep'
-alias vim='~/.local/bin/nvim.appimage'
+alias vim='nvim'
 
 # DEV
 alias be="bundle exec"
@@ -18,11 +18,16 @@ alias acceptance="be rspec -t @acceptance"
 alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
 alias tmux="env TERM=xterm-256color tmux"
 
+# copy to clipboard
+alias copy="xsel --clipboard"
+
 # Syntax highlighting and better display of file contents
 # https://github.com/sharkdp/bat
-alias cat="batcat"
+alias cat="bat"
 
 alias emacs="emacs --no-window-system"
 
 # others
 alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
+
+alias weather='curl -s http://wttr.in/'
