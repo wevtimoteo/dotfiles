@@ -15,7 +15,7 @@ alias vim='nvim'
 alias be="bundle exec"
 alias unit="be rspec -t ~@acceptance"
 alias acceptance="be rspec -t @acceptance"
-alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
+alias migrate="bin/rake db:migrate && RAILS_ENV=test bin/rake db:migrate"
 alias tmux="env TERM=xterm-256color tmux"
 
 # copy to clipboard
