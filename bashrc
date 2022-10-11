@@ -111,7 +111,7 @@ if ! shopt -oq posix; then
 fi
 
 ### Dircolors
-eval `dircolors ~/Sites/gnome-terminal/dircolors`
+eval `dircolors ~/.dir_colors`
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
