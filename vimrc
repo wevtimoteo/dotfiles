@@ -64,6 +64,9 @@ au BufRead,BufNewFile *.hamlc set filetype=haml
 au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile .env.example set filetype=sh
 au BufRead,BufNewFile .env.development set filetype=sh
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+au BufRead,BufNewFile mix.lock set filetype=elixir
 
 if (has("termguicolors"))
  set termguicolors
