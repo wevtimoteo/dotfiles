@@ -17,7 +17,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'bronson/vim-trailing-whitespace'
 
 " Loaded when lang file is opened
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs', 'heex', 'eex', 'leex'] }
 Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'ex', 'exs'] }
 
 Plug 'othree/html5.vim', { 'for': 'html' }
