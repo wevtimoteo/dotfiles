@@ -168,7 +168,8 @@ set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class
 
 " change the terminal's title
-set title
+" This was causing Gnome Terminal to glitch
+"set title
 
 " don't beep
 set visualbell
