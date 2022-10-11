@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=( ackrc bashrc irbrc alias vim vimrc git-completion.sh gitconfig gitignore_global gemrc tmux.conf pryrc tmux )
+files=( ackrc bashrc irbrc bash_aliases vim vimrc git-completion.sh gitconfig gitignore_global gemrc tmux.conf pryrc tmux )
 
 for filename in ${files[@]}
 do
