@@ -17,6 +17,7 @@ alias unit="be rspec -t ~@acceptance"
 alias acceptance="be rspec -t @acceptance"
 alias migrate="bin/rake db:migrate && RAILS_ENV=test bin/rake db:migrate"
 alias tmux="env TERM=xterm-256color tmux"
+alias gitroot='cd $(git rev-parse --show-toplevel)'
 
 # copy to clipboard
 alias copy="xsel --clipboard"
