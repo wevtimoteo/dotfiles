@@ -30,3 +30,24 @@ bash install.sh
 
   0. You just DO WHAT THE FUCK YOU WANT TO.
 ```
+
+## Evolution Mail client keymap
+
+### Checking keys:
+
+```
+xmodmap -pk | grep <key-name>
+```
+
+```
+(gtk_accel_path "<Actions>/new-item/mail-message-new" "c")
+(gtk_accel_path "<Actions>/mail/mail-previous" "k")
+(gtk_accel_path "<Actions>/mail/mail-next" "j")
+(gtk_accel_path "<Actions>/mail/mail-move" "v")
+(gtk_accel_path "<Actions>/mail/mail-copy" "l")
+(gtk_accel_path "<Actions>/mail/mail-mark-unread" "<Shift>u")
+(gtk_accel_path "<Actions>/mail/mail-mark-read" "<Shift>i")
+(gtk_accel_path "<Actions>/mail/mail-folder-select-thread" "x")
+(gtk_accel_path "<Actions>/mail/mail-archive" "e")
+(gtk_accel_path "<Actions>/mail/mail-delete" "<Shift>ssharp")
+```
