@@ -2,7 +2,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="~/bin:$PATH"
 
-export EDITOR="nvim"
+source ~/.exports
 
 # prompt with git
 parse_git_branch() {
@@ -115,8 +115,6 @@ eval `dircolors ~/.dir_colors`
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-source ~/.exports
 
 # ASDF tool
 source $HOME/.asdf/asdf.sh
