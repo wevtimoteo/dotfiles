@@ -16,6 +16,8 @@ Plug 'scrooloose/syntastic'
 Plug 'gcmt/wildfire.vim'
 Plug 'bronson/vim-trailing-whitespace'
 
+Plug 'ap/vim-css-color'
+
 " Loaded when lang file is opened
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs', 'heex', 'eex', 'leex'] }
 Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'ex', 'exs'] }
