@@ -9,8 +9,34 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+# prompt aws profile
+function __aws_config() {
+    # add to the prompt:
+    [ "${AWS_DEFAULT_PROFILE}" ] && msg="${AWS_DEFAULT_PROFILE}"
+    [ "${AWS_DEFAULT_REGION}"  ] && msg="${msg}:${AWS_DEFAULT_REGION}"
+    echo "[aws:${msg}]"
+}
+
 # set ps1
-export PS1="\[\033[38;5;43m\]➜ \[\033[38;5;75m\]\\W \[\033[38;5;249m\]\$(parse_git_branch) \[\033[38;5;153m\]\$\[\033[00m\] "
+function set_ps1() {
+  local arrow_prompt="\[\033[38;5;43m\]➜"
+  local current_dir="\[\033[38;5;75m\]\\W"
+  local current_branch="\[\033[38;5;249m\]\$(parse_git_branch)"
+  local current_aws_profile="\[\033[38;5;150m\]$(__aws_config)"
+  local current_privilege="\[\033[38;5;153m\]\$"
+  local command_prefs="\[\033[00m\]"
+
+  export PS1=$arrow_prompt
+  export PS1="$PS1 $current_dir"
+  export PS1="$PS1 $current_branch"
+
+  #export PS1="$PS1 $current_aws_profile"
+
+  export PS1="$PS1 $current_privilege"
+  export PS1="$PS1 $command_prefs"
+}
+
+set_ps1
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
