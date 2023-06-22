@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # open all modified/added files with your $EDITOR
-$EDITOR -p $(git status --short | awk '$1 ~ /^M$/ {print $2}')
+modified_files=$(git st --short | awk '$1 ~ /^M$/ {print $2}')
+nvim -p $modified_files
