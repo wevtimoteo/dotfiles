@@ -24,3 +24,5 @@ alias cat="bat"
 
 # others
 alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
+
+alias unsafe-rm="command rm -i"
