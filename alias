@@ -15,6 +15,7 @@ alias unit="rspec -t ~@acceptance"
 alias acceptance="rspec -t @acceptance"
 alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
 alias tmux="env TERM=xterm-256color tmux"
+alias gitroot='cd $(git rev-parse --show-toplevel)'
 alias vim="nvim"
 alias cat="bat"
 
