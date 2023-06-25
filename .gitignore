@@ -1,6 +1,16 @@
 # Vim
 vim/plugged
 vim/autoload/plug.vim.old
+nvim/autoload
+nvim/colors
+nvim/after
+nvim/plugged
+nvim/doc
+nvim/ruby
+nvim/plugin
+nvim/indent
+nvim/ftplugin
+nvim/snippets
 
 .netrwhist
 # Emacs
@@ -17,6 +27,7 @@ tmux/resurrect
 zsh/.zcompdump*
 zsh/_git
 zsh/completions
+zsh/.zsh_plugins.zsh
 
 # zsh themes
 zsh/custom/themes/
