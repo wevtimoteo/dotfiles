@@ -11,6 +11,9 @@ nvim/plugin
 nvim/indent
 nvim/ftplugin
 nvim/snippets
+nvim/syntax
+nvim/.VimballRecord
+nvim/.vim
 
 .netrwhist
 # Emacs
@@ -28,6 +31,7 @@ zsh/.zcompdump*
 zsh/_git
 zsh/completions
 zsh/.zsh_plugins.zsh
+zsh/.antidote
 
 # zsh themes
 zsh/custom/themes/
