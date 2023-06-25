@@ -27,7 +27,7 @@ zstyle ':completion:*:complete:(cd|pushd):*' tag-order \
         'local-directories named-directories'
 
 # Reverse history search
-bindkey -v
+bindkey -e
 bindkey '^R' history-incremental-search-backward
 
 # Other variables
