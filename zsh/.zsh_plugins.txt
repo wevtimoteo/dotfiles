@@ -1,0 +1,4 @@
+mattmc3/zsh-safe-rm
+marlonrichert/zsh-autocomplete
+Tarrasch/zsh-bd
+MichaelAquilina/zsh-you-should-use
