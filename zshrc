@@ -39,5 +39,9 @@ LANG=en_US.UTF-8
 ZDOTDIR="$HOME/.zsh"
 ZSH_CUSTOM="$ZDOTDIR/custom"
 
+# source antidote
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
 
