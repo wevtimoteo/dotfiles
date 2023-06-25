@@ -1,246 +1,100 @@
-"wevtimoteo .vimrc
-
-"Plugins -- vim-plug
-call plug#begin('~/.vim/plugged')
-
-" Multiple file types
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
-
-Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'airblade/vim-gitgutter'
-
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rizzatti/dash.vim'
-
-Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
-Plug 'scrooloose/syntastic'
-
-Plug 'gcmt/wildfire.vim'
-Plug 'bronson/vim-trailing-whitespace'
-
-" Loaded when lang file is opened
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-classpath', { 'for': 'clojure' }
-
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
-Plug 'keith/swift.vim', { 'for': 'swift' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-
-Plug 'othree/html5.vim', { 'for': 'html' }
-
-Plug 'hashivim/vim-terraform', { 'for': 'tf' }
-
-" Multiple file types
-Plug 'rhysd/vim-crystal', { 'for': ['crystal', 'cr'] }
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
-
-Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'hs'] }
-
-
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'js'] }
-Plug 'walm/jshint.vim', { 'for': ['javascript', 'js'] }
-Plug 'posva/vim-vue', { 'for': ['javascript', 'js'] }
-
-Plug 'tpope/vim-markdown', { 'for': ['markdown', 'md'] }
-
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rb', 'erb'] }
-Plug 'tpope/vim-rails', { 'for': ['ruby', 'rb'] }
-Plug 'dgsuarez/reruby.vim', { 'for': ['ruby', 'rb'] }
-Plug 'benmills/vimux', { 'for': 'ruby' }
-Plug 'jgdavey/vim-turbux', { 'for': 'ruby' }
-
-Plug 'ekalinin/Dockerfile.vim'
-
-" Add plugins to &runtimepath
-call plug#end()
-
-"general options
-set encoding=utf-8
-set mouse=a
-set nu
-syntax enable
-
-"set Podfile syntax to ruby lang
-au BufRead,BufNewFile Podfile set filetype=ruby
-au BufRead,BufNewFile j2 set syntax=csh
-
-" theme
-colorscheme dracula
-colo dracula
-set guifont="Monaco":h15
-
-hi Normal guibg=NONE ctermbg=NONE
-hi CursorLine ctermbg=235
-hi Search ctermbg=69 ctermfg=15
-
-" Show theme hi CursorLine
-set cursorline
-
-" indent
-set cinkeys=0{,0},:,0#,!^F
-set smartindent
-set autoindent
-
-" show when searching
-set incsearch
-" highlight all the matches in search
-set hlsearch
-
-" show dir list when tab dir
-set wildmode=list:longest
-
-" folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
-filetype indent on
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-
-"make Y consistent with C and D
-nnoremap Y y$
-
-" turn off needless toolbar on gvim/mvim
-set guioptions+=TLlRrb
-set guioptions-=TLlRrb
-set guioptions-=m
-
-" Using this mapping, you can press Alt-/
-" in order to automatically fill in a
-" range" for your search
-vnoremap <M-/> <Esc>/\%V
-
-" ruby
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-
-" misc
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
-" improve autocomplete menu color
-highlight Pmenu ctermbg=238 gui=bold
-
-" Tab mappings.
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
-
-nnoremap <C-j> 5j
-nnoremap <C-k> 5k
-
-set pastetoggle=<F3>
-
-"key mapping for tab navigation
-nmap <Tab> gt
-nmap <S-Tab> gT
-
-"NERDtree
-"map for Exp
-nmap <leader>e :Exp<cr>
-
-" Default settings
-set ts=2 sts=2 sw=2 expandtab
-
-" remember more commands and search history
-set history=1000
-
-" use many muchos levels of undo
-set undolevels=1000
-
-set wildignore=*.swp,*.bak,*.pyc,*.class
-
-" change the terminal's title
-set title
-
-" don't beep
-set visualbell
-set noerrorbells
-
-set nobackup
-set noswapfile
-
-"configs for powerline
-set t_Co=256
+" Don't try to be vi compatible
 set nocompatible
+
+" Helps force plugins to load correctly when it is turned back on below
+filetype off
+
+" TODO: Load plugins here (pathogen or vundle)
+
+" Turn on syntax highlighting
+syntax on
+
+" For plugins to load correctly
+filetype plugin indent on
+
+" TODO: Pick a leader key
+" let mapleader = ","
+
+" Security
+set modelines=0
+
+" Show line numbers
+set number
+
+" Show file stats
+set ruler
+
+" Blink cursor on error instead of beeping (grr)
+set visualbell
+
+" Encoding
+set encoding=utf-8
+
+" Whitespace
+set wrap
+set textwidth=79
+set formatoptions=tcqrn1
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set noshiftround
+
+" Cursor motion
+set scrolloff=3
+set backspace=indent,eol,start
+set matchpairs+=<:> " use % to jump between pairs
+runtime! macros/matchit.vim
+
+" Move up/down editor lines
+nnoremap j gj
+nnoremap k gk
+
+" Allow hidden buffers
+set hidden
+
+" Rendering
+set ttyfast
+
+" Status bar
 set laststatus=2
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" Last line
+set showmode
+set showcmd
 
-" Automatically removing all trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+" Searching
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+map <leader><space> :let @/=''<cr> " clear search
 
-" Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
-"set list!
+" Remap help key.
+inoremap <F1> <ESC>:set invfullscreen<CR>a
+nnoremap <F1> :set invfullscreen<CR>
+vnoremap <F1> :set invfullscreen<CR>
 
-" Increase and decrease split size 10 in 10
-nmap <silent> <leader>< :10winc <<CR>
-nmap <silent> <leader>> :10winc ><CR>
+" Textmate holdouts
 
-" Better navigation for wrapped lines
-nmap j gj
-nmap k gk
+" Formatting
+map <leader>q gqip
 
-" Abbreviations
-ab pryb require 'pry';binding.pry
-
-" Enabling SnipMate
-filetype plugin on
-
-" Print current path
-cmap <C-e> <C-r>=expand('%:p:h')<CR>/
-
-" Check spell and limit text length for commit messages
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
-" Use the same symbols as TextMate for tabstops and EOLs
+" Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
+" Uncomment this to enable by default:
+" set list " To enable by default
+" Or use your leader key + l to toggle on/off
+map <leader>l :set list!<CR> " Toggle tabs and EOL
 
-"Invisible character colors
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
-
-autocmd BufRead,BufNewFile *.tokamak set filetype=ruby
-
-" Build tags for the current directory
-nmap <F2> :!/usr/local/Cellar/ctags/5.8_1/bin/ctags -R .<CR>
-"Ctags search always lists all occurrences
-nmap <C-]> g<C-]>
-
-" unmapping arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-nmap ; :
-
-" increment and decrement with arrow keys
-nmap <up> <C-a>
-nmap <down> <C-x>
-
-" Dealing with TMUX unnamed clipboard
-set clipboard=unnamed
-
-" Transforms old Ruby hash syntax to new one
-map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
-
-" Custom ignore for CtrlP
-let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules\|priv\/static\|tmp\|.log$'
+" Color scheme (terminal)
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
+" in ~/.vim/colors/ and uncomment:
+" colorscheme solarized
