@@ -45,3 +45,5 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
+#PROMPT="%F{175}➔ %F{33}%~ %f%F{44}\$%f "
+eval "$(starship init zsh)"
