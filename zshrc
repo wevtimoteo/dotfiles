@@ -1,3 +1,4 @@
+. "$HOME/.asdf/asdf.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -7,23 +8,6 @@ autoload -Uz compinit && compinit
 unsetopt nomatch
 
 source ~/.alias
-
-# rbenv
-PATH="/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$PATH"
-PATH="$HOME/.rbenv/bin:$PATH"
-
-# golang
-PATH="$HOME/go/bin:$PATH"
-GOPATH=$HOME/go
-
-EDITOR="nvim"
-
-unset DOCKER_CERT_PATH
-unset DOCKER_TLS_VERIFY
-
-eval "$(rbenv init -)"
-
-PATH="/usr/local/heroku/bin:$PATH"
 
 HISTCONTROL=ignoreboth
 
