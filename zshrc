@@ -39,27 +39,5 @@ LANG=en_US.UTF-8
 ZDOTDIR="$HOME/.zsh"
 ZSH_CUSTOM="$ZDOTDIR/custom"
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
 
-set -o emacs
 
-SPACESHIP_PROMPT_ORDER=(
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  ruby          # Ruby section
-  elixir        # Elixir section
-  xcode         # Xcode section
-  swift         # Swift section
-  golang        # Go section
-  rust          # Rust section
-  aws           # Amazon Web Services section
-  venv          # virtualenv section
-  terraform     # Terraform workspace section
-  battery       # Battery level and status
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
