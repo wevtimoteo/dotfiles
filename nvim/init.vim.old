@@ -1,47 +1,41 @@
 "wevtimoteo .vimrc
 
-"Plugins -- vim-plug
-call plug#begin('~/.config/nvim/plugged')
-
 " Multiple file types
-Plug 'vim-airline/vim-airline'
-Plug 'EdenEast/nightfox.nvim'
-Plug 'airblade/vim-gitgutter'
-
-Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
-Plug 'scrooloose/syntastic'
-
-Plug 'gcmt/wildfire.vim'
-Plug 'bronson/vim-trailing-whitespace'
-
-Plug 'ap/vim-css-color'
-
-Plug 'HampusHauffman/block.nvim'
-
-" Loaded when lang file is opened
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
-Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'ex', 'exs'] }
-
-Plug 'preservim/vim-markdown', { 'for': ['markdown', 'md'] }
-
-Plug 'othree/html5.vim', { 'for': 'html' }
-
-" Multiple file types
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'js'] }
-Plug 'walm/jshint.vim', { 'for': ['javascript', 'js'] }
-Plug 'posva/vim-vue', { 'for': ['javascript', 'js'] }
-
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rb', 'erb'] }
-Plug 'tpope/vim-rails', { 'for': ['ruby', 'rb'] }
-Plug 'dgsuarez/reruby.vim', { 'for': ['ruby', 'rb'] }
-
-Plug 'ekalinin/Dockerfile.vim'
-
-" Add plugins to &runtimepath
-call plug#end()
+"Plug 'vim-airline/vim-airline'
+"Plug 'EdenEast/nightfox.nvim'
+"Plug 'airblade/vim-gitgutter'
+"
+"Plug 'ctrlpvim/ctrlp.vim'
+"
+"Plug 'tpope/vim-surround'
+"Plug 'godlygeek/tabular'
+"Plug 'scrooloose/syntastic'
+"
+"Plug 'gcmt/wildfire.vim'
+"Plug 'bronson/vim-trailing-whitespace'
+"
+"Plug 'ap/vim-css-color'
+"
+"Plug 'HampusHauffman/block.nvim'
+"
+"" Loaded when lang file is opened
+"Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'ex', 'exs'] }
+"Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'ex', 'exs'] }
+"
+"Plug 'preservim/vim-markdown', { 'for': ['markdown', 'md'] }
+"
+"Plug 'othree/html5.vim', { 'for': 'html' }
+"
+"" Multiple file types
+"Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'js'] }
+"Plug 'walm/jshint.vim', { 'for': ['javascript', 'js'] }
+"Plug 'posva/vim-vue', { 'for': ['javascript', 'js'] }
+"
+"Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rb', 'erb'] }
+"Plug 'tpope/vim-rails', { 'for': ['ruby', 'rb'] }
+"Plug 'dgsuarez/reruby.vim', { 'for': ['ruby', 'rb'] }
+"
+"Plug 'ekalinin/Dockerfile.vim'
 
 "general options
 set encoding=utf-8
@@ -49,7 +43,7 @@ set mouse=a
 set nu
 syntax enable
 
-"set Podfile syntax to ruby lang
+" Custom syntax
 au BufRead,BufNewFile Podfile set filetype=ruby
 au BufRead,BufNewFile Guardfile set filetype=ruby
 au BufRead,BufNewFile Berksfile set filetype=ruby
@@ -95,7 +89,6 @@ filetype indent on
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-
 "make Y consistent with C and D
 nnoremap Y y$
 
@@ -118,9 +111,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 " misc
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" improve autocomplete menu color
-highlight Pmenu ctermbg=238 gui=bold
-
 " Tab mappings.
 map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
@@ -139,7 +129,6 @@ set pastetoggle=<F3>
 nmap <Tab> gt
 nmap <S-Tab> gT
 
-"NERDtree
 "map for Exp
 nmap <leader>e :Exp<cr>
 
@@ -169,15 +158,14 @@ set t_Co=256
 set nocompatible
 set laststatus=2
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-"set list!
 
 " Increase and decrease split size 10 in 10
 nmap <silent> <leader>< :10winc <<CR>
@@ -207,7 +195,7 @@ highlight SpecialKey guifg=#4a4a59
 autocmd BufRead,BufNewFile *.tokamak set filetype=ruby
 
 " Build tags for the current directory
-nmap <F2> :!/usr/local/Cellar/ctags/5.8_1/bin/ctags -R .<CR>
+"nmap <F2> :!/usr/local/Cellar/ctags/5.8_1/bin/ctags -R .<CR>
 "Ctags search always lists all occurrences
 nmap <C-]> g<C-]>
 
@@ -234,4 +222,4 @@ set clipboard=unnamed
 map <leader>: :%s/:\(\w\+\)\(\s*=>\s*\)/\1: /gc<CR>
 
 " Custom ignore for CtrlP
-let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules\|priv\/static\|tmp\|storage\|.log$'
+"let g:ctrlp_custom_ignore = '_build\|deps\|vendor\|node_modules\|priv\/static\|tmp\|storage\|.log$'
