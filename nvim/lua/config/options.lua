@@ -4,5 +4,5 @@
 local opt = vim.opt
 
 opt.relativenumber = false
-opt.spelllang = { "en", "pt-BR" }
+opt.spelllang = { "en" }
 vim.g.mapleader = "\\"
