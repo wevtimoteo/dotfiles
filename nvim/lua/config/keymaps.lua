@@ -5,9 +5,9 @@
 local set_keymap = vim.api.nvim_set_keymap
 -- Helper function to set key mappings for multiple modes
 local function multiple_set_keymap(modes, lhs, rhs, opts)
-	for mode in string.gmatch(modes, "%a") do
-		set_keymap(mode, lhs, rhs, opts)
-	end
+  for mode in string.gmatch(modes, "%a") do
+    set_keymap(mode, lhs, rhs, opts)
+  end
 end
 
 -- alias for leader
@@ -33,14 +33,14 @@ set_keymap("n", "<Down>", "<C-x>", { desc = "Decrement cursor number" })
 
 -- Set the key mapping for <Up> to increment cursor number
 set_keymap("n", "<Up>", "<C-a>", {
-	desc = "Increment cursor number",
-	noremap = true,
+  desc = "Increment cursor number",
+  noremap = true,
 })
 
 -- Set the key mapping for <Down> to decrement cursor number
 set_keymap("n", "<Down>", "<C-x>", {
-	desc = "Decrement cursor number",
-	noremap = true,
+  desc = "Decrement cursor number",
+  noremap = true,
 })
 
 -- Disable arrow keys in normal mode
@@ -56,23 +56,23 @@ set_keymap("i", "<Right>", "<Nop>", { noremap = true, silent = true })
 local is_maximized = false
 
 vim.toggle_maximize_window = function()
-	if is_maximized then
-		vim.cmd("wincmd =")
-		is_maximized = false
-	else
-		vim.cmd("wincmd |")
-		vim.cmd("wincmd _")
-		is_maximized = true
-	end
+  if is_maximized then
+    vim.cmd("wincmd =")
+    is_maximized = false
+  else
+    vim.cmd("wincmd |")
+    vim.cmd("wincmd _")
+    is_maximized = true
+  end
 end
 
 set_keymap("n", "<Leader>z", ":lua vim.toggle_maximize_window()<CR>", { desc = "Toggle maximize window" })
 
 -- Call Telescope file finder directly with <Ctrl+p> in normal and insert modes
 multiple_set_keymap("n,i", "<C-p>", "<Cmd>Telescope find_files<CR>", {
-	noremap = true, -- Do not remap nested mappings
-	silent = true, -- Do not show the mapping in command-line area
-	desc = "Find files", -- Description for the key mapping
+  noremap = true, -- Do not remap nested mappings
+  silent = true, -- Do not show the mapping in command-line area
+  desc = "Find files", -- Description for the key mapping
 })
 
 -- nnoremap <up> <nop>
