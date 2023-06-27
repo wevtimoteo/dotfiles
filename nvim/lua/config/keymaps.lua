@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 local set_keymap = vim.api.nvim_set_keymap
+
 -- Helper function to set key mappings for multiple modes
 local function multiple_set_keymap(modes, lhs, rhs, opts)
   for mode in string.gmatch(modes, "%a") do
@@ -29,7 +30,9 @@ set_keymap("c", "<C-e>", "<C-r>=expand('%:p:h')<CR>/", { desc = "Fill current di
 
 -- replace
 set_keymap("n", "<leader>:", ":%s/:(w+)(s*=>s*)/\1: /gc<CR>", { desc = "Replace old Ruby hash syntax to new one" })
-set_keymap("n", "<Down>", "<C-x>", { desc = "Decrement cursor number" })
+
+-- select
+--set_keymap("n", "<CR>", "<Plug>(textobj-punctuation-i)", { desc = "Select content inside punctuation", silent = false })
 
 -- Set the key mapping for <Up> to increment cursor number
 set_keymap("n", "<Up>", "<C-a>", {
@@ -74,12 +77,3 @@ multiple_set_keymap("n,i", "<C-p>", "<Cmd>Telescope find_files<CR>", {
   silent = true, -- Do not show the mapping in command-line area
   desc = "Find files", -- Description for the key mapping
 })
-
--- nnoremap <up> <nop>
--- nnoremap <down> <nop>
--- nnoremap <left> <nop>
--- nnoremap <right> <nop>
--- inoremap <up> <nop>
--- inoremap <down> <nop>
--- inoremap <left> <nop>
--- inoremap <right> <nop>
