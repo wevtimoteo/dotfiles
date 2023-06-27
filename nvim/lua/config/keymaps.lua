@@ -10,6 +10,9 @@ local function multiple_set_keymap(modes, lhs, rhs, opts)
 	end
 end
 
+-- alias for leader
+set_keymap("n", "<space>", "<leader>", { desc = "Alias for leader", silent = true })
+
 -- explore
 set_keymap("n", "<leader>e", ":Exp<cr>", { desc = "Enter netrw" })
 
