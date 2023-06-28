@@ -7,9 +7,25 @@ return {
     "hrsh7th/nvim-cmp",
     opts = function()
       vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
+
       local cmp = require("cmp")
       local defaults = require("cmp.config.default")()
+
+      local bordered = {
+        border = "rounded",
+        winhighlight = "FloatBorder:IndentBlanklineChar,Normal:Normal",
+        zindex = 1001,
+        scrolloff = 0,
+        col_offset = 0,
+        side_padding = 1,
+        scrollbar = true,
+      }
+
       return {
+        window = {
+          completion = bordered,
+          documentation = bordered,
+        },
         completion = {
           completeopt = "menu,menuone,noinsert",
         },
