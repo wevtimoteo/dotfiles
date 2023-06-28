@@ -7,9 +7,9 @@ return {
       highlight_colors.turnOn()
 
       highlight_colors.setup({
-        render = "first_column",
+        render = "background",
         enable_named_colors = true,
-        enable_tailwind = false,
+        enable_tailwind = true,
       })
     end,
   },
