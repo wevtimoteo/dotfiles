@@ -1,15 +1,20 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    require("telescope").setup({
-      defaults = {
-        mappings = {
-          n = {
-            ["<c-t>"] = require("telescope.actions").select_default,
+    config = function()
+      require("telescope").setup({
+        defaults = {
+          mappings = {
+            i = {
+              ["<c-t>"] = require("telescope.actions").select_tab,
+            },
+            n = {
+              ["<c-t>"] = require("telescope.actions").select_tab,
+            },
           },
         },
-      },
-    }),
+      })
+    end,
   },
   {
     "folke/flash.nvim",
