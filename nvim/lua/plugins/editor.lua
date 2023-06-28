@@ -23,9 +23,6 @@ return {
     end,
   },
   {
-    "HampusHauffman/block.nvim",
-  },
-  {
     "echasnovski/mini.surround",
     opts = {
       mappings = {
