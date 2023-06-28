@@ -35,7 +35,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "fluoromachine" } },
+  install = { colorscheme = { "delta" } },
   checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
