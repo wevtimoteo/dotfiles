@@ -9,21 +9,26 @@ return {
         bg = "#FAE5FF",
       }
 
+      -- Reverse the colors
       local custom_title_theme = {
-        bg = "#7C0097",
-        fg = "#FAE5FF",
+        bg = custom_theme.fg,
+        fg = custom_theme.bg,
       }
 
       fm.setup({
         glow = true,
         theme = "delta",
-        brightness = 0.07,
+        brightness = 0.05,
         overrides = {
           TelescopePromptTitle = custom_title_theme,
           TelescopePreviewTitle = custom_title_theme,
           TelescopeResultsTitle = custom_title_theme,
           TelescopeResultsBorder = custom_theme,
           TelescopeResultsNormal = custom_theme,
+          TelescopeMatching = {
+            bg = "#FF6596",
+            fg = custom_title_theme.fg,
+          },
         },
       })
 
