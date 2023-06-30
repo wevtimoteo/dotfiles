@@ -1,9 +1,5 @@
 return {
   {
-    "echasnovski/mini.pairs",
-    enabled = false,
-  },
-  {
     "hrsh7th/nvim-cmp",
     opts = function()
       vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
