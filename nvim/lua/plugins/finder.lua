@@ -18,6 +18,7 @@ return {
   },
   {
     "folke/flash.nvim",
+    enabled = false,
     setup = function()
       local flash = require("flash")
 
