@@ -4,6 +4,10 @@ return {
     enabled = false,
   },
   {
+    "folke/edgy.nvim",
+    enabled = false,
+  },
+  {
     "goolord/alpha-nvim",
     enabled = false,
   },
