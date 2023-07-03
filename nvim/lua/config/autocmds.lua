@@ -17,3 +17,6 @@ vim.cmd([[
   ab pryb require 'pry';binding.pry
   ab pryi require IEx; IEx.pry
 ]])
+
+-- Disables resize_splits autocmds that causes last tab being focused on window resized
+vim.api.nvim_del_augroup_by_name("lazyvim_resize_splits")
