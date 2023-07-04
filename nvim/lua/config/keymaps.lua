@@ -35,7 +35,7 @@ set_keymap("c", "<C-e>", "<C-r>=expand('%:p:h')<CR>/", { desc = "Fill current di
 set_keymap("n", "<leader>:", ":%s/:(w+)(s*=>s*)/\1: /gc<CR>", { desc = "Replace old Ruby hash syntax to new one" })
 
 -- select
---set_keymap("n", "<CR>", "<Plug>(textobj-punctuation-i)", { desc = "Select content inside punctuation", silent = false })
+set_keymap("n", "<CR>", 'vi"', { desc = "Select content inside string", silent = false })
 
 -- Set the key mapping for <Up> to increment cursor number
 set_keymap("n", "<Up>", "<C-a>", {
