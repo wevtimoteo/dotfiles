@@ -1,0 +1,26 @@
+# set ft:zsh
+path=('$HOME/.local/bin/' $path)
+
+# Set gnu-sed as sed
+path=('$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin/' $path)
+
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+
+ZDOTDIR="$HOME/.zsh"
+ZSH_CUSTOM="$ZDOTDIR/custom"
+
+EDITOR=nvim
+
+# Kubernetes
+KUBECONFIG=$HOME/.kube/config
+
+# Theme
+LS_COLORS="$(vivid generate dracula)"
+
+TIG_EDITOR="nvim"
+
+# Erlang (REPL)/Elixir (iex) history
+ERL_AFLAGS="-kernel shell_history_path '\"$HOME/.erlang-history\"'"
+
+CONFIG_DIR=$HOME/.config/

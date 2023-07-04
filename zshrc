@@ -30,14 +30,10 @@ zstyle ':completion:*:complete:(cd|pushd):*' tag-order \
 bindkey -e
 bindkey '^R' history-incremental-search-backward
 
-# Other variables
-source ~/.exports
+# Other environment variables
+source $HOME/.exports
 
-LC_ALL=en_US.UTF-8
-LANG=en_US.UTF-8
-
-ZDOTDIR="$HOME/.zsh"
-ZSH_CUSTOM="$ZDOTDIR/custom"
+[[ -s $HOME/.custom_exports ]] && source $HOME/.custom_exports
 
 # source antidote
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
