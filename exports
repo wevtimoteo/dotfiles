@@ -23,4 +23,4 @@ TIG_EDITOR="nvim"
 # Erlang (REPL)/Elixir (iex) history
 ERL_AFLAGS="-kernel shell_history_path '\"$HOME/.erlang-history\"'"
 
-CONFIG_DIR=$HOME/.config/
+CONFIG_DIR=$HOME/.config
