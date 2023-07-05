@@ -7,10 +7,13 @@ Also check the [Linux version](https://github.com/wevtimoteo/dotfiles/tree/linux
 ```
 git clone git://github.com/wevtimoteo/dotfiles.git
 cd dotfiles
-sh install.sh
+
+./install.zsh --simulate
 
 brew bundle
 ```
+
+Omit `--simulate` to actually run it.
 
 ## References:
 
