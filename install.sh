@@ -10,5 +10,6 @@ source $HOME/.exports
 
 ln -sf $PWD/git-edit ~/.local/bin/git-edit
 ln -sf $PWD/nvim $CONFIG_DIR/nvim
+ln -sf $PWD/topgrade.toml $CONFIG_DIR/
 
 source ~/.zshrc
