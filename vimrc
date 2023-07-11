@@ -4,16 +4,11 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-" TODO: Load plugins here (pathogen or vundle)
-
 " Turn on syntax highlighting
 syntax on
 
 " For plugins to load correctly
 filetype plugin indent on
-
-" TODO: Pick a leader key
-" let mapleader = ","
 
 " Security
 set modelines=0
@@ -82,6 +77,9 @@ vnoremap <F1> :set invfullscreen<CR>
 
 " Formatting
 map <leader>q gqip
+
+" Fast access to commands
+nmap ; :
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
