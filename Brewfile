@@ -2,6 +2,7 @@
 brew 'ack'
 brew 'gnu-sed'
 brew 'ripgrep'
+brew 'fd'
 
 # Terminal
 brew 'exa'
