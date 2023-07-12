@@ -1,5 +1,16 @@
 return {
   {
+    "RRethy/nvim-treesitter-endwise",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        endwise = {
+          enable = true,
+        },
+      })
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     opts = function()
       vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
