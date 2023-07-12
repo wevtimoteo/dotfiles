@@ -47,7 +47,7 @@ while (( $# > 0 )); do
   esac
 done
 
-files=(zshrc zsh irbrc alias vim gitconfig gitignore_global gemrc tmux.conf tmux tigrc exports)
+files=(zshrc zsh irbrc alias vim gitconfig gitignore_global gemrc tmux.conf tmux tigrc exports ackrc)
 setup_dotfiles "$HOME" yes "${files[@]}"
 
 source "$HOME/.exports"
