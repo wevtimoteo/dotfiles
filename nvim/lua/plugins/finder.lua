@@ -4,6 +4,27 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
+    opts = {
+      pickers = {
+        find_files = {
+          hidden = true,
+          file_ignore_patterns = {
+            ".git",
+            "log",
+            "tmp",
+            "**/public/assets",
+            "**/public/packs",
+            "**/public/packs-test",
+            "build",
+            "./priv",
+            "vendor",
+            "**/node_modules",
+            "**/deps",
+            "coverage",
+          },
+        },
+      },
+    },
     config = function()
       require("telescope").setup({
         defaults = {
