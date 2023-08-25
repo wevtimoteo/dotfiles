@@ -76,6 +76,14 @@ return {
     end,
   },
   {
+    "sustech-data/wildfire.nvim",
+    event = "VeryLazy",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("wildfire").setup()
+    end,
+  },
+  {
     "echasnovski/mini.surround",
     opts = {
       mappings = {
