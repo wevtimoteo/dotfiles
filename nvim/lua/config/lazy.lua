@@ -20,7 +20,6 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- { import = "lazyvim.plugins.extras.editor.mini-files" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    { import = "lazyvim.plugins.extras.editor.flash" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
 
     -- import/override with your plugins
