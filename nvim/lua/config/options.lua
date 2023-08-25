@@ -5,4 +5,5 @@ local opt = vim.opt
 
 opt.relativenumber = false
 opt.spelllang = { "en" }
+opt.clipboard = ""
 vim.g.mapleader = "\\"
