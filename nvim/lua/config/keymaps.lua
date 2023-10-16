@@ -11,9 +11,6 @@ local function multiple_set_keymap(modes, lhs, rhs, opts)
   end
 end
 
--- alias for leader
-set_keymap("n", "<space>", "<leader>", { desc = "Alias for leader", silent = true })
-
 -- explore
 set_keymap("n", "<leader>e", ":Exp<cr>", { desc = "Enter netrw" })
 
@@ -68,10 +65,3 @@ vim.toggle_maximize_window = function()
 end
 
 set_keymap("n", "<Leader>z", ":lua vim.toggle_maximize_window()<CR>", { desc = "Toggle maximize window" })
-
--- Call Telescope file finder directly with <Ctrl+p> in normal and insert modes
-multiple_set_keymap("n,i", "<C-p>", "<Cmd>Telescope find_files<CR>", {
-  noremap = true, -- Do not remap nested mappings
-  silent = true, -- Do not show the mapping in command-line area
-  desc = "Find files", -- Description for the key mapping
-})
