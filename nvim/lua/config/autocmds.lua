@@ -12,6 +12,7 @@ vim.cmd([[
   au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eex
   au BufRead,BufNewFile *.html.eex set filetype=heex
   au BufRead,BufNewFile mix.lock set filetype=elixir
+  au BufRead,BufNewFile *.pcss set filetype=scss
 
   " Abbreviations
   ab pryb require 'pry';binding.pry
