@@ -1,3 +1,5 @@
+tap "homebrew/cask-versions"
+
 # Searching
 brew 'ack'
 brew 'gnu-sed'
@@ -10,6 +12,7 @@ brew 'bat'
 brew 'starship'
 brew 'tmux'
 brew 'vivid'
+cask 'wezterm'
 
 # Monitoring
 brew 'htop'
@@ -17,6 +20,7 @@ brew 'htop'
 # Coding
 brew 'neovim'
 brew 'tree-sitter'
+brew 'tidy-html5'
 
 # Developer tools
 brew 'gh'
