@@ -1,11 +1,15 @@
 tap 'homebrew/cask-versions'
 tap 'homebrew/cask-fonts'
 
+# `pinentry` tap
+tap 'jorgelbg/tap'
+
 # Searching
 brew 'ack'
 brew 'gnu-sed'
 brew 'ripgrep'
 brew 'fd'
+brew 'rg'
 
 # Terminal
 brew 'exa'
@@ -14,6 +18,11 @@ brew 'starship'
 brew 'tmux'
 brew 'vivid'
 cask 'wezterm'
+brew 'yazi'
+# yazi dependencies
+brew 'ffmpegthumbnailer'
+brew 'jq' # JSON preview
+brew 'poppler' # PDF preview
 
 # Monitoring
 brew 'htop'
