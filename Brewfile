@@ -1,4 +1,5 @@
-tap "homebrew/cask-versions"
+tap 'homebrew/cask-versions'
+tap 'homebrew/cask-fonts'
 
 # Searching
 brew 'ack'
@@ -29,3 +30,7 @@ brew 'tig'
 
 # Utilities
 brew 'topgrade'
+
+# Fonts
+cask 'font-recursive-code'
+cask 'font-symbols-only-nerd-font'
