@@ -1,0 +1,63 @@
+[user]
+    # Do not guess the user's identity.
+    # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+
+    useConfigOnly = true
+
+    # [!] DO NOT store sensitive information such as the Git user
+    # credentials (`name` / `email`), or things such as the `signingkey`
+    # in this file, add them in `~/.gitconfig.local`!
+    
+[credential]
+	helper = osxkeychain
+
+[diff]
+  tool = ksdiff
+
+[difftool "ksdiff"]
+  cmd = ksdiff \"$LOCAL\" \"$REMOTE\"
+
+[core]
+	excludesfile = ~/.gitignore_global
+  autosetuprebase = always
+
+[color]
+  ui = auto
+
+[alias]
+  st  = status
+  br  = branch
+  co  = checkout
+  df  = diff
+  lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches master
+  who = shortlog -s --
+  dft = difftool -y
+  committers = shortlog --summary --email --committer -n
+  last-commit = !sh -c 'git rev-list HEAD --abbrev-commit | head -1'
+  current-branch = !sh -c 'git branch | grep \\* | sed "s/^*\\ //g"'
+  update = !sh -c 'git fetch --prune && git rebase --autostash origin/`git current-branch`'
+  oh-my-god = !sh -c 'git fsck --lost-found | grep "dangling commit" | cut -d " " -f 3 | xargs git log --oneline --no-walk -p'
+
+[push]
+	default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+
+[commit]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
+
+[include]
+  # Load local configs.
+  # https://git-scm.com/docs/git-config#_includes
+  #
+  # [!] The following needs to remain at the end of this file in
+  #     order to allow any of the above configs to be overwritten
+  #     by the local ones
+
+  path = ~/.gitconfig.local
