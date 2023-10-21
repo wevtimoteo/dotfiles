@@ -31,6 +31,7 @@ brew 'htop'
 brew 'neovim'
 brew 'tree-sitter'
 brew 'tidy-html5'
+brew 'pinentry-touchid'
 
 # Developer tools
 brew 'gh'
