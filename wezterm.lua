@@ -45,4 +45,12 @@ config.window_padding = {
 	bottom = 2,
 }
 
+config.default_cursor_style = "SteadyBlock"
+
+config.colors = {
+	cursor_bg = "#A868AD",
+	cursor_fg = "white",
+	cursor_border = "#A868AD",
+}
+
 return config
