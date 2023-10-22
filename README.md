@@ -28,7 +28,7 @@ Omit `--simulate` to actually run it.
 ## Updating tools
 
 ```
-topgrade -c -n
+topgrade -n
 ```
 
 Omit `-n` to actually run it.

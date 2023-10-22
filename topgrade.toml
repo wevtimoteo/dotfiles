@@ -61,7 +61,7 @@ display_time = true
 cleanup = true
 
 # Skip sending a notification at the end of a run
-skip_notify = false
+skip_notify = true
 
 # Whether to self update (this is ignored if the binary has been built without self update support, available also via setting the environment variable TOPGRADE_NO_SELF_UPGRADE)
 no_self_update = false
