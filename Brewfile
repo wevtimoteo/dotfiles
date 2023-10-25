@@ -40,6 +40,7 @@ brew 'tig'
 
 # Utilities
 brew 'topgrade'
+brew 'ffmpeg'
 
 # Fonts
 cask 'font-recursive-code'
