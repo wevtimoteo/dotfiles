@@ -161,7 +161,8 @@ return {
 
       require("symbol-usage").setup({
         text_format = text_format,
-        request_pending_text = "...",
+        request_pending_text = false,
+        vt_position = "end_of_line",
         references = { enabled = true, include_declaration = true },
         definition = { enabled = true },
 
