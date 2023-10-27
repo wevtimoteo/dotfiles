@@ -12,6 +12,15 @@ __      _______   _| |_ _ _ __ ___   ___ | |_ ___  ___     __| | ___ | |_| |_ _|
 
 Also check the [Linux version](https://github.com/wevtimoteo/dotfiles/tree/linux).
 
+Includes:
+
+- [neovim](https://neovim.io/): better vim-based text editor
+- [wezterm](https://wezfurlong.org/wezterm): terminal emulator and multiplexer
+- [tmux](https://github.com/tmux/tmux): terminal multiplexer (I don't use `wezterm` for it)
+- [gh](https://github.com/cli/cli): GitHub’s official command line tool
+- [tig](https://jonas.github.io/tig/): ncurses-based text-mode interface for git
+- [codespell](https://github.com/codespell-project/codespell): check code for common misspellings
+
 ## Setup
 
 ```bash
