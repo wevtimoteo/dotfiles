@@ -19,9 +19,6 @@ vim.cmd([[
   au BufRead,BufNewFile *.ejs set filetype=html
   au BufRead,BufNewFile .env.example set filetype=sh
   au BufRead,BufNewFile .env.development set filetype=sh
-  au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eex
-  au BufRead,BufNewFile *.html.eex set filetype=heex
-  au BufRead,BufNewFile mix.lock set filetype=elixir
   au BufRead,BufNewFile *.pcss set filetype=scss
 
   " Abbreviations
@@ -31,3 +28,15 @@ vim.cmd([[
 
 -- Disables resize_splits autocmds that causes last tab being focused on window resized
 vim.api.nvim_del_augroup_by_name("lazyvim_resize_splits")
+
+local group = vim.api.nvim_create_augroup("Elixir", { clear = true })
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = "*.ex,*.exs",
+  group = group,
+  callback = function()
+    local ok, otter = pcall(require, "otter")
+    if ok then
+      otter.activate({ "markdown" })
+    end
+  end,
+})
