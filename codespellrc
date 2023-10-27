@@ -1,0 +1,4 @@
+[codespell]
+skip = *.po,node_modules,deps,_build,erl_crash.dump
+#count =
+quiet-level = 3
