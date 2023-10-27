@@ -25,6 +25,25 @@ brew bundle
 
 Omit `--simulate` to actually run it.
 
+### Config files
+
+### Codespell ignore words
+
+Add a file under `~/.config/codespell/ignore-words.txt`:
+
+```txt
+SourceLevel
+Dotfiles
+```
+
+### Vale Styles
+
+To sync vale styles use:
+
+```bash
+vale sync
+```
+
 ## Updating tools
 
 ```bash

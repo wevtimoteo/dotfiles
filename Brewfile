@@ -33,6 +33,11 @@ brew 'tree-sitter'
 brew 'tidy-html5'
 brew 'pinentry-touchid'
 
+# Spellcheck
+brew 'openjdk'
+brew 'codespell'
+brew 'vale'
+
 # Developer tools
 brew 'gh'
 brew 'git'
