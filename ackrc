@@ -10,6 +10,7 @@
 --pager
 less -r
 
+--ignore-dir=.elixir_ls/
 --ignore-dir=log/
 --ignore-dir=tmp/
 --ignore-dir=public/assets/
