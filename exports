@@ -21,6 +21,6 @@ LS_COLORS="$(vivid generate dracula)"
 TIG_EDITOR="nvim"
 
 # Erlang (REPL)/Elixir (iex) history
-ERL_AFLAGS="-kernel shell_history_path '\"$HOME/.erlang-history\"'"
+ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 2097152"
 
 CONFIG_DIR=$HOME/.config
