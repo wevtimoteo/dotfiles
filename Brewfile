@@ -1,5 +1,6 @@
 tap 'homebrew/cask-versions'
 tap 'homebrew/cask-fonts'
+tap 'heroku/brew'
 
 # `pinentry` tap
 tap 'jorgelbg/tap'
@@ -42,6 +43,10 @@ brew 'vale'
 brew 'gh'
 brew 'git'
 brew 'tig'
+
+# Cloud Platforms
+cask 'google-cloud-sdk'
+brew 'heroku'
 
 # Utilities
 brew 'topgrade'
