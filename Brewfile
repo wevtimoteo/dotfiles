@@ -43,6 +43,8 @@ brew 'vale'
 brew 'gh'
 brew 'git'
 brew 'tig'
+brew 'asdf'
+brew 'direnv'
 
 # Cloud Platforms
 cask 'google-cloud-sdk'
