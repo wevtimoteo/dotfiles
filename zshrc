@@ -1,7 +1,3 @@
-. "$HOME/.asdf/asdf.sh"
-
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
@@ -43,3 +39,7 @@ antidote load
 
 #PROMPT="%F{175}➔ %F{33}%~ %f%F{44}\$%f "
 eval "$(starship init zsh)"
+
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
