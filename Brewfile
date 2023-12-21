@@ -46,6 +46,9 @@ brew 'tig'
 brew 'asdf'
 brew 'direnv'
 
+# Ops
+brew 'kubectl'
+
 # Cloud Platforms
 cask 'google-cloud-sdk'
 brew 'heroku'
