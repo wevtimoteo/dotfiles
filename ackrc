@@ -22,6 +22,7 @@ less -r
 --ignore-dir=node_modules/
 --ignore-dir=deps/
 --ignore-dir=coverage/
+--ignore-dir=storage/
 --ignore-file=ext:log
 --ignore-file=ext:output
 
