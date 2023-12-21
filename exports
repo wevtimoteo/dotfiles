@@ -24,3 +24,6 @@ TIG_EDITOR="nvim"
 ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 2097152"
 
 CONFIG_DIR=$HOME/.config
+
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"

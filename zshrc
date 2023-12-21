@@ -43,3 +43,6 @@ eval "$(starship init zsh)"
 . "$HOME/.asdf/asdf.sh"
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
+
+# bun completions
+[ -s "/Users/wevtimoteo/.bun/_bun" ] && source "/Users/wevtimoteo/.bun/_bun"
