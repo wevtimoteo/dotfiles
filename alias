@@ -21,6 +21,7 @@ alias permissions="stat -f \"%Lp\""
 alias pinentry='pinentry-mac'
 alias mov2gif='ffmpeg -i $1 -vf "fps=10,scale=320:-1:flags=lanczos" -c:v gif $2'
 alias codespell='codespell --config ~/.codespellrc'
+alias serve='ruby -run -e httpd . -p 9090'
 
 # Syntax highlighting and better display of file contents
 # https://github.com/sharkdp/bat
