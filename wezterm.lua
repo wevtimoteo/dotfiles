@@ -28,7 +28,7 @@ config.color_scheme = "Catppuccin Macchiato"
 --config.color_scheme = "purplepeter"
 
 -- Fonts
-config.font = wezterm.font("FiraCodeGG Nerd Font")
+config.font = wezterm.font("JuliaMono")
 config.font_size = 14
 
 config.anti_alias_custom_block_glyphs = true
