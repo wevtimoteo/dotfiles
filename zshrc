@@ -1,4 +1,6 @@
 # initialise completions with ZSH's compinit
+fpath+=~/.zfunc
+
 autoload -Uz compinit && compinit
 
 unsetopt nomatch
@@ -6,6 +8,7 @@ unsetopt nomatch
 source ~/.alias
 
 HISTCONTROL=ignoreboth
+setopt HIST_IGNORE_SPACE
 
 # fast access to projects folder
 typeset -U path cdpath fpath
