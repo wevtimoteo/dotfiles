@@ -1,6 +1,6 @@
 # some more ls aliases
-alias ll='exa --long --git'
-alias la='exa --long --git -a'
+alias ll='eza --long --git'
+alias la='eza --long --git -a'
 alias l='ls -CF'
 alias ..='cd ..'
 alias ...='cd ..; ll'

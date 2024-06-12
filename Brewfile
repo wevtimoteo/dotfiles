@@ -13,7 +13,7 @@ brew 'fd'
 brew 'rg'
 
 # Terminal
-brew 'exa'
+brew 'eza'
 brew 'bat'
 brew 'starship'
 brew 'tmux'
