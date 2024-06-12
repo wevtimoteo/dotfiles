@@ -50,7 +50,6 @@ brew 'direnv'
 brew 'kubectl'
 
 # Cloud Platforms
-cask 'google-cloud-sdk'
 brew 'heroku'
 
 # Utilities
