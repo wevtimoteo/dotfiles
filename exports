@@ -27,3 +27,15 @@ CONFIG_DIR=$HOME/.config
 
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+LDFLAGS="-L/opt/homebrew/opt/zlib/lib"
+
+ICU_PREFIX=$(brew --prefix icu4c)
+CFLAGS="-I$ICU_PREFIX/include"
+LDFLAGS="-L$ICU_PREFIX/lib"
+
+# Fix for GPG (pinentry and pinentry-touchid)
+# https://github.com/gopasspw/gopass/issues/1879
+GPG_TTY=$(tty)
+
+eval "$(direnv hook zsh)"
