@@ -20,6 +20,7 @@ brew 'tmux'
 brew 'vivid'
 cask 'wezterm'
 brew 'yazi'
+brew 'antidote'
 # yazi dependencies
 brew 'ffmpegthumbnailer'
 brew 'jq' # JSON preview
