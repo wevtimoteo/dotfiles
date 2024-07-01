@@ -184,4 +184,12 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
   },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      format = {
+        async = true,
+      },
+    },
+  },
 }
