@@ -14,7 +14,7 @@ setopt HIST_IGNORE_SPACE
 typeset -U path cdpath fpath
 
 setopt auto_cd
-cdpath=($HOME/Sites $HOME/Apps)
+cdpath=($HOME/Sites $HOME/Apps $HOME)
 
 # Enable comment in command line
 setopt interactivecomments
