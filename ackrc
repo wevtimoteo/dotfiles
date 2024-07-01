@@ -11,6 +11,9 @@
 less -r
 
 --ignore-dir=.elixir_ls/
+--ignore-dir=.ruby-lsp/
+--ignore-dir=.saas-cache/
+--ignore-dir=.bundle/
 --ignore-dir=log/
 --ignore-dir=tmp/
 --ignore-dir=public/assets/
