@@ -10,15 +10,16 @@ LANG=en_US.UTF-8
 ZDOTDIR="$HOME/.zsh"
 ZSH_CUSTOM="$ZDOTDIR/custom"
 
-EDITOR=nvim
-
 # Kubernetes
 KUBECONFIG=$HOME/.kube/config
 
 # Theme
 LS_COLORS="$(vivid generate dracula)"
 
-TIG_EDITOR="nvim"
+default_editor="nvim"
+EDITOR=$default_editor
+TIG_EDITOR=$default_editor
+GIT_EDITOR=$default_editor
 
 # Erlang (REPL)/Elixir (iex) history
 ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 2097152"
