@@ -4,13 +4,7 @@ return {
     optional = true,
     opts = {
       linters_by_ft = {
-        ["*"] = { "codespell" },
-      },
-      linters = {
-        codespell = {
-          cmd = "codespell",
-          args = { "--ignore-words", "~/.config/codespell/ignore-words.txt" },
-        },
+        markdown = { "markdownlint" },
       },
     },
   },
