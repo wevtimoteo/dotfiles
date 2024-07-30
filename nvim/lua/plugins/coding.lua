@@ -187,7 +187,7 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
-      format = {
+      default_format = {
         async = true,
       },
     },
