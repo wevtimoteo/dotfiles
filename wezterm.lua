@@ -24,11 +24,12 @@ config.enable_scroll_bar = false
 config.use_fancy_tab_bar = false
 
 -- Appearance
-config.color_scheme = "Catppuccin Macchiato"
+--config.color_scheme = "tokyonight_storm"
+config.color_scheme = "Catppuccin Frappe"
 --config.color_scheme = "purplepeter"
 
 -- Fonts
-config.font = wezterm.font("JuliaMono")
+config.font = wezterm.font("JuliaMono Nerd Font Mono")
 config.font_size = 14
 
 config.anti_alias_custom_block_glyphs = true
