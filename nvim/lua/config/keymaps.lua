@@ -29,7 +29,12 @@ set_keymap("n", ";", ":", { desc = "Fast command" })
 set_keymap("c", "<C-e>", "<C-r>=expand('%:p:h')<CR>/", { desc = "Fill current dir" })
 
 -- replace
-set_keymap("n", "<leader>:", ":%s/:(w+)(s*=>s*)/\1: /gc<CR>", { desc = "Replace old Ruby hash syntax to new one" })
+set_keymap(
+  "n",
+  "<leader>h",
+  ":%s/:\\(\\w\\+\\)\\s*=>\\s*/\\1: /gc<CR>",
+  { desc = "Replace old Ruby hash syntax to new one" }
+)
 
 -- Set the key mapping for <Up> to increment cursor number
 set_keymap("n", "<Up>", "<C-a>", {
