@@ -1,15 +1,16 @@
 [user]
-    # Do not guess the user's identity.
-    # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+  # Do not guess the user's identity.
+  # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
 
-    useConfigOnly = true
+  useConfigOnly = true
 
-    # [!] DO NOT store sensitive information such as the Git user
-    # credentials (`name` / `email`), or things such as the `signingkey`
-    # in this file, add them in `~/.gitconfig.local`!
+  # [!] DO NOT store sensitive information such as the Git user
+  # credentials (`name` / `email`), or things such as the `signingkey`
+  # in this file, add them in `~/.gitconfig.local`!
     
+
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [diff]
   tool = ksdiff
@@ -18,10 +19,10 @@
   cmd = ksdiff \"$LOCAL\" \"$REMOTE\"
 
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
   autosetuprebase = always
-	pager = git-split-diffs --color | less -RFX
-	editor = nvim
+  pager = git-split-diffs --color | less -RFX
+  editor = nvim
 
 [color]
   ui = auto
@@ -42,17 +43,18 @@
   oh-my-god = !sh -c 'git fsck --lost-found | grep "dangling commit" | cut -d " " -f 3 | xargs git log --oneline --no-walk -p'
 
 [push]
-	default = simple
+  default = simple
+
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [include]
   # Load local configs.
