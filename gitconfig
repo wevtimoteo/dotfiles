@@ -44,6 +44,7 @@
 
 [push]
   default = simple
+  autoSetupRemote = true
 
 [filter "media"]
   required = true
