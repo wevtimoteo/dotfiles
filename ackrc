@@ -15,6 +15,7 @@ less -r
 --ignore-dir=.saas-cache/
 --ignore-dir=.bundle/
 --ignore-dir=log/
+--ignore-dir=dist/
 --ignore-dir=tmp/
 --ignore-dir=public/assets/
 --ignore-dir=public/packs/
