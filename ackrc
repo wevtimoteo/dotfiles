@@ -29,6 +29,7 @@ less -r
 --ignore-dir=storage/
 --ignore-file=ext:log
 --ignore-file=ext:output
+--ignore-file=ext:liquidc
 
 --ignore-file=match:tags
 --ignore-file=match:.min.js
