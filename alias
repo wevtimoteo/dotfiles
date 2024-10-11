@@ -1,7 +1,8 @@
 # some more ls aliases
 alias ll='eza --long --git'
 alias la='eza --long --git -a'
-alias l='ls -CF'
+# Using https://github.com/redding/l.rb
+#alias l='ls -CF'
 alias ..='cd ..'
 alias ...='cd ..; ll'
 alias peg='ps -ef | grep -i'
