@@ -121,3 +121,6 @@ cabal.project.local~
 
 # direnv
 .envrc
+
+# l (https://github.com/redding/l.rb)
+.l.yml
