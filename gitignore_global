@@ -122,5 +122,8 @@ cabal.project.local~
 # direnv
 .envrc
 
-# l (https://github.com/redding/l.rb)
+# test runner (https://github.com/redding/t.rb)
+.t.yml
+
+# linter runner (https://github.com/redding/l.rb)
 .l.yml
