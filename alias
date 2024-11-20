@@ -1,0 +1,41 @@
+# some more ls aliases
+alias ll='eza --long --git'
+alias la='eza --long --git -a'
+# Using https://github.com/redding/l.rb
+#alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ..; ll'
+alias peg='ps -ef | grep -i'
+alias psg='ps aux | grep '
+alias llg='launchctl list | grep'
+
+# DEV
+alias be="bundle exec"
+alias rspec='be rspec'
+alias unit="rspec -t ~@acceptance"
+alias acceptance="rspec -t @acceptance"
+alias migrate="bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate"
+alias tmux="env TERM=xterm-256color tmux"
+alias gitroot='cd $(git rev-parse --show-toplevel)'
+alias vim="nvim"
+alias permissions="stat -f \"%Lp\""
+alias mov2gif='ffmpeg -i $1 -vf "fps=10,scale=320:-1:flags=lanczos" -c:v gif $2'
+alias codespell='codespell --config ~/.codespellrc'
+alias serve='ruby -run -e httpd . -p 9090'
+alias r-eady='bundle && yarn install && migrate'
+
+# Syntax highlighting and better display of file contents
+# https://github.com/sharkdp/bat
+alias cat="~/.local/bin/bat"
+
+# others
+alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
+
+alias weather='curl -s http://wttr.in/'
+
+alias unsafe-rm="command rm -i"
+
+alias ngrok-me="ngrok http 3000"
+
+# Docker
+alias dexec="docker compose exec "
