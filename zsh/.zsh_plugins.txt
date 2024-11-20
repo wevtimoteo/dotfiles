@@ -1,0 +1,3 @@
+mattmc3/zsh-safe-rm
+Tarrasch/zsh-bd
+MichaelAquilina/zsh-you-should-use
