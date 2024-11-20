@@ -1,14 +1,32 @@
-.netrwhist
+# Vim
+vim/plugged
+vim/autoload/plug.vim.old
+nvim/autoload
+nvim/colors
+nvim/after
+nvim/plugged
+nvim/doc
+nvim/ruby
+nvim/plugin
+nvim/indent
+nvim/ftplugin
+nvim/snippets
+nvim/syntax
+nvim/.VimballRecord
+nvim/.vim
 
-emacs.d/elpa/
-emacs.d/places
-emacs.d/backups/
-emacs.d/.smex-items
-emacs.d/auto-save-list
+.netrwhist
 
 # Tmux Plugins
 tmux/plugins/*
 tmux/resurrect
 
-vim/plugged
-vim/.vim
+# zsh
+zsh/.zcompdump*
+zsh/_git
+zsh/completions
+zsh/.zsh_plugins.zsh
+zsh/.antidote
+
+# zsh themes
+zsh/custom/themes/
