@@ -1,0 +1,27 @@
+# set ft:zsh
+path=('$HOME/.local/bin/' $path)
+
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+
+ZDOTDIR="$HOME/.zsh"
+ZSH_CUSTOM="$ZDOTDIR/custom"
+
+# Theme
+LS_COLORS="$(vivid generate dracula)"
+
+default_editor="nvim"
+EDITOR=$default_editor
+TIG_EDITOR=$default_editor
+GIT_EDITOR=$default_editor
+
+# Erlang (REPL)/Elixir (iex) history
+ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 2097152"
+
+CONFIG_DIR=$HOME/.config
+
+# Fix for GPG
+# https://github.com/gopasspw/gopass/issues/1879
+GPG_TTY=$(tty)
+
+eval "$(direnv hook zsh)"
