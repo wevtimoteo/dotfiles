@@ -57,4 +57,13 @@ setup_dotfiles "$CONFIG_DIR" no "${config_dir_files[@]}"
 
 ln -sf "$PWD/git-edit" "$HOME/.local/bin/git-edit"
 
+# Install utilities
+# Linter:
+# https://github.com/redding/l.rb
+#
+# Test runner:
+# https://github.com/redding/t.rb
+curl -L https://git.io/l.rb--install | PREFIX=/.local sh
+curl -L https://git.io/t.rb--install | PREFIX=/.local sh
+
 source "$HOME/.zshrc"
