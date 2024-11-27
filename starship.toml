@@ -10,12 +10,12 @@
 # 
 # 
 
-#           _     _ 
+#           _     _
 #  ______ _(_) __| |
 # |_  / _` | |/ _` |
 #  / / (_| | | (_| |
 # /___\__,_|_|\__,_|	zaid-hassan
- 
+
 # ---------------------------------------------------------------
 format = """
 [░▒▓](#6204B6)\
@@ -31,9 +31,9 @@ $ruby\
 $docker_context\
 [](fg:#7B35DA bg:#6204B6)\
 [ ](fg:#6204B6)\
-$cmd_duration\
 $character\
 """
+command_timeout = 1000
 
 [line_break]
 disabled = false
@@ -145,10 +145,10 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#6272a4"
 format = '[  $time ]($style)'
-	
+
 [character]
-success_symbol = '[ ➜](#B441B1)'
-error_symbol = '[ ➜](bold red)'
+success_symbol = '[ \$](#B441B1)'
+error_symbol = '[ \$](bold red)'
 #style = "bg:#6272a4"
 
 [cmd_duration]
