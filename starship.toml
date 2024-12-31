@@ -147,8 +147,8 @@ style = "bg:#6272a4"
 format = '[  $time ]($style)'
 	
 [character]
-success_symbol = '[ ➜](#B441B1)'
-error_symbol = '[ ➜](bold red)'
+success_symbol = '[ \$](#B441B1) '
+error_symbol = '[ \$](bold red) '
 #style = "bg:#6272a4"
 
 [cmd_duration]
