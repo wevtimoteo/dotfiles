@@ -25,6 +25,8 @@ brew 'antidote'
 brew 'ffmpegthumbnailer'
 brew 'jq' # JSON preview
 brew 'poppler' # PDF preview
+brew 'viu' # Image viewer
+brew 'chafa' # Terminal graphics
 
 # Monitoring
 brew 'htop'
