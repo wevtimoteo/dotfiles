@@ -1,6 +1,6 @@
 return {
   {
-    "RRethy/nvim-treesitter-endwise",
+    "RRethy/nvim-treesitter-endwise", -- Wisely add "end" in Ruby
     event = "VeryLazy",
     config = function()
       require("nvim-treesitter.configs").setup({
@@ -11,7 +11,7 @@ return {
     end,
   },
   {
-    "hrsh7th/nvim-cmp",
+    "hrsh7th/nvim-cmp", -- completion
     opts = function()
       vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
 
@@ -76,7 +76,7 @@ return {
     end,
   },
   {
-    "sustech-data/wildfire.nvim",
+    "sustech-data/wildfire.nvim", -- Smart selection of the closest text object
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
@@ -107,7 +107,7 @@ return {
     },
   },
   {
-    "Wansmer/symbol-usage.nvim",
+    "Wansmer/symbol-usage.nvim", -- Display references, definitions and implementations of document symbols
     event = "BufReadPre", -- need run before LspAttach if you use nvim 0.9. On 0.10 use 'LspAttach'
     config = function()
       local function h(name)
@@ -175,7 +175,7 @@ return {
     end,
   },
   {
-    "nvimdev/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim", -- LSP experience improved
     config = function()
       require("lspsaga").setup({})
     end,
@@ -185,7 +185,7 @@ return {
     },
   },
   {
-    "stevearc/conform.nvim",
+    "stevearc/conform.nvim", -- formatter
     opts = {
       default_format = {
         async = true,
