@@ -1,8 +1,5 @@
 return {
   {
-    "mileszs/ack.vim",
-  },
-  {
     "nvim-telescope/telescope.nvim",
     opts = {
       pickers = {
@@ -93,12 +90,11 @@ return {
     end,
   },
   {
-    "nvim-pack/nvim-spectre",
-    cmd = "Spectre",
+    "MagicDuck/grug-far.nvim",
     opts = { open_cmd = "noswapfile vnew" },
     -- stylua: ignore
     keys = {
-      { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+      { "<leader>sr", function() require("grug-far").open() end, desc = "Replace in files (Grug)" },
     },
   },
 }
