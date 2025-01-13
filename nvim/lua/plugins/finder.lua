@@ -97,4 +97,14 @@ return {
       { "<leader>sr", function() require("grug-far").open() end, desc = "Replace in files (Grug)" },
     },
   },
+  {
+    "ibhagwan/fzf-lua", -- Fuzzy finder
+    opts = function(_, opts)
+      local fzf = require("fzf-lua")
+      local config = fzf.config
+      local actions = fzf.actions
+
+      config.defaults.actions.files["ctrl-t"] = actions.file_tabedit
+    end,
+  }
 }
