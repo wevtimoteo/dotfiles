@@ -83,7 +83,7 @@ set blob-view	= line-number:no,interval=5 text
 set diff-view	= line-number:no,interval=5 text:yes,commit-title-overflow=no
 
 # UI display settings
-set show-changes		= yes		# Show changes commits in the main view?
+set show-changes		= no		# Show changes commits in the main view?
 set wrap-lines			= no		# Wrap long lines in pager views?
 set tab-size			= 8		# Number of spaces to use when expanding tabs
 set line-graphics		= default	# Enum: ascii, default, utf-8
@@ -104,7 +104,7 @@ set truncation-delimiter	= ~		# Character drawn for truncations, or "utf-8"
 set reference-format		= [branch] <tag> {remote} ~replace~
 
 # Settings controlling how content is read from Git
-set commit-order		= auto		# Enum: auto, default, topo, date, reverse (main)
+set commit-order		= default		# Enum: auto, default, topo, date, reverse (main)
 set status-show-untracked-dirs	= yes		# Show files in untracked directories? (status)
 set status-show-untracked-files	= yes		# Show untracked files?
 set ignore-space		= no		# Enum: no, all, some, at-eol (diff)
@@ -115,7 +115,8 @@ set show-notes			= yes		# When non-bool passed as `--show-notes=...` (diff)
 						#                   defaults to `diff-highlight`.
 #set blame-options		= -C -C -C	# User-defined options for `tig blame` (git-blame)
 #set log-options		= --pretty=raw	# User-defined options for `tig log` (git-log)
-#set main-options		= -n 1000	# User-defined options for `tig` (git-log)
+set log-options =
+set main-options = -n 1000
 #set mailmap			= yes		# Use .mailmap to show canonical name and email address
 
 # Misc
