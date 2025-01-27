@@ -6,11 +6,11 @@ tap 'heroku/brew'
 tap 'jorgelbg/tap'
 
 # Searching
-brew 'ack'
 brew 'gnu-sed'
 brew 'ripgrep'
 brew 'fd'
 brew 'rg'
+brew 'fzf'
 
 # Terminal
 brew 'eza'
