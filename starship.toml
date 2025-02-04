@@ -27,10 +27,7 @@ $git_status\
 [](fg:#6B1E8C bg:#6204B6)\
 $elixir\
 $ruby\
-[](fg:#6204B6 bg:#7B35DA)\
-$docker_context\
-[](fg:#7B35DA bg:#6204B6)\
-[ ](fg:#6204B6)\
+[](fg:#6204B6)\
 $character\
 """
 command_timeout = 1000
