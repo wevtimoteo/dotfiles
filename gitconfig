@@ -7,7 +7,7 @@
   # [!] DO NOT store sensitive information such as the Git user
   # credentials (`name` / `email`), or things such as the `signingkey`
   # in this file, add them in `~/.gitconfig.local`!
-    
+
 
 [credential]
   helper = osxkeychain
@@ -43,6 +43,11 @@
   update = !sh -c 'git fetch --prune && git rebase --autostash origin/`git current-branch`'
   oh-my-god = !sh -c 'git fsck --lost-found | grep "dangling commit" | cut -d " " -f 3 | xargs git log --oneline --no-walk -p'
 
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+
 [push]
   default = simple
   autoSetupRemote = true
@@ -54,6 +59,7 @@
 
 [commit]
   gpgsign = true
+  verbose = true
 
 [init]
   defaultBranch = main
@@ -67,3 +73,6 @@
   #     by the local ones
 
   path = ~/.gitconfig.local
+[rerere]
+  enabled = true
+  autoupdate = true
