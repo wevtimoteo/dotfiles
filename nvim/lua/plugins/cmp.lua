@@ -95,9 +95,14 @@ return {
 
         ["<C-l>"] = { "snippet_forward", "fallback" },
         ["<C-h>"] = { "snippet_backward", "fallback" },
+        ["<Tab>"] = {
+          function(cmp)
+            cmp.accept()
+          end,
+        },
         ["<A-1>"] = {
           function(cmp)
-            cmp.accept({ index = 1 })
+            cmp.accept()
           end,
         },
         ["<A-2>"] = {
