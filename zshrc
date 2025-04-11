@@ -29,6 +29,38 @@ zstyle ':completion:*:complete:(cd|pushd):*' tag-order \
 bindkey -e
 bindkey '^R' history-incremental-search-backward
 
+# Custom widget: delete until a given character (mimicking Vim's dt<char>)
+function delete_until_char() {
+  local target
+  # Read one character without waiting for newline
+  read -k 1 target || return
+
+  local rest="${BUFFER:$CURSOR}"
+  # Use parameter expansion to remove the longest match of target and anything after it
+  local remainder="${rest%%$target*}"
+
+  # If the remainder equals the full rest, the target was not found
+  if [[ "$remainder" == "$rest" ]]; then
+    zle beep
+    return
+  fi
+
+  # The position of the target is the length of the remainder plus one
+  local pos=$(( ${#remainder} + 1 ))
+  local end=$(( CURSOR + pos - 1 ))
+
+  # Set mark at current cursor position, move cursor to the target, and kill region
+  zle set-mark-command
+  CURSOR=$end
+  zle kill-region
+}
+
+# Register the widget with zle
+zle -N delete_until_char
+
+# Bind Alt-d (Meta-d) to our custom widget (choose a different key-binding if desired)
+bindkey "^[d" delete_until_char
+
 # Other environment variables
 source $HOME/.exports
 
