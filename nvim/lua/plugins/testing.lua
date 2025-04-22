@@ -1,6 +1,7 @@
 return {
   {
     "nvim-neotest/neotest",
+    lazy = true,
     dependencies = {
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
@@ -11,8 +12,16 @@ return {
       "olimorris/neotest-rspec",
       "zidhuss/neotest-minitest",
     },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec"),
+          require("neotest-minitest"),
+          require("neotest-elixir"),
+        },
+      })
+    end,
     opts = {
-      log_level = vim.log.levels.DEBUG,
       output_panel = {
         enabled = true,
         open = "botright split | resize 15",
@@ -20,43 +29,42 @@ return {
       quickfix = {
         open = false,
       },
-      adapters = {
-        ["neotest-elixir"] = {
-          mix_command = function()
-            return "docker compose exec app mix"
-          end,
-        },
-        ["neotest-rspec"] = {
-          rspec_cmd = function()
-            return vim.tbl_flatten({
-              "docker-compose",
-              "exec",
-              "app",
-              "bin/rspec",
-            })
-          end,
-          transform_spec_path = function(path)
-            local prefix = require("neotest-rspec").root(path)
-            return string.sub(path, string.len(prefix) + 2, -1)
-          end,
-          results_path = "tmp/rspec.output",
-          formatter = "json",
-        },
-        ["neotest-minitest"] = {
-          test_cmd = function()
-            return vim.tbl_flatten({
-              "docker-compose",
-              "exec",
-              "web",
-              "bin/rails",
-              "test",
-            })
-          end,
-          transform_spec_path = function(path)
-            local prefix = require("neotest-minitest").root(path)
-            return string.sub(path, string.len(prefix) + 2, -1)
-          end,
-        },
+    },
+    keys = {
+      {
+        "<Leader>tn",
+        function()
+          require("neotest").run.run()
+        end,
+        desc = "Nearest test",
+      },
+      {
+        "<Leader>tt",
+        function()
+          require("neotest").run.run_last()
+        end,
+        desc = "Last test",
+      },
+      {
+        "<Leader>tf",
+        function()
+          require("neotest").run.run(vim.fn.expand("%"))
+        end,
+        desc = "Entire file",
+      },
+      {
+        "<Leader>ts",
+        function()
+          require("neotest").summary.toggle()
+        end,
+        desc = "Summary",
+      },
+      {
+        "<Leader>te",
+        function()
+          require("neotest").output.open({ enter = true, auto_close = true })
+        end,
+        desc = "Expand error",
       },
     },
   },
