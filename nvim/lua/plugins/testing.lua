@@ -12,24 +12,25 @@ return {
       "olimorris/neotest-rspec",
       "zidhuss/neotest-minitest",
     },
-    config = function()
-      require("neotest").setup({
+    opts = function()
+      return {
         adapters = {
           require("neotest-rspec"),
           require("neotest-minitest"),
           require("neotest-elixir"),
         },
-      })
+        output_panel = {
+          enabled = true,
+          open = "botright split | resize 15",
+        },
+        quickfix = {
+          open = false,
+        },
+      }
     end,
-    opts = {
-      output_panel = {
-        enabled = true,
-        open = "botright split | resize 15",
-      },
-      quickfix = {
-        open = false,
-      },
-    },
+    config = function(_, opts)
+      require("neotest").setup(opts)
+    end,
     keys = {
       {
         "<Leader>tn",
