@@ -127,3 +127,6 @@ cabal.project.local~
 
 # linter runner (https://github.com/redding/l.rb)
 .l.yml
+
+# nvim project files
+.nvim.lua
