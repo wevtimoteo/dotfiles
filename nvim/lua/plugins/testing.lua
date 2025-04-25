@@ -67,6 +67,13 @@ return {
         end,
         desc = "Expand error",
       },
+      {
+        "<Leader>tE",
+        function()
+          require("neotest").output_panel.toggle()
+        end,
+        desc = "Toggle Output panel",
+      },
     },
   },
 }
