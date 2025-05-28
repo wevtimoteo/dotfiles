@@ -1,10 +1,28 @@
+# Dotfiles for Linux
+
+```
+                    _   _                 _                   _       _    __ _ _
+                   | | (_)               | |                 | |     | |  / _(_) |
+__      _______   _| |_ _ _ __ ___   ___ | |_ ___  ___     __| | ___ | |_| |_ _| | ___  ___
+\ \ /\ / / _ \ \ / / __| | '_ ` _ \ / _ \| __/ _ \/ _ \   / _` |/ _ \| __|  _| | |/ _ \/ __|
+ \ V  V /  __/\ V /| |_| | | | | | | (_) | ||  __/ (_) | | (_| | (_) | |_| | | | |  __/\__ \
+  \_/\_/ \___| \_/  \__|_|_| |_| |_|\___/ \__\___|\___/   \__,_|\___/ \__|_| |_|_|\___||___/
+
+```
+
+Check [`macOS` version](https://github.com/wevtimoteo/dotfiles/tree/macos).
+
 # Installation:
 
 ```
 git clone git://github.com/wevtimoteo/dotfiles.git
 cd dotfiles
-bash install.sh
+
+./install.zsh # --simulate
 ```
+
+- Install [Julia Mono Nerdfont](https://github.com/mietzen/juliamono-nerd-font)
+- Extract them to the `./fonts/` directory
 
 ## References:
 
