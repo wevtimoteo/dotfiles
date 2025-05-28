@@ -8,7 +8,7 @@ ZDOTDIR="$HOME/.zsh"
 ZSH_CUSTOM="$ZDOTDIR/custom"
 
 # Theme
-LS_COLORS="$(vivid generate dracula)"
+LS_COLORS="$(vivid generate catppuccin-macchiato)"
 
 default_editor="nvim"
 EDITOR=$default_editor
