@@ -26,7 +26,7 @@ alias r-eady='bundle && yarn install && migrate'
 
 # Syntax highlighting and better display of file contents
 # https://github.com/sharkdp/bat
-alias cat="~/.local/bin/bat"
+alias cat="bat"
 
 # others
 alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
