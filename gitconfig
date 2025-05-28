@@ -43,6 +43,11 @@
   update = !sh -c 'git fetch --prune && git rebase --autostash origin/`git current-branch`'
   oh-my-god = !sh -c 'git fsck --lost-found | grep "dangling commit" | cut -d " " -f 3 | xargs git log --oneline --no-walk -p'
 
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+
 [push]
   default = simple
   autoSetupRemote = true
