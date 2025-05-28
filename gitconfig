@@ -59,15 +59,10 @@
 
 [commit]
   gpgsign = true
-
-[tag]
-	gpgSign = true
+  verbose = true
 
 [init]
   defaultBranch = main
-
-[gpg]
-	program = /usr/bin/gpg
 
 [include]
   # Load local configs.
