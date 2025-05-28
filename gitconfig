@@ -72,3 +72,7 @@
   #     order to allow any of the above configs to be overwritten
   #     by the local ones
   path = ~/.gitconfig.local
+
+[rerere]
+  enabled = true
+  autoupdate = true
