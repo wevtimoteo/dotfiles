@@ -30,3 +30,6 @@ zsh/.antidote
 
 # zsh themes
 zsh/custom/themes/
+
+# fonts
+nixos/modules/fonts/*.ttf
