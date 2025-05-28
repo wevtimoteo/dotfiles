@@ -1,8 +1,5 @@
 return {
   {
-    "mileszs/ack.vim",
-  },
-  {
     "nvim-telescope/telescope.nvim",
     opts = {
       pickers = {
@@ -93,12 +90,22 @@ return {
     end,
   },
   {
-    "nvim-pack/nvim-spectre",
-    cmd = "Spectre",
+    "MagicDuck/grug-far.nvim",
+    commit = "29f460c",
     opts = { open_cmd = "noswapfile vnew" },
     -- stylua: ignore
     keys = {
-      { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+      { "<leader>sr", function() require("grug-far").open() end, desc = "Replace in files (Grug)" },
     },
+  },
+  {
+    "ibhagwan/fzf-lua", -- Fuzzy finder
+    opts = function(_, opts)
+      local fzf = require("fzf-lua")
+      local config = fzf.config
+      local actions = fzf.actions
+
+      config.defaults.actions.files["ctrl-t"] = actions.file_tabedit
+    end,
   },
 }

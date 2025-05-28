@@ -1,6 +1,6 @@
 return {
   {
-    "RRethy/nvim-treesitter-endwise",
+    "RRethy/nvim-treesitter-endwise", -- Wisely add "end" in Ruby
     event = "VeryLazy",
     config = function()
       require("nvim-treesitter.configs").setup({
@@ -11,72 +11,7 @@ return {
     end,
   },
   {
-    "hrsh7th/nvim-cmp",
-    opts = function()
-      vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
-
-      local cmp = require("cmp")
-      local defaults = require("cmp.config.default")()
-
-      local bordered = {
-        border = "rounded",
-        winhighlight = "FloatBorder:IndentBlanklineChar,Normal:Normal",
-        zindex = 1001,
-        scrolloff = 0,
-        col_offset = 0,
-        side_padding = 1,
-        scrollbar = true,
-      }
-
-      return {
-        window = {
-          completion = bordered,
-          documentation = bordered,
-        },
-        completion = {
-          completeopt = "menu,menuone,noinsert",
-        },
-        snippet = {
-          expand = function(args)
-            require("luasnip").lsp_expand(args.body)
-          end,
-        },
-        mapping = cmp.mapping.preset.insert({
-          ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-          ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-          -- Customize accept suggestion
-          ["<tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-          ["<S-tab>"] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-          }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        }),
-        sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "buffer" },
-          { name = "path" },
-        }),
-        formatting = {
-          format = function(_, item)
-            local icons = require("lazyvim.config").icons.kinds
-            if icons[item.kind] then
-              item.kind = icons[item.kind] .. item.kind
-            end
-            return item
-          end,
-        },
-        experimental = {
-          ghost_text = {
-            hl_group = "CmpGhostText",
-          },
-        },
-        sorting = defaults.sorting,
-      }
-    end,
-  },
-  {
-    "sustech-data/wildfire.nvim",
+    "sustech-data/wildfire.nvim", -- Smart selection of the closest text object
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
@@ -107,7 +42,7 @@ return {
     },
   },
   {
-    "Wansmer/symbol-usage.nvim",
+    "Wansmer/symbol-usage.nvim", -- Display references, definitions and implementations of document symbols
     event = "BufReadPre", -- need run before LspAttach if you use nvim 0.9. On 0.10 use 'LspAttach'
     config = function()
       local function h(name)
@@ -175,7 +110,7 @@ return {
     end,
   },
   {
-    "nvimdev/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim", -- LSP experience improved
     config = function()
       require("lspsaga").setup({})
     end,
@@ -185,11 +120,15 @@ return {
     },
   },
   {
-    "stevearc/conform.nvim",
+    "stevearc/conform.nvim", -- formatter
     opts = {
       default_format = {
         async = true,
       },
     },
+  },
+  {
+    "cappyzawa/trim.nvim",
+    opts = {},
   },
 }
