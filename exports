@@ -1,8 +1,8 @@
 # set ft:zsh
-path=('$HOME/.local/bin/' $path)
+path=("$HOME/.local/bin/" $path)
 
 # Set gnu-sed as sed
-path=('$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin/' $path)
+path=("$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin/" $path)
 
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
