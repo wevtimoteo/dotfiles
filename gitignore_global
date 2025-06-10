@@ -40,6 +40,7 @@ Thumbs.db
 # Ctags #
 #########
 /tags
+/docs/tags
 
 # Editor files #
 ################
