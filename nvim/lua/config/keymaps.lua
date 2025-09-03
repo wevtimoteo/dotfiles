@@ -17,8 +17,8 @@ set_keymap("n", "<leader>e", ":Exp<cr>", { desc = "Enter netrw" })
 -- navigation
 set_keymap("n", "<C-j>", "5j", { desc = "Jump down" })
 set_keymap("n", "<C-k>", "5k", { desc = "Jump up" })
-set_keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "Next buffer" })
-set_keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
+set_keymap("n", "<Tab>", "gt", { desc = "Next buffer" })
+set_keymap("n", "<S-Tab>", "gT", { desc = "Previous buffer" })
 
 -- tabs
 set_keymap("n", "<leader>tc", ":tabclose<cr>", { desc = "Close tab" })
