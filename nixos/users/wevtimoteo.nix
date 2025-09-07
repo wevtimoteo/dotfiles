@@ -6,7 +6,6 @@
     description = "Weverton";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      asdf-vm            # For managing tool versions
       bat
       bitwarden
       brave

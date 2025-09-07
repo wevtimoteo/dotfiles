@@ -34,15 +34,10 @@ source $HOME/.exports
 
 [[ -s $HOME/.custom_exports ]] && source $HOME/.custom_exports
 
-# source antidote
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
-
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
 PROMPT="%F{175}➔ %F{33}%~ %f%F{44}\$%f "
 eval "$(starship init zsh)"
 
-. "$HOME/.asdf/asdf.sh"
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
