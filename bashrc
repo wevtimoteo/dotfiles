@@ -6,15 +6,15 @@ source ~/.exports
 
 # prompt with git
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 # prompt aws profile
 function __aws_config() {
-    # add to the prompt:
-    [ "${AWS_DEFAULT_PROFILE}" ] && msg="${AWS_DEFAULT_PROFILE}"
-    [ "${AWS_DEFAULT_REGION}"  ] && msg="${msg}:${AWS_DEFAULT_REGION}"
-    echo "[aws:${msg}]"
+  # add to the prompt:
+  [ "${AWS_DEFAULT_PROFILE}" ] && msg="${AWS_DEFAULT_PROFILE}"
+  [ "${AWS_DEFAULT_REGION}" ] && msg="${msg}:${AWS_DEFAULT_REGION}"
+  echo "[aws:${msg}]"
 }
 
 # set ps1
@@ -50,8 +50,8 @@ CDPATH=".:~:$HOME/Sites:$HOME/Apps"
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -78,12 +78,12 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+  debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+xterm-color) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -92,24 +92,22 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+  else
+    color_prompt=
+  fi
 fi
-
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+xterm* | rxvt*)
+  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+  ;;
+*) ;;
 esac
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -122,7 +120,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -137,15 +135,10 @@ if ! shopt -oq posix; then
 fi
 
 ### Dircolors
-eval `dircolors ~/.dir_colors`
+eval $(dircolors ~/.dir_colors)
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# ASDF tool
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
-export PATH="$HOME/.asdf/shims/:$PATH"
 
 # Git completion
 source $HOME/.git-completion.sh
