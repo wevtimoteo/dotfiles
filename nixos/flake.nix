@@ -13,7 +13,7 @@
         system = "x86_64-linux";
         modules = [
           /etc/nixos/configuration.nix # Base configuration
-            ./configuration.nix          # Custom modular configuration
+          ./configuration.nix          # Custom modular configuration
         ];
       };
     };
