@@ -11,24 +11,15 @@ return {
     end,
   },
   {
-    "sustech-data/wildfire.nvim", -- Smart selection of the closest text object
+    "sustech-data/wildfire.nvim",
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {
-      surrounds = {
-        { "(", ")" },
-        { "{", "}" },
-        { "<", ">" },
-        { "[", "]" },
-        { '"', '"' },
-      },
-    },
     config = function()
       require("wildfire").setup()
     end,
   },
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     opts = {
       mappings = {
         add = "gsa",
