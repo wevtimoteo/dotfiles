@@ -1,22 +1,23 @@
 return {
   {
+    "nvim-treesitter/nvim-treesitter",
+  },
+  {
     "RRethy/nvim-treesitter-endwise", -- Wisely add "end" in Ruby
-    event = "VeryLazy",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        endwise = {
-          enable = true,
-        },
-      })
-    end,
   },
   {
     "sustech-data/wildfire.nvim",
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = function()
-      require("wildfire").setup()
-    end,
+    -- opts = {
+    --   surrounds = {
+    --     { "(", ")" },
+    --     { "{", "}" },
+    --     { "<", ">" },
+    --     { "[", "]" },
+    --     { '"', '"' },
+    --   },
+    -- },
   },
   {
     "nvim-mini/mini.surround",
