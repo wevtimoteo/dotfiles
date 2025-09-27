@@ -1,6 +1,7 @@
 return {
   {
     "RRethy/nvim-treesitter-endwise", -- Wisely add "end" in Ruby
+    enabled = false,
     event = "VeryLazy",
     config = function()
       require("nvim-treesitter.configs").setup({
@@ -116,7 +117,7 @@ return {
       require("lspsaga").setup({})
     end,
     dependencies = {
-      "nvim-treesitter/nvim-treesitter",
+      --"nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
     },
   },
