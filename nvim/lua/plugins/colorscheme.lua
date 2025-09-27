@@ -31,7 +31,7 @@ return {
         neotree = true,
         semantic_tokens = true,
         telescope = true,
-        treesitter = true,
+        treesitter = false,
         which_key = true,
       },
     },

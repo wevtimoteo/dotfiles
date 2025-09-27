@@ -1,6 +1,7 @@
 return {
   {
     "RRethy/nvim-treesitter-endwise", -- Wisely add "end" in Ruby
+    enabled = false,
     event = "VeryLazy",
     config = function()
       require("nvim-treesitter.configs").setup({
@@ -12,6 +13,7 @@ return {
   },
   {
     "sustech-data/wildfire.nvim", -- Smart selection of the closest text object
+    enabled = false,
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
@@ -115,7 +117,7 @@ return {
       require("lspsaga").setup({})
     end,
     dependencies = {
-      "nvim-treesitter/nvim-treesitter",
+      --"nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
     },
   },
