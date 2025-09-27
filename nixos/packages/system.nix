@@ -21,5 +21,14 @@
     xclip
     wget
     ruby_3_4
+    nodejs_24
   ];
+
+  # Enable PipeWire for audio (instead of PulseAudio)
+  services.pipewire = {
+    enable = true;
+    audio.enable = true;
+    pulse.enable = true;   # Provides PulseAudio compatibility
+    jack.enable = true;    # Optional: JACK compatibility
+  };
 }
