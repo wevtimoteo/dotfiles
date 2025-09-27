@@ -9,6 +9,7 @@
     ./modules/zsh.nix
     ./modules/tmux.nix
     ./modules/tools.nix
+    ./modules/docker.nix
   ];
 
   # Additional top-level configuration
