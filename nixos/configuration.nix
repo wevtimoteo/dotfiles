@@ -10,6 +10,7 @@
     ./modules/tmux.nix
     ./modules/tools.nix
     ./modules/docker.nix
+    ./modules/nodejs.nix
   ];
 
   # Additional top-level configuration
