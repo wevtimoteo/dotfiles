@@ -30,11 +30,11 @@ return {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
-      "echasnovski/mini.pick", -- for file_selector provider mini.pick
+      "nvim-mini/mini.pick", -- for file_selector provider mini.pick
       "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
       "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
       "ibhagwan/fzf-lua", -- for file_selector provider fzf
-      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+      "nvim-tree/nvim-web-devicons",
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
@@ -68,7 +68,7 @@ return {
       "nvim-lua/plenary.nvim",  -- Required for Job and HTTP requests
     },
     -- uncomment the following line to load hub lazily
-    cmd = "MCPHub",  -- lazy load 
+    cmd = "MCPHub",  -- lazy load
     --build = "npm install -g mcp-hub@latest",  -- Installs required mcp-hub npm module
     -- uncomment this if you don't want mcp-hub to be available globally or can't use -g
     build = "bundled_build.lua",  -- Use this and set use_bundled_binary = true in opts  (see Advanced configuration)
