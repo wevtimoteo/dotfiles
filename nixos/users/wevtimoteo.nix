@@ -9,11 +9,11 @@
       bat
       bitwarden
       brave
-      clang              # LLVM C Compiler
-      direnv             # For managing environment variables
+      clang                # LLVM C Compiler
+      direnv               # For managing environment variables
       eza
-      fzf                # Fuzzy finder for command-line workflows
-      gcc                # GNU Compiler Collection
+      fzf                  # Fuzzy finder for command-line workflows
+      gcc                  # GNU Compiler Collection
       gnome-tweaks
       neovim
       obsidian
@@ -24,12 +24,13 @@
       ripgrep
       slack
       spotify
-      starship           # For a modern shell prompt
-      vivid              # For colorful directory listings
-      wezterm
+      starship             # For a modern shell prompt
+      vivid                # For colorful directory listings
+      ghostty              # Terminal
+      wezterm              # Terminal
       whatsapp-for-linux
       zeal
-      zig                # Zig programming language compiler
+      zig                  # Zig programming language compiler
       zsh
     ];
   };
