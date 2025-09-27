@@ -20,5 +20,6 @@
     gnumake
     xclip
     wget
+    ruby_3_4
   ];
 }
