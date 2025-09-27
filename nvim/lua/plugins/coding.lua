@@ -12,6 +12,7 @@ return {
   },
   {
     "sustech-data/wildfire.nvim", -- Smart selection of the closest text object
+    enabled = false,
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
