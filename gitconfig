@@ -58,7 +58,7 @@
   smudge = git media smudge %f
 
 [commit]
-  gpgsign = true
+  gpgsign = false
   verbose = true
 
 [init]
