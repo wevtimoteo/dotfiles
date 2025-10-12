@@ -22,15 +22,12 @@ function set_ps1() {
   local arrow_prompt="\[\033[38;5;43m\]➜"
   local current_dir="\[\033[38;5;75m\]\\W"
   local current_branch="\[\033[38;5;249m\]\$(parse_git_branch)"
-  local current_aws_profile="\[\033[38;5;150m\]$(__aws_config)"
   local current_privilege="\[\033[38;5;153m\]\$"
   local command_prefs="\[\033[00m\]"
 
   export PS1=$arrow_prompt
   export PS1="$PS1 $current_dir"
   export PS1="$PS1 $current_branch"
-
-  #export PS1="$PS1 $current_aws_profile"
 
   export PS1="$PS1 $current_privilege"
   export PS1="$PS1 $command_prefs"
