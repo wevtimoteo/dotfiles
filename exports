@@ -8,7 +8,7 @@ ZDOTDIR="$HOME/.zsh"
 ZSH_CUSTOM="$ZDOTDIR/custom"
 
 # Theme
-LS_COLORS="$(vivid generate catppuccin-macchiato)"
+#LS_COLORS="$(vivid generate catppuccin-macchiato)"
 
 default_editor="nvim"
 EDITOR=$default_editor
@@ -23,5 +23,3 @@ CONFIG_DIR=$HOME/.config
 # Fix for GPG
 # https://github.com/gopasspw/gopass/issues/1879
 export GPG_TTY=$(tty)
-
-eval "$(direnv hook zsh)"

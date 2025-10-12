@@ -29,7 +29,13 @@ setup_dotfiles() {
     if $simulate; then
       echo "$symlink_cmd"
     else
-      [[ -s $target_dir/$target_filename ]] && rm -${prefix_dot}i "$target_dir/$target_filename"
+      if [[ -s $target_dir/$target_filename ]]; then
+        if [[ $prefix_dot == "yes" ]]; then
+          rm -f "$target_dir/$target_filename"
+        else
+          rm "$target_dir/$target_filename"
+        fi
+      fi
       eval "$symlink_cmd"
     fi
   done
@@ -52,9 +58,4 @@ setup_dotfiles "$HOME" yes "${files[@]}"
 
 source "$HOME/.exports"
 
-config_dir_files=(nvim starship.toml)
-setup_dotfiles "$CONFIG_DIR" no "${config_dir_files[@]}"
-
 ln -sf "$PWD/git-edit" "$HOME/.local/bin/git-edit"
-
-source "$HOME/.zshrc"

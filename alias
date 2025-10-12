@@ -33,8 +33,6 @@ alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
 
 alias weather='curl -s http://wttr.in/'
 
-alias unsafe-rm="command rm -i"
-
 alias ngrok-me="ngrok http 3000"
 
 # Docker

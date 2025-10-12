@@ -120,12 +120,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-### Dircolors
-eval $(dircolors ~/.dir_colors)
-
-# Git completion
-source $HOME/.git-completion.sh
-eval "$(gh completion -s bash)"
-
 # History for Erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
