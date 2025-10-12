@@ -9,14 +9,6 @@ parse_git_branch() {
   git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-# prompt aws profile
-function __aws_config() {
-  # add to the prompt:
-  [ "${AWS_DEFAULT_PROFILE}" ] && msg="${AWS_DEFAULT_PROFILE}"
-  [ "${AWS_DEFAULT_REGION}" ] && msg="${msg}:${AWS_DEFAULT_REGION}"
-  echo "[aws:${msg}]"
-}
-
 # set ps1
 function set_ps1() {
   local arrow_prompt="\[\033[38;5;43m\]➜"
@@ -37,9 +29,6 @@ set_ps1
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# fast access to projects folder
-CDPATH=".:~:$HOME/Sites:$HOME/Apps"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -133,9 +122,6 @@ fi
 
 ### Dircolors
 eval $(dircolors ~/.dir_colors)
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # Git completion
 source $HOME/.git-completion.sh
