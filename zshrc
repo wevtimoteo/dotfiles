@@ -30,9 +30,8 @@ bindkey -e
 bindkey '^R' history-incremental-search-backward
 
 # Other environment variables
-source $HOME/.exports
-
 [[ -s $HOME/.custom_exports ]] && source $HOME/.custom_exports
+source $HOME/.exports
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
