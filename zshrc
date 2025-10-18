@@ -34,6 +34,7 @@ bindkey '^R' history-incremental-search-backward
 source $HOME/.exports
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+source ~/.antidote/antidote.zsh
 antidote load
 
 PROMPT="%F{175}➔ %F{33}%~ %f%F{44}\$%f "
