@@ -7,7 +7,8 @@
   # [!] DO NOT store sensitive information such as the Git user
   # credentials (`name` / `email`), or things such as the `signingkey`
   # in this file, add them in `~/.gitconfig.local`!
-    
+  # git config -f ~/.gitconfig.local user.email "your@email.com"`
+
 
 [credential]
 	helper = store
