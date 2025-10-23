@@ -131,3 +131,6 @@ cabal.project.local~
 
 # nvim project files
 .nvim.lua
+
+# AI
+.claude/
