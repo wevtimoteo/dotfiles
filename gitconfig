@@ -43,6 +43,7 @@
   update = !sh -c 'git fetch --prune && git rebase --autostash origin/`git current-branch`'
   oh-my-god = !sh -c 'git fsck --lost-found | grep "dangling commit" | cut -d " " -f 3 | xargs git log --oneline --no-walk -p'
   changes = diff --name-only origin/HEAD...HEAD
+  safe-force-push = push --force-with-lease
 
 [fetch]
   prune = true
