@@ -1,5 +1,5 @@
 # set ft:zsh
-path=('$HOME/.local/bin/' $path)
+path=($HOME/.local/bin $path)
 
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
