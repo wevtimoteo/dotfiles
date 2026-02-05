@@ -139,3 +139,5 @@ __pycache__/
 .starscope.db
 ruby_cscope.out
 ruby_tags
+
+.claude
