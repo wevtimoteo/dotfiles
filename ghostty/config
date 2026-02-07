@@ -21,6 +21,8 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
+theme = Catppuccin Frappe
+
 # Send newline for Shift+Enter (for Claude Code multi-line input)
 font-size = 11
 
