@@ -22,6 +22,8 @@
 # a full restart to take effect.
 
 # Send newline for Shift+Enter (for Claude Code multi-line input)
+font-size = 11
+
 keybind = shift+enter=text:\n
 
 # Config syntax crash course
