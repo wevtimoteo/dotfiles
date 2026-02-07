@@ -12,7 +12,17 @@ __      _______   _| |_ _ _ __ ___   ___ | |_ ___  ___     __| | ___ | |_| |_ _|
 
 Check [`macOS` version](https://github.com/wevtimoteo/dotfiles/tree/macos).
 
-# Installation:
+## What's included
+
+- **Shell**: zsh with custom aliases and exports
+- **Editor**: Neovim
+- **Terminal**: Ghostty, WezTerm
+- **Multiplexer**: tmux with [catppuccin-frappe](https://github.com/catppuccin/tmux) theme
+- **Prompt**: [Starship](https://starship.rs)
+- **Git**: custom aliases, global gitignore
+- **Theme**: Catppuccin Frappe across terminal and editor
+
+## Installation
 
 ```bash
 git clone git://github.com/wevtimoteo/dotfiles.git
@@ -21,39 +31,37 @@ cd dotfiles
 ./install.zsh # --simulate
 ```
 
-### Applying NixOS changes
+Credentials and machine-specific settings are kept in `~/.gitconfig.local` (not tracked).
+
+## tmux status bar
+
+The tmux setup uses catppuccin-frappe with the following status modules:
+
+| Module | Description |
+|--------|-------------|
+| Now Playing | Current Spotify/MPRIS track via `playerctl` |
+| Ping | Network latency to 8.8.8.8 (cached, 30s interval) |
+| Load Average | System load (1min, 5min) |
+| CPU | CPU usage percentage |
+| Battery | Battery level and icon |
+| Session | Current tmux session name |
+
+After installing plugins with `prefix + I`, reload with `prefix + r`.
+
+### Setup
+
+The tmux custom modules reference scripts via `$DOTFILES_DIR`. Add the following to your `~/.custom_exports`:
 
 ```bash
-sudo nixos-rebuild switch --flake <path-to-dotfiles>/dotfiles/nixos --impure
+export DOTFILES_DIR="$HOME/Sites/dotfiles"
 ```
 
-- Install [Julia Mono Nerdfont](https://github.com/mietzen/juliamono-nerd-font)
-- Extract them to the `./nixos/modules/fonts/` directory
+### Dependencies
 
-## References:
+- `playerctl` for now playing module: `sudo apt install playerctl`
 
-  * https://github.com/dynaum/dotfiles
-  * http://dailyvim.tumblr.com
-  * https://github.com/BrunoGrasselli/vim_files
-  * https://github.com/git/git
+## References
 
-## Evolution Mail client keymap
-
-### Checking keys:
-
-```
-xmodmap -pk | grep <key-name>
-```
-
-```
-(gtk_accel_path "<Actions>/new-item/mail-message-new" "c")
-(gtk_accel_path "<Actions>/mail/mail-previous" "k")
-(gtk_accel_path "<Actions>/mail/mail-next" "j")
-(gtk_accel_path "<Actions>/mail/mail-move" "v")
-(gtk_accel_path "<Actions>/mail/mail-copy" "l")
-(gtk_accel_path "<Actions>/mail/mail-mark-unread" "<Shift>u")
-(gtk_accel_path "<Actions>/mail/mail-mark-read" "<Shift>i")
-(gtk_accel_path "<Actions>/mail/mail-folder-select-thread" "x")
-(gtk_accel_path "<Actions>/mail/mail-archive" "e")
-(gtk_accel_path "<Actions>/mail/mail-delete" "<Shift>ssharp")
-```
+- https://github.com/dynaum/dotfiles
+- https://github.com/BrunoGrasselli/vim_files
+- https://github.com/git/git
