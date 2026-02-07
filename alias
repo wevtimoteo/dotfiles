@@ -28,6 +28,10 @@ alias r-eady='bundle && yarn install && migrate'
 # https://github.com/sharkdp/bat
 alias cat="batcat"
 
+# clipboard (macOS-like)
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 # others
 alias myip='curl -s http://checkrealip.com/ | grep "Current IP Address"'
 
