@@ -7,6 +7,9 @@ local opt = vim.opt
 -- ".nvimrc", or ".exrc" in current directory.
 opt.exrc = true
 
+-- Fix tree-sitter-heex build: its .tool-versions has "nodejs lts" which asdf can't resolve
+vim.env.ASDF_NODEJS_VERSION = vim.fn.system("asdf current nodejs"):match("nodejs%s+(%S+)")
+
 opt.relativenumber = false
 opt.spelllang = { "en" }
 opt.clipboard = ""
