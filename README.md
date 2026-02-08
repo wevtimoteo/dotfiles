@@ -60,6 +60,48 @@ export DOTFILES_DIR="$HOME/Sites/dotfiles"
 
 - `playerctl` for now playing module: `sudo apt install playerctl`
 
+## Docker LSP
+
+Run LSP servers inside Docker containers so that language servers resolve dependencies from the container rather than the host.
+
+Two scripts handle the setup:
+
+- **`docker-lsp`** — wrapper that proxies LSP commands through `docker compose exec -T`
+- **`docker-lsp-init`** — bootstrap script that generates per-project config
+
+### Supported servers
+
+| Server | Detected by |
+|--------|-------------|
+| ElixirLS | `mix.exs` |
+| Ruby LSP | `Gemfile` |
+| Tailwind CSS | `tailwind.config.js` / `tailwind.config.ts` |
+
+### Setup
+
+Run `docker-lsp-init` inside a project that has a `compose.yaml`:
+
+```bash
+cd ~/Sites/my-project
+docker-lsp-init
+```
+
+This generates:
+
+1. `compose.override.yaml` — aligns container paths to host paths and mounts Mason LSP packages read-only
+2. `.nvim.lua` — appends `vim.lsp.config()` calls that point each server to the `docker-lsp` wrapper
+
+Then restart containers and open Neovim:
+
+```bash
+docker compose down && docker compose up -d
+nvim .
+```
+
+Verify with `:LspInfo` — the `cmd` should show the `docker-lsp` wrapper.
+
+Add `compose.override.yaml` to the project's `.gitignore` so it stays local.
+
 ## References
 
 - https://github.com/dynaum/dotfiles
