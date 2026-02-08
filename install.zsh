@@ -56,5 +56,7 @@ config_dir_files=(nvim starship.toml ghostty)
 setup_dotfiles "$CONFIG_DIR" no "${config_dir_files[@]}"
 
 ln -sf "$PWD/git-edit" "$HOME/.local/bin/git-edit"
+ln -sf "$PWD/docker-lsp" "$HOME/.local/bin/docker-lsp"
+ln -sf "$PWD/docker-lsp-init" "$HOME/.local/bin/docker-lsp-init"
 
 source "$HOME/.zshrc"

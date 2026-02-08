@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Runs an LSP server inside a project's Docker container.
+# Usage: docker-lsp <compose-dir> <service> <lsp-command> [args...]
+
+COMPOSE_DIR="$1"
+SERVICE="$2"
+shift 2
+
+COMPOSE_FILES=("-f" "$COMPOSE_DIR/compose.yaml")
+
+if [ -f "$COMPOSE_DIR/compose.override.yaml" ]; then
+  COMPOSE_FILES+=("-f" "$COMPOSE_DIR/compose.override.yaml")
+fi
+
+exec docker compose "${COMPOSE_FILES[@]}" exec -T "$SERVICE" "$@"

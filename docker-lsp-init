@@ -1,0 +1,245 @@
+#!/usr/bin/env bash
+# Bootstraps Docker LSP support for a project.
+# Generates compose.override.yaml and .nvim.lua in the current directory.
+#
+# Usage: docker-lsp-init [--force]
+#   --force  Overwrite existing files
+
+set -euo pipefail
+
+FORCE=false
+if [ "${1:-}" = "--force" ]; then
+  FORCE=true
+fi
+
+COMPOSE_FILE="compose.yaml"
+
+if [ ! -f "$COMPOSE_FILE" ]; then
+  echo "Error: $COMPOSE_FILE not found in current directory."
+  exit 1
+fi
+
+HOST_PROJECT_DIR="$(pwd)"
+
+# --- Detect service name ---
+# Find the first service whose image does NOT match common database patterns.
+SERVICE=""
+in_services=false
+current_service=""
+current_image=""
+
+while IFS= read -r line; do
+  if echo "$line" | grep -qE '^services:'; then
+    in_services=true
+    continue
+  fi
+
+  if $in_services; then
+    # Top-level key (not indented under services) means we left services block
+    if echo "$line" | grep -qE '^[a-z]' && ! echo "$line" | grep -qE '^\s'; then
+      break
+    fi
+
+    # Service name (2-space indented, ends with colon)
+    if echo "$line" | grep -qE '^  [a-z][a-z0-9_-]*:$'; then
+      current_service=$(echo "$line" | sed 's/^  //;s/://')
+      current_image=""
+    fi
+
+    # Image line
+    if echo "$line" | grep -qE '^\s+image:'; then
+      current_image=$(echo "$line" | sed 's/.*image:\s*//')
+
+      # Skip database/infrastructure services
+      if echo "$current_image" | grep -qiE '(postgres|mysql|mariadb|redis|mongo|memcached|elasticsearch|rabbitmq)'; then
+        continue
+      fi
+
+      SERVICE="$current_service"
+      break
+    fi
+  fi
+done < "$COMPOSE_FILE"
+
+if [ -z "$SERVICE" ]; then
+  echo "Error: Could not detect a non-database service in $COMPOSE_FILE."
+  exit 1
+fi
+
+echo "Detected service: $SERVICE"
+
+# --- Parse volume mounts for the detected service ---
+# Find the bind mount (.:container_path) to determine container project root,
+# and named volumes that are subdirectories of it.
+CONTAINER_ROOT=""
+NAMED_VOLUMES=()
+
+in_target_service=false
+in_volumes=false
+
+while IFS= read -r line; do
+  if echo "$line" | grep -qE "^  ${SERVICE}:$"; then
+    in_target_service=true
+    continue
+  fi
+
+  if $in_target_service; then
+    # Another service at same indent level means we left our service
+    if echo "$line" | grep -qE '^  [a-z][a-z0-9_-]*:$' && ! echo "$line" | grep -q "^  ${SERVICE}:"; then
+      break
+    fi
+
+    if echo "$line" | grep -qE '^\s+volumes:'; then
+      in_volumes=true
+      continue
+    fi
+
+    if $in_volumes; then
+      # Non-volume line (not a list item) means volumes section ended
+      if ! echo "$line" | grep -qE '^\s+-\s'; then
+        in_volumes=false
+        continue
+      fi
+
+      volume_entry=$(echo "$line" | sed 's/^\s*-\s*//')
+
+      # Bind mount: .:/some/container/path
+      if echo "$volume_entry" | grep -qE '^\.:'; then
+        CONTAINER_ROOT=$(echo "$volume_entry" | cut -d: -f2)
+      # Named volume: name:/some/container/path
+      elif echo "$volume_entry" | grep -qE '^[a-z][a-z0-9_-]*:'; then
+        NAMED_VOLUMES+=("$volume_entry")
+      fi
+    fi
+  fi
+done < "$COMPOSE_FILE"
+
+if [ -z "$CONTAINER_ROOT" ]; then
+  echo "Error: Could not find a bind mount (.:...) for service '$SERVICE'."
+  exit 1
+fi
+
+echo "Container project root: $CONTAINER_ROOT"
+
+# --- Detect Mason packages directory ---
+MASON_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/mason/packages"
+MASON_MOUNTS=()
+
+if [ -d "$MASON_DIR/elixir-ls" ] && [ -f "mix.exs" ]; then
+  MASON_MOUNTS+=("$MASON_DIR/elixir-ls:/opt/mason/elixir-ls:ro")
+fi
+
+if [ -d "$MASON_DIR/tailwindcss-language-server" ]; then
+  if [ -f "tailwind.config.js" ] || [ -f "tailwind.config.ts" ] || [ -f "assets/tailwind.config.js" ]; then
+    MASON_MOUNTS+=("$MASON_DIR/tailwindcss-language-server:/opt/mason/tailwindcss-language-server:ro")
+  fi
+fi
+
+# --- Generate compose.override.yaml ---
+OVERRIDE_FILE="compose.override.yaml"
+
+if [ -f "$OVERRIDE_FILE" ] && ! $FORCE; then
+  echo "Skipping $OVERRIDE_FILE (already exists, use --force to overwrite)"
+else
+  {
+    echo "services:"
+    echo "  $SERVICE:"
+    echo "    volumes:"
+    echo "      - .:$HOST_PROJECT_DIR"
+
+    for vol in "${NAMED_VOLUMES[@]}"; do
+      vol_name=$(echo "$vol" | cut -d: -f1)
+      vol_container_path=$(echo "$vol" | cut -d: -f2)
+
+      # Replace container root with host project dir
+      vol_host_path="${vol_container_path/$CONTAINER_ROOT/$HOST_PROJECT_DIR}"
+      echo "      - $vol_name:$vol_host_path"
+    done
+
+    for mount in "${MASON_MOUNTS[@]}"; do
+      echo "      - $mount"
+    done
+  } > "$OVERRIDE_FILE"
+
+  echo "Created $OVERRIDE_FILE"
+fi
+
+# --- Detect project type and LSP servers ---
+# Each entry: server_name|cmd_arg1|cmd_arg2|...
+LSP_ENTRIES=()
+
+if [ -f "mix.exs" ]; then
+  LSP_ENTRIES+=("elixirls|/opt/mason/elixir-ls/language_server.sh")
+  echo "Detected Elixir project (mix.exs)"
+fi
+
+if [ -f "Gemfile" ]; then
+  LSP_ENTRIES+=("ruby_lsp|ruby-lsp")
+  echo "Detected Ruby project (Gemfile)"
+fi
+
+if [ -f "tailwind.config.js" ] || [ -f "tailwind.config.ts" ] || [ -f "assets/tailwind.config.js" ]; then
+  LSP_ENTRIES+=("tailwindcss|/opt/mason/tailwindcss-language-server/node_modules/.bin/tailwindcss-language-server|--stdio")
+  echo "Detected Tailwind CSS project"
+fi
+
+if [ ${#LSP_ENTRIES[@]} -eq 0 ]; then
+  echo "Warning: No supported project type detected. You can manually edit .nvim.lua to add servers."
+fi
+
+# --- Generate .nvim.lua ---
+NVIM_FILE=".nvim.lua"
+
+# Build the docker_lsp block with vim.lsp.config calls
+DOCKER_LSP_BLOCK="-- docker-lsp: run LSP servers inside Docker containers
+local compose_dir = vim.fn.fnamemodify(debug.getinfo(1, \"S\").source:sub(2), \":p:h\")
+local docker_lsp_service = \"$SERVICE\""
+
+for entry in "${LSP_ENTRIES[@]}"; do
+  IFS='|' read -ra parts <<< "$entry"
+  server_name="${parts[0]}"
+  # Build the cmd table string
+  cmd_args=""
+  for ((i=1; i<${#parts[@]}; i++)); do
+    cmd_args="${cmd_args}, \"${parts[$i]}\""
+  done
+
+  DOCKER_LSP_BLOCK="${DOCKER_LSP_BLOCK}
+vim.lsp.config(\"${server_name}\", {
+  cmd = { \"docker-lsp\", compose_dir, docker_lsp_service${cmd_args} },
+  before_init = function(params)
+    params.processId = vim.NIL
+  end,
+})"
+done
+
+MARKER="-- docker-lsp:"
+
+if [ -f "$NVIM_FILE" ]; then
+  if grep -q "$MARKER" "$NVIM_FILE"; then
+    if $FORCE; then
+      # Remove existing docker-lsp block (from marker to next blank line or EOF)
+      sed -i "/$MARKER/,/^$/d" "$NVIM_FILE"
+      # Remove trailing blank lines
+      sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$NVIM_FILE"
+      printf '\n%s\n' "$DOCKER_LSP_BLOCK" >> "$NVIM_FILE"
+      echo "Updated docker-lsp config in $NVIM_FILE"
+    else
+      echo "Skipping $NVIM_FILE (docker-lsp config already present, use --force to update)"
+    fi
+  else
+    printf '\n%s\n' "$DOCKER_LSP_BLOCK" >> "$NVIM_FILE"
+    echo "Appended docker-lsp config to $NVIM_FILE"
+  fi
+else
+  cat > "$NVIM_FILE" << EOF
+$DOCKER_LSP_BLOCK
+EOF
+  echo "Created $NVIM_FILE"
+fi
+
+echo ""
+echo "Done! Next steps:"
+echo "  1. Restart containers: docker compose down && docker compose up -d"
+echo "  2. Open Neovim in this directory"
+echo "  3. Run :LspInfo to verify LSP servers are connected via Docker"
