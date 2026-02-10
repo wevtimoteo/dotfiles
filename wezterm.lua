@@ -55,7 +55,10 @@ config.colors = {
 }
 
 config.keys = {
-  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
+	{ key = "Enter", mods = "SHIFT", action = wezterm.action({ SendString = "\x1b\r" }) },
 }
+
+config.send_composed_key_when_left_alt_is_pressed = false
+config.send_composed_key_when_right_alt_is_pressed = true
 
 return config
