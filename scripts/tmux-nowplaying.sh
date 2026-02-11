@@ -19,7 +19,7 @@ return ""
 ' 2>/dev/null)
 
 if [ -z "$text" ]; then
-  echo -n ""
+  echo -n "-"
   exit 0
 fi
 
