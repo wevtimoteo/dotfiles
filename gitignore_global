@@ -134,3 +134,5 @@ cabal.project.local~
 
 # AI
 .claude/
+
+.agent/
