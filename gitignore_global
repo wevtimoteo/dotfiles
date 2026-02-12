@@ -140,4 +140,6 @@ __pycache__/
 ruby_cscope.out
 ruby_tags
 
-.claude
+# AI
+.claude/
+.agent/
