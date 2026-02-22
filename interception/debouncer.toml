@@ -1,4 +1,4 @@
 # Keycodes to exclude from debouncing (modifier keys that shouldn't be delayed)
 # 29=LCtrl, 42=LShift, 54=RShift, 56=LAlt, 97=RCtrl, 100=RAlt, 125=Super
 exceptions=[29,42,54,56,97,100,125]
-debounce_time=18
+debounce_time=25
