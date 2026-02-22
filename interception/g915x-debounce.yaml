@@ -1,0 +1,3 @@
+- JOB: interception -g $DEVNODE | /usr/local/bin/debouncer-udevmon | uinput -d $DEVNODE
+  DEVICE:
+    LINK: /dev/input/by-id/usb-Logitech_G915_X_LS_TKL_3212C399-event-kbd
