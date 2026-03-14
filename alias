@@ -41,5 +41,8 @@ alias unsafe-rm="command rm -i"
 
 alias ngrok-me="ngrok http 3000"
 
+# AI
+alias claude-teams="claude --teammate-mode tmux"
+
 # Docker
 alias dexec="docker compose exec "
