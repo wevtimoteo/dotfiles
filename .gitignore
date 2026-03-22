@@ -33,3 +33,6 @@ zsh/custom/themes/
 
 # fonts
 nixos/modules/fonts/*.ttf
+
+# tmp
+tmp/
