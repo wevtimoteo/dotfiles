@@ -76,10 +76,11 @@ The Hyprland config lives in `hypr/hyprland.conf` and is symlinked to `~/.config
 | Super + V | Clipboard history |
 | Super + E | File manager (Nautilus) |
 | Super + C | Close window |
+| Super + N | Toggle notification panel |
 | Super + B | Toggle bar |
 | Super + Shift + R | Reload config |
 | Super + F1 | Show all keybinds |
-| Alt + Tab | Switch last focused window |
+| Alt + Tab | Window switcher (Walker) |
 | Super + 1-0 | Switch workspace |
 | Super + Shift + 1-0 | Move window to workspace |
 | Ctrl + Alt + Left/Right | Previous/next workspace |
