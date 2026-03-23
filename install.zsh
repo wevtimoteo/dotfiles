@@ -29,7 +29,6 @@ setup_dotfiles() {
     if $simulate; then
       echo "$symlink_cmd"
     else
-      [[ -s $target_dir/$target_filename ]] && rm -${prefix_dot}i "$target_dir/$target_filename"
       eval "$symlink_cmd"
     fi
   done
