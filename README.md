@@ -21,6 +21,9 @@ Check [`macOS` version](https://github.com/wevtimoteo/dotfiles/tree/macos).
 - **Prompt**: [Starship](https://starship.rs)
 - **Git**: custom aliases, global gitignore
 - **Theme**: Catppuccin Frappe across terminal and editor
+- **Window Manager**: [Hyprland](https://hyprland.org) (v0.54.2) with [HyprPanel](https://hyprpanel.com)
+- **App Launcher**: [Walker](https://github.com/abenz1267/walker) + [Elephant](https://github.com/abenz1267/elephant)
+- **Screenshots**: grim + slurp with clipboard support
 
 ## Installation
 
@@ -59,6 +62,53 @@ export DOTFILES_DIR="$HOME/Sites/dotfiles"
 ### Dependencies
 
 - `playerctl` for now playing module: `sudo apt install playerctl`
+
+## Hyprland
+
+The Hyprland config lives in `hypr/hyprland.conf` and is symlinked to `~/.config/hypr/` via `install.zsh`.
+
+### Key bindings
+
+| Keybind | Action |
+|---------|--------|
+| Super + Q | Open terminal (Ghostty) |
+| Super + Space | App launcher (Walker) |
+| Super + V | Clipboard history |
+| Super + E | File manager (Nautilus) |
+| Super + C | Close window |
+| Super + B | Toggle bar |
+| Super + Shift + R | Reload config |
+| Super + F1 | Show all keybinds |
+| Alt + Tab | Switch last focused window |
+| Super + 1-0 | Switch workspace |
+| Super + Shift + 1-0 | Move window to workspace |
+| Ctrl + Alt + Left/Right | Previous/next workspace |
+| Alt + Super + F | Fullscreen |
+| Ctrl + Super + Return | Maximize |
+| Print | Screenshot (full screen) |
+| Super + Print | Screenshot (region) |
+| Super + Shift + Print | Screenshot (active window) |
+
+### Dependencies
+
+```bash
+# Hyprland (v0.54.2 from PPA)
+sudo add-apt-repository ppa:cppiber/hyprland
+sudo apt update
+sudo apt install hyprland
+
+# Core tools
+sudo apt install grim slurp wl-clipboard cliphist playerctl brightnessctl imagemagick
+
+# HyprPanel (build from source, see tmp/hyprland-setup-deps.md)
+sudo apt install meson ninja-build valac valadoc gobject-introspection \
+  libgirepository1.0-dev libgtk-3-dev libgtk-layer-shell-dev \
+  libgtk-4-dev libgtk4-layer-shell-dev libjson-glib-dev libnm-dev \
+  libwireplumber-0.5-dev gir1.2-gtksource-3.0 libiniparser-dev \
+  libfftw3-dev gir1.2-gtop-2.0
+```
+
+HyprPanel, Walker, and Elephant are built from source. See the build steps in the commit history or run `cat tmp/hyprland-setup-deps.md` after creating the `tmp/` directory locally.
 
 ## Docker LSP
 
