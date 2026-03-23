@@ -1,0 +1,12 @@
+theme = catppuccin-frappe
+font-family = JuliaMono Nerd Font Mono
+font-size = 14
+window-padding-x = 2
+window-padding-y = 2
+confirm-close-surface = true
+cursor-style = block
+cursor-style-blink = false
+cursor-color = #A868AD
+cursor-text = white
+macos-option-as-alt = right
+keybind = shift+enter=text:\x1b\x0d
