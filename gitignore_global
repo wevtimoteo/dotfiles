@@ -136,3 +136,4 @@ cabal.project.local~
 .claude/
 
 .agent/
+.conductor/
