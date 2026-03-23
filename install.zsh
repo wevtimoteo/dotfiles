@@ -24,7 +24,7 @@ setup_dotfiles() {
       target_filename=".$filename"
     fi
 
-    local symlink_cmd="ln -sf $dot_files_dir/$filename $target_dir/$target_filename"
+    local symlink_cmd="ln -sfn $dot_files_dir/$filename $target_dir/$target_filename"
 
     if $simulate; then
       echo "$symlink_cmd"
