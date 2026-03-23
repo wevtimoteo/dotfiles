@@ -84,6 +84,7 @@ The Hyprland config lives in `hypr/hyprland.conf` and is symlinked to `~/.config
 | Super + 1-0 | Switch workspace |
 | Super + Shift + 1-0 | Move window to workspace |
 | Ctrl + Alt + Left/Right | Previous/next workspace |
+| Super + L | Lock screen |
 | Alt + Super + F | Fullscreen |
 | Ctrl + Super + Return | Maximize |
 | Print | Screenshot (full screen) |
