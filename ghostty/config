@@ -10,3 +10,8 @@ cursor-color = #A868AD
 cursor-text = white
 macos-option-as-alt = right
 keybind = shift+enter=text:\x1b\x0d
+# Emacs word-navigation via left Option key
+# (right Option is already handled by macos-option-as-alt)
+keybind = alt+f=text:\x1bf
+keybind = alt+b=text:\x1bb
+keybind = alt+d=text:\x1bd
