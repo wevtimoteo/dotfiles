@@ -1,6 +1,6 @@
-theme = catppuccin-frappe
+theme = Catppuccin Frappe
 font-family = JuliaMono Nerd Font Mono
-font-size = 14
+font-size = 14.2
 window-padding-x = 2
 window-padding-y = 2
 confirm-close-surface = true
