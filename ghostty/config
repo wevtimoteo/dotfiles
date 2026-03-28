@@ -26,7 +26,7 @@ theme = Catppuccin Frappe
 # Send newline for Shift+Enter (for Claude Code multi-line input)
 font-size = 11
 
-keybind = shift+enter=text:\n
+keybind = shift+enter=text:\x1b\x0d
 
 # Config syntax crash course
 # ==========================
