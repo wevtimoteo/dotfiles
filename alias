@@ -40,3 +40,4 @@ alias ngrok-me="ngrok http 3000"
 
 # Docker
 alias dexec="docker compose exec "
+alias marp="docker run --rm -v \$PWD:/home/marp/app marpteam/marp-cli"
