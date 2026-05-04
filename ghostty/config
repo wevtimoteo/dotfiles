@@ -9,7 +9,7 @@ cursor-style-blink = false
 cursor-color = #A868AD
 cursor-text = white
 macos-option-as-alt = right
-keybind = shift+enter=text:\x1b\x0d
+keybind = shift+enter=text:\x1b[13;2u
 # Emacs word-navigation for left Option key
 # Only these specific keys are remapped to preserve accents (e.g. Option+e)
 keybind = alt+f=text:\x1bf

@@ -29,6 +29,10 @@ zstyle ':completion:*:complete:(cd|pushd):*' tag-order \
 bindkey -e
 bindkey '^R' history-incremental-search-backward
 
+# Treat tmux extended Shift+Enter as Enter in the shell.
+bindkey '^[[13;2u' accept-line
+bindkey '^[[27;2;13~' accept-line
+
 # Custom widget: delete until a given character (mimicking Vim's dt<char>)
 function delete_until_char() {
   local target
