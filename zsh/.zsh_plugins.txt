@@ -1,4 +1,4 @@
 mattmc3/zsh-safe-rm
-marlonrichert/zsh-autocomplete
+marlonrichert/zsh-autocomplete pin:16fb02566367d7802c51e41b13d918fc6b7cabf5
 Tarrasch/zsh-bd
 MichaelAquilina/zsh-you-should-use
