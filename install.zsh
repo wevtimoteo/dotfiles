@@ -51,7 +51,7 @@ setup_dotfiles "$HOME" yes "${files[@]}"
 
 source "$HOME/.exports"
 
-config_dir_files=(nvim starship.toml ghostty hypr)
+config_dir_files=(nvim starship.toml ghostty)
 setup_dotfiles "$CONFIG_DIR" no "${config_dir_files[@]}"
 
 ln -sf "$PWD/git-edit" "$HOME/.local/bin/git-edit"
