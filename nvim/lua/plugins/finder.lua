@@ -91,7 +91,7 @@ return {
   },
   {
     "MagicDuck/grug-far.nvim",
-    commit = "29f460c",
+    commit = "a5875fd",
     opts = { open_cmd = "noswapfile vnew" },
     -- stylua: ignore
     keys = {
