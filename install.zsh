@@ -58,4 +58,8 @@ ln -sf "$PWD/git-edit" "$HOME/.local/bin/git-edit"
 ln -sf "$PWD/docker-lsp" "$HOME/.local/bin/docker-lsp"
 ln -sf "$PWD/docker-lsp-init" "$HOME/.local/bin/docker-lsp-init"
 
+if [[ "$XDG_CURRENT_DESKTOP" == *GNOME* ]] && ! $simulate; then
+  bash "$PWD/gnome/install.sh"
+fi
+
 source "$HOME/.zshrc"
