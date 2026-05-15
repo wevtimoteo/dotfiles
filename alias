@@ -29,10 +29,10 @@ alias r-eady='bundle && yarn install && migrate'
 alias cat="batcat"
 
 # clipboard (macOS-like)
-if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+if [ "$XDG_SESSION_TYPE" = "wayland" ] && command -v wl-copy >/dev/null 2>&1; then
   alias pbcopy='wl-copy'
   alias pbpaste='wl-paste'
-else
+elif command -v xclip >/dev/null 2>&1; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
