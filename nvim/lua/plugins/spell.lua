@@ -4,9 +4,17 @@ return {
     optional = true,
     opts = {
       linters_by_ft = {
-        markdown = { "markdownlint" },
+        markdown = { "markdownlint-cli2" },
       },
     },
+  },
+  {
+    "mason-org/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "markdownlint-cli2",
+      })
+    end,
   },
   {
     "jmbuhr/otter.nvim",
