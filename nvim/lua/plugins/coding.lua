@@ -29,30 +29,47 @@ return {
         node_incremental = "<CR>",
         node_decremental = "<BS>",
       },
-      filetype_exclude = { "qf", "markdown" },
+      filetype_exclude = { "qf" },
     },
-    init = function()
-      -- Markdown is excluded above because treesitter parses [text](url) as one
-      -- inline node, so <CR> would select the whole line. Map <CR> to select
-      -- inside the closest enclosing bracket pair using native vim text objects.
+    config = function(_, opts)
+      require("wildfire").setup(opts)
+
+      -- In markdown, treesitter parses [text](url) as one inline node, so
+      -- wildfire's <CR> would select the whole line. Override with a buffer-
+      -- local map that selects inside the closest enclosing bracket pair.
+      local function select_inner_pair()
+        local pairs = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
+        local best, best_lnum, best_col = nil, 0, 0
+        for _, p in ipairs(pairs) do
+          local lnum, col = unpack(vim.fn.searchpairpos([[\V]] .. p[1], "", [[\V]] .. p[2], "bnW"))
+          if lnum > 0 and (lnum > best_lnum or (lnum == best_lnum and col > best_col)) then
+            best, best_lnum, best_col = p[1], lnum, col
+          end
+        end
+        if best then
+          vim.cmd("normal! vi" .. best)
+        end
+      end
+
+      local function set_map(bufnr)
+        vim.keymap.set("n", "<CR>", select_inner_pair, {
+          buffer = bufnr,
+          desc = "Select inside closest bracket pair",
+        })
+      end
+
       vim.api.nvim_create_autocmd("FileType", {
         pattern = "markdown",
         callback = function(args)
-          vim.keymap.set("n", "<CR>", function()
-            local pairs = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
-            local best, best_lnum, best_col = nil, 0, 0
-            for _, p in ipairs(pairs) do
-              local lnum, col = unpack(vim.fn.searchpairpos([[\V]] .. p[1], "", [[\V]] .. p[2], "bnW"))
-              if lnum > 0 and (lnum > best_lnum or (lnum == best_lnum and col > best_col)) then
-                best, best_lnum, best_col = p[1], lnum, col
-              end
-            end
-            if best then
-              vim.cmd("normal! vi" .. best)
-            end
-          end, { buffer = args.buf, desc = "Select inside closest bracket pair" })
+          set_map(args.buf)
         end,
       })
+
+      for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.bo[buf].filetype == "markdown" then
+          set_map(buf)
+        end
+      end
     end,
   },
   {
