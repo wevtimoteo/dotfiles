@@ -31,6 +31,29 @@ return {
       },
       filetype_exclude = { "qf", "markdown" },
     },
+    init = function()
+      -- Markdown is excluded above because treesitter parses [text](url) as one
+      -- inline node, so <CR> would select the whole line. Map <CR> to select
+      -- inside the closest enclosing bracket pair using native vim text objects.
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "markdown",
+        callback = function(args)
+          vim.keymap.set("n", "<CR>", function()
+            local pairs = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
+            local best, best_lnum, best_col = nil, 0, 0
+            for _, p in ipairs(pairs) do
+              local lnum, col = unpack(vim.fn.searchpairpos([[\V]] .. p[1], "", [[\V]] .. p[2], "bnW"))
+              if lnum > 0 and (lnum > best_lnum or (lnum == best_lnum and col > best_col)) then
+                best, best_lnum, best_col = p[1], lnum, col
+              end
+            end
+            if best then
+              vim.cmd("normal! vi" .. best)
+            end
+          end, { buffer = args.buf, desc = "Select inside closest bracket pair" })
+        end,
+      })
+    end,
   },
   {
     "nvim-mini/mini.surround",
