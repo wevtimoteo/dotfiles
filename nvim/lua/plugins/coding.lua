@@ -12,8 +12,7 @@ return {
     end,
   },
   {
-    "sustech-data/wildfire.nvim", -- Smart selection of the closest text object
-    enabled = false,
+    "sustech-data/wildfire.nvim", -- Smart selection of the closest text object (<CR> expands, <BS> shrinks)
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
@@ -23,11 +22,15 @@ return {
         { "<", ">" },
         { "[", "]" },
         { '"', '"' },
+        { "'", "'" },
       },
+      keymaps = {
+        init_selection = "<CR>",
+        node_incremental = "<CR>",
+        node_decremental = "<BS>",
+      },
+      filetype_exclude = { "qf", "markdown" },
     },
-    config = function()
-      require("wildfire").setup()
-    end,
   },
   {
     "nvim-mini/mini.surround",
