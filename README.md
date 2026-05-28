@@ -46,6 +46,7 @@ This setup prioritizes:
 ### Writing & Code Quality
 - [codespell](https://github.com/codespell-project/codespell) - Spell checker for code
 - [vale](https://vale.sh/) - Prose linter with style enforcement
+- [gitleaks](https://github.com/gitleaks/gitleaks) - Secret scanner (aliased to docker image)
 
 ### System Maintenance
 - [topgrade](https://github.com/topgrade-rs/topgrade) - Unified update tool for all package managers
