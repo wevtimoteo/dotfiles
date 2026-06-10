@@ -28,6 +28,7 @@ tmux/resurrect
 
 # zsh
 zsh/.zcompdump*
+zsh/.zcompcache/
 zsh/_git
 zsh/completions
 zsh/.zsh_plugins.zsh
