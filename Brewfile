@@ -1,5 +1,3 @@
-tap 'homebrew/cask-versions'
-tap 'homebrew/cask-fonts'
 tap 'heroku/brew'
 
 # `pinentry` tap
@@ -44,6 +42,7 @@ brew 'codespell'
 brew 'vale'
 
 # Developer tools
+brew 'asdf'
 brew 'gh'
 brew 'git'
 brew 'tig'
@@ -62,3 +61,4 @@ brew 'ffmpeg'
 # Fonts
 cask 'font-recursive-code'
 cask 'font-symbols-only-nerd-font'
+cask 'font-powerline-symbols'
