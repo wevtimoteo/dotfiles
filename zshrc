@@ -67,7 +67,7 @@ source $HOME/.exports
 [[ -s $HOME/.custom_exports ]] && source $HOME/.custom_exports
 
 # source antidote
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+source ${HOMEBREW_PREFIX}/opt/antidote/share/antidote/antidote.zsh
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
@@ -75,9 +75,9 @@ antidote load
 #PROMPT="%F{175}➔ %F{33}%~ %f%F{44}\$%f "
 eval "$(starship init zsh)"
 
-. "$HOME/.asdf/asdf.sh"
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+# asdf 0.16+ no longer ships asdf.sh — shims on PATH is the new init
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=("${ASDF_DATA_DIR:-$HOME/.asdf}/completions" $fpath)
 
 # bun completions
 [ -s "/Users/wevtimoteo/.bun/_bun" ] && source "/Users/wevtimoteo/.bun/_bun"
