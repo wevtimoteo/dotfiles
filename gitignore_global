@@ -137,3 +137,9 @@ cabal.project.local~
 
 .agent/
 .conductor/
+
+# Personal caveman skills fetched into repo-tracked .agents/skills/
+**/.agents/skills/caveman
+**/.agents/skills/caveman-*
+**/.agents/skills/cavecrew
+skills-lock.json
