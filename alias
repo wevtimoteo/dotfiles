@@ -38,6 +38,7 @@ alias weather='curl -s http://wttr.in/'
 alias unsafe-rm="command rm -i"
 
 alias ngrok-me="ngrok http 3000"
+alias upgrade-ai-tools="brew upgrade --cask codex && brew upgrade claude-code"
 
 # Docker
 alias dexec="docker compose exec "
