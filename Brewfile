@@ -51,9 +51,6 @@ brew 'direnv'
 # Ops
 brew 'kubectl'
 
-# Cloud Platforms
-brew 'heroku'
-
 # Utilities
 brew 'topgrade'
 brew 'ffmpeg'
