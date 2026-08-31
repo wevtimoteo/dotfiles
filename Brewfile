@@ -1,5 +1,3 @@
-tap 'heroku/brew'
-
 # `pinentry` tap
 tap 'jorgelbg/tap'
 
@@ -47,9 +45,6 @@ brew 'gh'
 brew 'git'
 brew 'tig'
 brew 'direnv'
-
-# Ops
-brew 'kubectl'
 
 # Utilities
 brew 'topgrade'
