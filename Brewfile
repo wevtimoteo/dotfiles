@@ -43,6 +43,7 @@ brew 'vale'
 brew 'asdf'
 brew 'gh'
 brew 'git'
+brew 'git-lfs'
 brew 'tig'
 brew 'direnv'
 
