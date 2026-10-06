@@ -56,6 +56,10 @@ setup_dotfiles "$CONFIG_DIR" no "${config_dir_files[@]}"
 
 ln -sf "$PWD/git-edit" "$HOME/.local/bin/git-edit"
 
+# Install tmux plugins (catppuccin status bar, etc.) via TPM
+git submodule update --init tmux/plugins/tpm
+"$HOME/.tmux/plugins/tpm/bin/install_plugins"
+
 # Install utilities
 # Linter:
 # https://github.com/redding/l.rb
