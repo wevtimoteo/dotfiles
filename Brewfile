@@ -52,5 +52,6 @@ brew 'ffmpeg'
 
 # Fonts
 cask 'font-recursive-code'
+cask 'font-juliamono'
 cask 'font-symbols-only-nerd-font'
 cask 'font-powerline-symbols'
