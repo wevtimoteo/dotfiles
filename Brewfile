@@ -46,6 +46,7 @@ brew 'git'
 brew 'git-lfs'
 brew 'tig'
 brew 'direnv'
+cask 'agentsview'
 
 # Utilities
 brew 'topgrade'

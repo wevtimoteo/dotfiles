@@ -36,4 +36,9 @@ LDFLAGS="-L$ICU_PREFIX/lib"
 # https://github.com/gopasspw/gopass/issues/1879
 GPG_TTY=$(tty)
 
+# AgentsView: keep data local (no telemetry, no update checks)
+export AGENTSVIEW_TELEMETRY_ENABLED=0
+export AGENTSVIEW_DISABLE_UPDATE_CHECK=1
+export DO_NOT_TRACK=1
+
 eval "$(direnv hook zsh)"
